@@ -34,7 +34,7 @@ const overusedGrotesk = localFont({
 
 export const metadata: Metadata = {
   title: "PT. WECON - Water Resources Engineering Consultant",
-  description: "Indonesia's Trusted Water Resources Engineering Consultant Since 1973. Specializing in dam design, irrigation, hydropower, and construction supervision.",
+  description: "PT Wecon is Indonesia's trusted Water Engineering Consultant since 1973. We specialize in dam design, irrigation, hydropower, and construction supervision.",
 };
 
 export default function RootLayout({
