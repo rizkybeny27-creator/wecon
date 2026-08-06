@@ -22,7 +22,7 @@ export default function ProjectsList() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
+          {projects.map((project, idx) => (
             <Link href={`/projects/${project.slug}`} key={project.slug} className="group">
               <div className="w-full aspect-[4/3] relative rounded-[24px] overflow-hidden">
                 <Image src={project.image || '/dam_sustainable.png'} alt={project.title} fill className="object-cover transition-transform duration-1000 group-hover:scale-[1.03]" priority={idx < 2} />
