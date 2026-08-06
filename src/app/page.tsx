@@ -93,6 +93,18 @@ export default function Home() {
                     <p className="text-white/70 font-sans text-[12px] md:text-[13px]">East Kolaka, Southeast Sulawesi, Indonesia</p>
                   </div>
                 </Link>
+                {/* Project Card 4 */}
+                <Link href="/projects/jlantah-dam" className="w-[85vw] md:w-[520px] aspect-[4/3] relative rounded-xl overflow-hidden group border border-black/5 block">
+                  <img src="/dam_sustainable.png" alt="Jlantah Dam" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.03]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                  <div className="absolute top-5 right-5">
+                    <span className="bg-white/95 backdrop-blur text-[#222] text-[9px] font-mono px-2.5 py-1.5 rounded-[4px] uppercase tracking-widest font-bold">DAM INFRASTRUCTURE</span>
+                  </div>
+                  <div className="absolute bottom-6 left-6 right-6 text-white">
+                    <h3 className="text-[20px] md:text-[22px] font-heading mb-1.5 tracking-tight">Jlantah Dam</h3>
+                    <p className="text-white/70 font-sans text-[12px] md:text-[13px]">Indonesia</p>
+                  </div>
+                </Link>
               </div>
             ))}
           </div>
