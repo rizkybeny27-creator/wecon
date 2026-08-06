@@ -180,7 +180,7 @@ export default function Home() {
             
             <div className="relative z-10 max-w-[800px]">
               <div className="flex -space-x-4 mb-10">
-                <div className="w-[52px] h-[52px] rounded-full border-[3px] border-wecon-dark bg-gray-300 overflow-hidden">
+                <div className="w-[52px] h-[52px] rounded-full border-[3px] border-wecon-dark bg-gray-300 overflow-hidden relative">
                   <Image src="/avatar.png" alt="Avatar" fill className="object-cover" sizes="60px" />
                 </div>
                 <div className="w-[52px] h-[52px] rounded-full border-[3px] border-wecon-dark bg-[#3d63d2] flex items-center justify-center text-white text-2xl">
@@ -224,7 +224,7 @@ export default function Home() {
                 { title: "Geology, Mining & Digital Solutions", desc: "Specialized geological investigation paired with digital tools that support data-driven decision-making.", tags: ["MINERAL & GEOTHERMAL EXPLORATION", "GEOLOGICAL & MINING DATA COMPILATION", "GIS DEVELOPMENT & SPATIAL DATA PROCESSING", "APPLICATION & SOFTWARE DEVELOPMENT"], image: "/service_geology.png" }
               ].map((service, idx) => (
                 <div key={idx} className="bg-white rounded-[24px] p-6 lg:p-12 flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-10 items-start">
-                  <div className="lg:col-span-4 aspect-[4/3] w-full rounded-[16px] overflow-hidden bg-gray-100">
+                  <div className="lg:col-span-4 aspect-[4/3] w-full rounded-[16px] overflow-hidden bg-gray-100 relative">
                     <Image src={service.image} alt={service.title} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
                   </div>
                   <div className="lg:col-span-8 w-full">
