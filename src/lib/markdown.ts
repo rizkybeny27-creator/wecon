@@ -73,5 +73,5 @@ export async function getPostData(type: string, slug: string): Promise<PostData>
     slug,
     contentHtml,
     ...(matterResult.data as { [key: string]: any }),
-  };
+  } as PostData;
 }
