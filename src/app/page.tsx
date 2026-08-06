@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
 import ScrollRevealText from "@/components/ScrollRevealText";
 import HeroReveal from "@/components/HeroReveal";
 import ProcessSection from "@/components/ProcessSection";
@@ -13,7 +14,7 @@ export default function Home() {
       {/* 2. Hero Section */}
       <section className="relative h-screen min-h-[700px] flex items-center pt-20">
         <div className="absolute inset-0 z-0">
-          <img src="/hero-bg.jpg" alt="Construction Worker" className="w-full h-full object-cover" />
+          <Image src="/hero-bg.jpg" alt="Construction Worker" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-wecon-dark"></div>
         </div>
         
@@ -59,7 +60,7 @@ export default function Home() {
               <div key={set} className="flex gap-4 pr-4 w-max">
                 {/* Project Card 1 */}
                 <Link href="/projects/semantok-dam" className="w-[85vw] md:w-[520px] aspect-[4/3] relative rounded-xl overflow-hidden group border border-black/5 block">
-                  <img src="/semantok.jpg" alt="Semantok Dam" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.03]" />
+                  <Image src="/semantok.jpg" alt="Semantok Dam" fill className="object-cover transition-transform duration-1000 group-hover:scale-[1.03]" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
                   <div className="absolute top-5 right-5">
                     <span className="bg-white/95 backdrop-blur text-[#222] text-[9px] font-mono px-2.5 py-1.5 rounded-[4px] uppercase tracking-widest font-bold">DAM / WATER INFRASTRUCTURE</span>
@@ -71,7 +72,7 @@ export default function Home() {
                 </Link>
                 {/* Project Card 2 */}
                 <Link href="/projects/merangin" className="w-[85vw] md:w-[520px] aspect-[4/3] relative rounded-xl overflow-hidden group border border-black/5 block">
-                  <img src="/merangin.jpg" alt="Merangin Power Plant" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.03]" />
+                  <Image src="/merangin.jpg" alt="Merangin Power Plant" fill className="object-cover transition-transform duration-1000 group-hover:scale-[1.03]" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
                   <div className="absolute top-5 right-5">
                     <span className="bg-white/95 backdrop-blur text-[#222] text-[9px] font-mono px-2.5 py-1.5 rounded-[4px] uppercase tracking-widest font-bold">HYDROPOWER</span>
@@ -83,7 +84,7 @@ export default function Home() {
                 </Link>
                 {/* Project Card 3 */}
                 <Link href="/projects/ladongi" className="w-[85vw] md:w-[520px] aspect-[4/3] relative rounded-xl overflow-hidden group border border-black/5 block">
-                  <img src="/ladongi.jpg" alt="Ladongi Dam" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.03]" />
+                  <Image src="/ladongi.jpg" alt="Ladongi Dam" fill className="object-cover transition-transform duration-1000 group-hover:scale-[1.03]" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
                   <div className="absolute top-5 right-5">
                     <span className="bg-white/95 backdrop-blur text-[#222] text-[9px] font-mono px-2.5 py-1.5 rounded-[4px] uppercase tracking-widest font-bold">DAM / WATER INFRASTRUCTURE</span>
@@ -95,7 +96,7 @@ export default function Home() {
                 </Link>
                 {/* Project Card 4 */}
                 <Link href="/projects/jlantah-dam" className="w-[85vw] md:w-[520px] aspect-[4/3] relative rounded-xl overflow-hidden group border border-black/5 block">
-                  <img src="/dam_sustainable.png" alt="Jlantah Dam" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.03]" />
+                  <Image src="/dam_sustainable.png" alt="Jlantah Dam" fill className="object-cover transition-transform duration-1000 group-hover:scale-[1.03]" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
                   <div className="absolute top-5 right-5">
                     <span className="bg-white/95 backdrop-blur text-[#222] text-[9px] font-mono px-2.5 py-1.5 rounded-[4px] uppercase tracking-widest font-bold">DAM INFRASTRUCTURE</span>
@@ -173,14 +174,14 @@ export default function Home() {
       {/* 6. Testimonial CTA Section */}
       <section className="p-4 md:p-8 bg-wecon-light pb-24 md:pb-40">
          <div className="container mx-auto max-w-[1440px] h-[700px] relative rounded-[20px] overflow-hidden flex items-end p-10 md:p-20">
-            <img src="/testimonial_bg.png" alt="Testimonial Background" className="absolute inset-0 w-full h-full object-cover" />
+            <Image src="/testimonial_bg.png" alt="Testimonial Background" fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
             
             <div className="relative z-10 max-w-[800px]">
               <div className="flex -space-x-4 mb-10">
                 <div className="w-[52px] h-[52px] rounded-full border-[3px] border-wecon-dark bg-gray-300 overflow-hidden">
-                  <img src="/avatar.png" alt="Avatar" className="w-full h-full object-cover" />
+                  <Image src="/avatar.png" alt="Avatar" fill className="object-cover" />
                 </div>
                 <div className="w-[52px] h-[52px] rounded-full border-[3px] border-wecon-dark bg-[#3d63d2] flex items-center justify-center text-white text-2xl">
                   ❋
@@ -224,7 +225,7 @@ export default function Home() {
               ].map((service, idx) => (
                 <div key={idx} className="bg-white rounded-[24px] p-6 lg:p-12 flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-10 items-start">
                   <div className="lg:col-span-4 aspect-[4/3] w-full rounded-[16px] overflow-hidden bg-gray-100">
-                    <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
+                    <Image src={service.image} alt={service.title} fill className="object-cover" />
                   </div>
                   <div className="lg:col-span-8 w-full">
                     <h3 className="text-[22px] md:text-[26px] font-heading mb-3 md:mb-4 tracking-tight text-[#222]">{service.title}</h3>
@@ -333,7 +334,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
              <Link href="/blog/panduan-perijinan-pengalihan-air-sungai" className="group flex flex-col bg-white rounded-[24px] border border-black/5 p-3 transition-shadow hover:shadow-lg">
                 <div className="aspect-[4/3] relative overflow-hidden bg-gray-100 rounded-[20px] mb-6">
-                   <img src="/dam_sustainable.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Blog" />
+                   <Image src="/dam_sustainable.png" alt="Blog" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded uppercase text-[10px] font-mono tracking-widest text-black">
                       Engineering
                    </div>
@@ -345,7 +346,7 @@ export default function Home() {
              </Link>
              <Link href="/blog/panduan-perijinan-pengalihan-air-sungai" className="group flex flex-col bg-white rounded-[24px] border border-black/5 p-3 transition-shadow hover:shadow-lg">
                 <div className="aspect-[4/3] relative overflow-hidden bg-gray-100 rounded-[20px] mb-6">
-                   <img src="/hydropower_turbine.png" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Blog" />
+                   <Image src="/hydropower_turbine.png" alt="Blog" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded uppercase text-[10px] font-mono tracking-widest text-black">
                       Projects
                    </div>
@@ -441,7 +442,7 @@ export default function Home() {
       <footer className="relative bg-[#151515] text-white">
          {/* CTA Section */}
          <div className="relative h-[550px] flex flex-col justify-center items-center text-center p-6 overflow-hidden">
-            <img src="/cta-bg.jpg" className="absolute inset-0 w-full h-full object-cover" alt="Construction Footer Background" />
+            <Image src="/cta-bg.jpg" alt="Construction Footer Background" fill className="object-cover" />
             <div className="absolute inset-0 bg-black/30"></div>
             
             {/* Precise Fading Frosted Glass Effect mimicking the screenshot */}
@@ -468,7 +469,7 @@ export default function Home() {
             <div className="container mx-auto max-w-[1440px] grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-6">
                <div className="md:col-span-5 lg:col-span-4">
                   <div className="mb-6">
-                     <img src="/logo-white.png" alt="PT Wecon" className="h-[22px] object-contain" />
+                     <Image src="/logo-white.png" alt="PT Wecon" width={110} height={22} className="h-[22px] w-auto object-contain" />
                   </div>
                   <p className="text-[#888888] text-[13px] leading-[1.6] max-w-[280px] mb-8">
                      Partner with us to turn strategic ambition into measurable business results.

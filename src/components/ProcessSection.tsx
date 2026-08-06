@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 const processSteps = [
   {
@@ -96,11 +97,12 @@ export default function ProcessSection() {
           </p>
         </div>
         <div className="w-full aspect-[4/3] rounded-[20px] overflow-hidden relative border border-white/[0.04]">
-          <img 
+          <Image 
             key={activeData.id} // Forces re-render for transition if we want to add one
             src={activeData.image} 
             alt={activeData.title} 
-            className="w-full h-full object-cover animate-fade-in" 
+            fill
+            className="object-cover animate-fade-in" 
           />
         </div>
       </div>

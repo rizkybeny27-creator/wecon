@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { getAllPosts } from '@/lib/markdown';
 
 export const metadata = {
@@ -24,7 +25,7 @@ export default function ProjectsList() {
           {projects.map((project) => (
             <Link href={`/projects/${project.slug}`} key={project.slug} className="group">
               <div className="w-full aspect-[4/3] relative rounded-[24px] overflow-hidden">
-                <img src={project.image || '/dam_sustainable.png'} alt={project.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.03]" />
+                <Image src={project.image || '/dam_sustainable.png'} alt={project.title} fill className="object-cover transition-transform duration-1000 group-hover:scale-[1.03]" priority={idx < 2} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
                 
                 {project.tag && (

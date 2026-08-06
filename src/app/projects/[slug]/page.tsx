@@ -35,10 +35,12 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       {/* Hero Section */}
       <section className="relative w-full h-[80vh] min-h-[600px] flex flex-col justify-end">
         <div className="absolute inset-0 z-0">
-          <img 
+          <Image 
             src={project.image || "/dam_sustainable.png"} 
             alt={project.title} 
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10"></div>
         </div>
@@ -111,11 +113,14 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
                 </p>
                 <div className="flex items-center gap-4">
                   {project.quote.authorAvatar && (
-                    <img 
-                      src={project.quote.authorAvatar} 
-                      alt={project.quote.author} 
-                      className="w-14 h-14 rounded-full object-cover"
-                    />
+                    <div className="w-[50px] h-[50px] rounded-full border-2 border-[#333] bg-[#222] overflow-hidden flex-shrink-0 relative">
+                      <Image 
+                        src={project.quote.authorAvatar} 
+                        alt={project.quote.author} 
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   )}
                   <div>
                     <h4 className="font-medium text-black">{project.quote.author}</h4>
@@ -133,8 +138,8 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
           <div className="mt-24">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {project.gallery.slice(0, 8).map((imgUrl: string, idx: number) => (
-                  <div key={idx} className="relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3]">
-                    <img src={imgUrl} alt={`Gallery image ${idx + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  <div key={idx} className="relative aspect-[4/3] rounded-[16px] overflow-hidden border border-black/5 bg-gray-100">
+                    <Image src={imgUrl} alt={`Gallery image ${idx + 1}`} fill className="object-cover hover:scale-105 transition-transform duration-500" />
                   </div>
               ))}
             </div>
@@ -147,7 +152,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
             <Link href="/projects/merangin" className="group relative block w-full aspect-[4/3] rounded-2xl overflow-hidden bg-gray-200">
-              <img src="/merangin.jpg" alt="Merangin Power Plant" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image src="/merangin.jpg" alt="Merangin Power Plant" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
               <div className="absolute top-6 right-6">
                 <span className="bg-white/95 backdrop-blur text-black text-[10px] font-mono px-3 py-1.5 rounded uppercase tracking-widest font-bold">HYDROPOWER</span>
@@ -159,7 +164,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             </Link>
 
             <Link href="/projects/ladongi" className="group relative block w-full aspect-[4/3] rounded-2xl overflow-hidden bg-gray-200">
-              <img src="/ladongi.jpg" alt="Ladongi Dam" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image src="/ladongi.jpg" alt="Ladongi Dam" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
               <div className="absolute top-6 right-6">
                 <span className="bg-white/95 backdrop-blur text-black text-[10px] font-mono px-3 py-1.5 rounded uppercase tracking-widest font-bold">DAM / WATER INFRASTRUCTURE</span>
@@ -178,7 +183,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       <footer className="relative bg-[#151515] text-white">
          {/* CTA Section */}
          <div className="relative h-[550px] flex flex-col justify-center items-center text-center p-6 overflow-hidden">
-            <img src="/cta-bg.jpg" className="absolute inset-0 w-full h-full object-cover" alt="Construction Footer Background" />
+            <Image src="/cta-bg.jpg" alt="Construction Footer Background" fill className="object-cover" />
             <div className="absolute inset-0 bg-black/30"></div>
             
             {/* Precise Fading Frosted Glass Effect mimicking the screenshot */}
@@ -205,7 +210,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             <div className="container mx-auto max-w-[1440px] grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-6">
                <div className="md:col-span-5 lg:col-span-4">
                   <div className="mb-6">
-                     <img src="/logo-white.png" alt="PT Wecon" className="h-[22px] object-contain" />
+                     <Image src="/logo-white.png" alt="PT Wecon" width={110} height={22} className="h-[22px] w-auto object-contain" />
                   </div>
                   <p className="text-[#888888] text-[13px] leading-[1.6] max-w-[280px] mb-8">
                      Partner with us to turn strategic ambition into measurable business results.

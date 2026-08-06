@@ -1,6 +1,7 @@
 import { getPostData, getAllPosts } from '@/lib/markdown';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -44,7 +45,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         
         {post.image && (
           <div className="w-full aspect-[21/9] bg-gray-100 rounded-none overflow-hidden relative">
-            <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+            <Image src={post.image} alt={post.title} fill className="object-cover" priority />
           </div>
         )}
       </section>
@@ -75,7 +76,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           {relatedPosts.map((related) => (
              <Link key={related.slug} href={`/blog/${related.slug}`} className="block border border-black/10 rounded-[20px] overflow-hidden hover:shadow-lg transition-all group flex flex-col bg-white">
                 <div className="aspect-[3/2] w-full bg-gray-100 relative overflow-hidden">
-                   <img src={related.image || '/hydropower_turbine.png'} alt={related.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                   <Image src={related.image || '/hydropower_turbine.png'} alt={related.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="p-6 md:p-8 flex flex-col justify-between flex-grow">
                    <div>
@@ -100,7 +101,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       <footer className="relative bg-[#151515] text-white">
          {/* CTA Section */}
          <div className="relative h-[550px] flex flex-col justify-center items-center text-center p-6 overflow-hidden">
-            <img src="/cta-bg.jpg" className="absolute inset-0 w-full h-full object-cover" alt="Construction Footer Background" />
+            <Image src="/cta-bg.jpg" alt="Construction Footer Background" fill className="object-cover" />
             <div className="absolute inset-0 bg-black/30"></div>
             
             <div 
@@ -126,7 +127,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <div className="container mx-auto max-w-[1440px] grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-6">
                <div className="md:col-span-5 lg:col-span-4">
                   <div className="mb-6">
-                     <img src="/logo-white.png" alt="PT Wecon" className="h-[22px] object-contain" />
+                     <Image src="/logo-white.png" alt="PT Wecon" width={110} height={22} className="h-[22px] w-auto object-contain" />
                   </div>
                   <p className="text-[#888888] text-[13px] leading-[1.6] max-w-[280px] mb-8">
                      Partner with us to turn strategic ambition into measurable business results.

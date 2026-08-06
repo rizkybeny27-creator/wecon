@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Navbar({ theme = 'dark' }: { theme?: 'dark' | 'light' }) {
@@ -48,10 +49,13 @@ export default function Navbar({ theme = 'dark' }: { theme?: 'dark' | 'light' })
       {/* Logo */}
       <div className="flex items-center gap-3">
         <Link href="/">
-          <img 
+          <Image 
             src={isLight ? "/logo-black.png" : "/logo-white.png"} 
             alt="PT Wecon" 
-            className="h-6 object-contain" 
+            width={120}
+            height={24}
+            className="h-6 w-auto object-contain" 
+            priority
           />
         </Link>
       </div>
