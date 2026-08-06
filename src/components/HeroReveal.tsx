@@ -34,15 +34,15 @@ export default function HeroReveal() {
       className="relative z-10 w-full max-w-[840px] mx-auto px-6 text-center mt-20 flex flex-col items-center"
     >
       <motion.h1 variants={item} className="text-[44px] md:text-[64px] font-heading text-white leading-[1.05] tracking-tight">
-        Indonesia&apos;s Trusted Water<br className="hidden md:block" />
-        Resources Engineering<br className="hidden md:block" />
+        Indonesia&apos;s Trusted Water{' '}<br className="hidden md:block" />
+        Resources Engineering{' '}<br className="hidden md:block" />
         Consultant Since 1973
       </motion.h1>
       
       <motion.p variants={item} className="mt-6 text-[15px] md:text-[17px] text-white/80 leading-[1.7] max-w-[650px] font-sans">
-        Beyond Technologies. For more than 50 years, we have<br className="hidden md:block" />
-        partnered with Indonesian government agencies and industries<br className="hidden md:block" />
-        to design, supervise, and certify water infrastructure — from<br className="hidden md:block" />
+        Beyond Technologies. For more than 50 years, we have{' '}<br className="hidden md:block" />
+        partnered with Indonesian government agencies and industries{' '}<br className="hidden md:block" />
+        to design, supervise, and certify water infrastructure — from{' '}<br className="hidden md:block" />
         Southeast Asia&apos;s longest dam to nationwide hydropower plants.
       </motion.p>
       
