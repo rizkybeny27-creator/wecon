@@ -1,7 +1,7 @@
 ---
 title: "The Future of Dam Construction: Sustainable Water Engineering Practices"
 date: "2026-08-01"
-author: "Ziad Malek"
+author: "Gani"
 category: "Engineering Insights"
 excerpt: "Explore how top water engineering consultants are integrating sustainable practices in dam construction to ensure long-term environmental balance."
 image: "/dam_sustainable.png"

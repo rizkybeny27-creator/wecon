@@ -1,7 +1,7 @@
 ---
 title: "Hydropower's Role in Indonesia's Renewable Energy Future"
 date: "2026-08-03"
-author: "Ziad Malek"
+author: "Gani"
 category: "Industry Insights"
 excerpt: "Hydropower remains a cornerstone of Indonesia's renewable energy transition. Learn how expert water engineering consultants optimize these complex projects."
 image: "/hydropower_turbine.png"

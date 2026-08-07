@@ -62,7 +62,15 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           {/* Right Column: Markdown Content */}
           <div className="lg:col-span-8">
             <div 
-              className="prose prose-lg prose-headings:font-heading prose-headings:tracking-tight prose-headings:font-medium prose-p:text-black/70 prose-p:leading-[1.8] prose-p:mb-8 prose-p:text-justify prose-a:text-blue-600 prose-img:rounded-2xl prose-img:w-full prose-img:my-10 max-w-none"
+              className="max-w-none text-black/70 leading-[1.8] text-justify
+                [&_p]:mb-6 
+                [&_h2]:text-2xl [&_h2]:md:text-3xl [&_h2]:font-heading [&_h2]:font-medium [&_h2]:text-black [&_h2]:mt-12 [&_h2]:mb-6
+                [&_h3]:text-xl [&_h3]:font-heading [&_h3]:font-medium [&_h3]:text-black [&_h3]:mt-8 [&_h3]:mb-4
+                [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-6 [&_li]:mb-2
+                [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-6
+                [&_a]:text-blue-600 [&_a]:underline
+                [&_strong]:font-semibold [&_strong]:text-black
+                [&_img]:rounded-2xl [&_img]:w-full [&_img]:my-10"
               dangerouslySetInnerHTML={{ __html: post.contentHtml || "" }}
             />
           </div>

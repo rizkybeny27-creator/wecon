@@ -1,7 +1,7 @@
 ---
 title: "The Importance of Effective Construction Supervision in Infrastructure"
 date: "2026-08-05"
-author: "Ziad Malek"
+author: "Gani"
 category: "Project Management"
 excerpt: "Discover why meticulous construction supervision is the backbone of successful, long-lasting infrastructure and water engineering projects."
 image: "/construction_supervision.png"
