@@ -25,16 +25,26 @@ body {
 }
 
 @keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
 }
 
 .animate-ticker {
   animation: ticker 40s linear infinite;
+  will-change: transform;
 }
 
 .animate-ticker:hover {
   animation-play-state: paused;
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translate3d(0, 30px, 0); }
+  100% { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Markdown Content Styles */

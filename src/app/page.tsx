@@ -24,9 +24,8 @@ export default function Home() {
       {/* 3. About Section */}
       <section id="about" className="bg-wecon-light text-wecon-dark py-16 md:py-24">
         <div className="container mx-auto px-6 md:px-12 max-w-[1440px]">
-          <h1 className="sr-only">PT Wecon is a Water Engineering Consultant in Indonesia</h1>
           <ScrollRevealText 
-            text="PT Wecon is a leading Water Engineering Consultant in Indonesia, operating in the civil construction sector with a specialized focus on water resources infrastructure. Founded in 1973, we have over 33 years of proven experience delivering dam design, irrigation, hydropower, and construction supervision projects across multiple provinces—including two National Strategic Projects inaugurated directly by the President."
+            text="PT Wecon is a leading Water Engineering Consultant in Indonesia, officially certified to deliver specialized civil construction and water resources infrastructure. Founded in 1973 and led by Ir. Hadi Santoso, MT., we leverage decades of hands-on expertise to execute dam designs, irrigation systems, and hydropower facilities. Our track record spans across 7 provinces, securing ISO-standard quality assurance on National Strategic Projects inaugurated directly by the President of the Republic of Indonesia."
             className="text-[24px] md:text-[32px] lg:text-[36px] font-sans font-medium leading-[1.4] tracking-tight max-w-[1300px]"
           />
           <div className="mt-12">
