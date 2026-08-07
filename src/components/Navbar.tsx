@@ -41,7 +41,7 @@ export default function Navbar({ theme = 'dark' }: { theme?: 'dark' | 'light' })
   return (
     <nav 
       aria-label="Main Navigation"
-      className="animate-fade-in-down absolute top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-12 py-8"
+      className="absolute top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-12 py-8"
     >
       {/* Logo */}
       <div className="flex items-center gap-3">

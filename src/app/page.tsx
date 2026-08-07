@@ -13,7 +13,7 @@ export default function Home() {
       {/* 2. Hero Section */}
       <section className="relative h-screen min-h-[700px] flex items-center pt-20">
         <div className="absolute inset-0 z-0">
-          <Image src="/hero-bg.jpg" alt="Construction Worker" fill className="object-cover" priority sizes="100vw" quality={90} fetchPriority="high" />
+          <Image src="/hero-bg.jpg" alt="Construction Worker" fill className="object-cover" priority sizes="100vw" quality={75} fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-wecon-dark"></div>
         </div>
         

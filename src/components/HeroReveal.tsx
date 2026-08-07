@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function HeroReveal() {
   return (
     <div className="relative z-10 w-full max-w-[1000px] mx-auto px-6 text-center mt-20 flex flex-col items-center">
-      <h1 className="text-[36px] md:text-[60px] lg:text-[72px] font-heading text-white leading-[1.1] tracking-tight drop-shadow-md text-balance">
+      <h1 className="text-[32px] md:text-[60px] lg:text-[72px] font-heading text-white leading-[1.1] tracking-tight drop-shadow-md">
         PT Wecon: Indonesia&apos;s Trusted Water Engineering Consultant Since 1973
       </h1>
       
