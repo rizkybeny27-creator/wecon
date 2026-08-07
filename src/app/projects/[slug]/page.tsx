@@ -101,15 +101,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
           {/* Right Main: Content & Quote */}
           <div className="lg:col-span-8">
             <div 
-              className="max-w-none text-black/80 leading-relaxed mb-16
-                [&_p]:mb-6 
-                [&_h2]:text-2xl [&_h2]:md:text-3xl [&_h2]:font-heading [&_h2]:font-medium [&_h2]:text-black [&_h2]:mt-12 [&_h2]:mb-6
-                [&_h3]:text-xl [&_h3]:font-heading [&_h3]:font-medium [&_h3]:text-black [&_h3]:mt-8 [&_h3]:mb-4
-                [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-6 [&_li]:mb-2
-                [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-6
-                [&_a]:text-blue-600 [&_a]:underline
-                [&_strong]:font-semibold [&_strong]:text-black
-                [&_img]:rounded-2xl [&_img]:w-full [&_img]:my-10"
+              className="markdown-content max-w-none text-black/80 leading-relaxed mb-16"
               dangerouslySetInnerHTML={{ __html: project.contentHtml || "" }}
             />
 
