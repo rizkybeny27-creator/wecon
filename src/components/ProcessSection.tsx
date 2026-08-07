@@ -61,12 +61,16 @@ export default function ProcessSection() {
   return (
     <div className="bg-[#212121] rounded-[24px] p-6 md:p-12 border border-white/[0.04]">
       {/* Tabs */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-16">
+      <div role="tablist" aria-label="Process Steps" className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-16">
         {processSteps.map((step) => {
           const isActive = activeTab === step.id;
           return (
             <button
               key={step.id}
+              role="tab"
+              aria-selected={isActive}
+              aria-controls={`panel-${step.id}`}
+              id={`tab-${step.id}`}
               onClick={() => setActiveTab(step.id)}
               className={`flex items-center gap-3 px-6 py-4 rounded-xl text-[15px] font-sans transition-colors text-left ${
                 isActive 
@@ -84,7 +88,12 @@ export default function ProcessSection() {
       </div>
 
       {/* Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center min-h-[400px]">
+      <div 
+        id={`panel-${activeData.id}`} 
+        role="tabpanel" 
+        aria-labelledby={`tab-${activeData.id}`} 
+        className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center min-h-[400px]"
+      >
         <div>
           <p className="text-[11px] font-mono tracking-widest text-white/50 uppercase mb-8 pb-5 border-b border-white/[0.06]">
             {activeData.phase}
@@ -98,7 +107,7 @@ export default function ProcessSection() {
         </div>
         <div className="w-full aspect-[4/3] rounded-[20px] overflow-hidden relative border border-white/[0.04]">
           <Image 
-            key={activeData.id} // Forces re-render for transition if we want to add one
+            key={activeData.id}
             src={activeData.image} 
             alt={activeData.title} 
             fill

@@ -387,47 +387,47 @@ export default function Home() {
                <form className="flex flex-col gap-5">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                      <div className="flex flex-col gap-2">
-                        <label className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#888888]">Name</label>
-                        <input type="text" className="bg-[#f5f5f5] rounded-[6px] px-4 py-3.5 w-full outline-none focus:ring-2 focus:ring-black/10 text-[13px]" placeholder="Jane Smith" />
+                        <label htmlFor="name" className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#555555]">Name</label>
+                        <input id="name" type="text" className="bg-[#f5f5f5] rounded-[6px] px-4 py-3.5 w-full outline-none focus:ring-2 focus:ring-black/30 text-[13px] text-black" placeholder="Jane Smith" />
                      </div>
                      <div className="flex flex-col gap-2">
-                        <label className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#888888]">Email</label>
-                        <input type="email" className="bg-[#f5f5f5] rounded-[6px] px-4 py-3.5 w-full outline-none focus:ring-2 focus:ring-black/10 text-[13px]" placeholder="jane@framer.com" />
+                        <label htmlFor="email" className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#555555]">Email</label>
+                        <input id="email" type="email" className="bg-[#f5f5f5] rounded-[6px] px-4 py-3.5 w-full outline-none focus:ring-2 focus:ring-black/30 text-[13px] text-black" placeholder="jane@framer.com" />
                      </div>
                   </div>
                   <div className="flex flex-col gap-2">
-                     <label className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#888888]">Address</label>
-                     <input type="text" className="bg-[#f5f5f5] rounded-[6px] px-4 py-3.5 w-full outline-none focus:ring-2 focus:ring-black/10 text-[13px]" placeholder="Jane Smith" />
+                     <label htmlFor="address" className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#555555]">Address</label>
+                     <input id="address" type="text" className="bg-[#f5f5f5] rounded-[6px] px-4 py-3.5 w-full outline-none focus:ring-2 focus:ring-black/30 text-[13px] text-black" placeholder="Jakarta, Indonesia" />
                   </div>
                   <div className="flex flex-col gap-2">
-                     <label className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#888888]">You are interested in</label>
+                     <label htmlFor="service" className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#555555]">You are interested in</label>
                      <div className="relative">
-                        <select defaultValue="" className="appearance-none bg-[#f5f5f5] rounded-[6px] px-4 py-3.5 w-full outline-none focus:ring-2 focus:ring-black/10 text-[13px] text-[#888888] cursor-pointer">
+                        <select id="service" defaultValue="" className="appearance-none bg-[#f5f5f5] rounded-[6px] px-4 py-3.5 w-full outline-none focus:ring-2 focus:ring-black/30 text-[13px] text-black cursor-pointer">
                            <option value="" disabled>Select a service...</option>
                            <option value="survey">Topographic Survey</option>
                            <option value="design">Engineering Design</option>
                            <option value="supervision">Construction Supervision</option>
                         </select>
-                        <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-[#888888]">
-                           <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-[#555555]">
+                           <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                               <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                            </svg>
                         </div>
                      </div>
                   </div>
                   <div className="flex flex-col gap-2">
-                     <label className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#888888]">Message</label>
-                     <textarea rows={4} className="bg-[#f5f5f5] rounded-[6px] px-4 py-3.5 w-full outline-none focus:ring-2 focus:ring-black/10 resize-none text-[13px]" placeholder="Write your message..." />
+                     <label htmlFor="message" className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#555555]">Message</label>
+                     <textarea id="message" rows={4} className="bg-[#f5f5f5] rounded-[6px] px-4 py-3.5 w-full outline-none focus:ring-2 focus:ring-black/30 resize-none text-[13px] text-black" placeholder="Write your message..." />
                   </div>
                   
                   <div className="flex items-start gap-3 mt-2">
-                     <input type="checkbox" className="mt-0.5 w-4 h-4 rounded-[4px] border-[#dddddd] bg-[#f5f5f5] checked:bg-black checked:border-black cursor-pointer appearance-none relative checked:after:content-['✓'] checked:after:text-white checked:after:text-[10px] checked:after:font-bold checked:after:absolute checked:after:inset-0 checked:after:flex checked:after:items-center checked:after:justify-center" />
-                     <p className="text-[#888888] text-[11px] leading-[1.6]">
+                     <input id="newsletter" type="checkbox" className="mt-0.5 w-4 h-4 rounded-[4px] border-[#dddddd] bg-[#f5f5f5] checked:bg-black checked:border-black cursor-pointer appearance-none relative checked:after:content-['✓'] checked:after:text-white checked:after:text-[10px] checked:after:font-bold checked:after:absolute checked:after:inset-0 checked:after:flex checked:after:items-center checked:after:justify-center" />
+                     <label htmlFor="newsletter" className="text-[#555555] text-[11px] leading-[1.6] cursor-pointer">
                         Yes, I&apos;d like to receive product updates and insights from Wecon. Unsubscribe anytime.
-                     </p>
+                     </label>
                   </div>
                   
-                  <button type="submit" className="bg-[#151515] text-white w-full py-4 rounded-[6px] font-mono font-bold text-[10px] tracking-[0.15em] uppercase hover:bg-black/80 transition-colors mt-2">
+                  <button type="submit" className="bg-[#151515] text-white w-full py-4 rounded-[6px] font-mono font-bold text-[10px] tracking-[0.15em] uppercase hover:bg-black/80 transition-colors mt-2 focus:ring-2 focus:ring-offset-2 focus:ring-black">
                      Send Enquiry
                   </button>
                </form>
@@ -457,7 +457,7 @@ export default function Home() {
                   Explore how Wecon can bring your<br className="hidden md:block" /> next development to life.
                </h2>
                <Link href="#contact" className="inline-flex items-center gap-2 bg-white text-black px-6 py-4 rounded-[6px] text-[10px] font-mono font-bold tracking-[0.15em] uppercase hover:bg-white/90 transition-colors">
-                  CONTACT US <span className="font-sans text-[14px] leading-none -mt-0.5">↗</span>
+                  CONTACT US <span aria-hidden="true" className="font-sans text-[14px] leading-none -mt-0.5">↗</span>
                </Link>
             </div>
          </div>
@@ -473,7 +473,7 @@ export default function Home() {
                      Partner with us to turn strategic ambition into measurable business results.
                   </p>
                   <Link href="#contact" className="inline-flex items-center gap-2 bg-white text-black px-5 py-3.5 rounded-md text-[10px] font-bold tracking-widest uppercase hover:bg-white/90 transition-colors">
-                     CONTACT US <span className="font-sans text-[14px] leading-none -mt-0.5">↗</span>
+                     CONTACT US <span aria-hidden="true" className="font-sans text-[14px] leading-none -mt-0.5">↗</span>
                   </Link>
                </div>
                
