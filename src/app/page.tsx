@@ -2,7 +2,9 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import HeroReveal from "@/components/HeroReveal";
-import ProcessSection from "@/components/ProcessSection";
+import dynamic from 'next/dynamic';
+
+const ProcessSection = dynamic(() => import('@/components/ProcessSection'), { ssr: true });
 
 export default function Home() {
   return (
