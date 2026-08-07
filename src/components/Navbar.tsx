@@ -3,7 +3,6 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 export default function Navbar({ theme = 'dark' }: { theme?: 'dark' | 'light' }) {
   const isLight = theme === 'light';
@@ -40,11 +39,8 @@ export default function Navbar({ theme = 'dark' }: { theme?: 'dark' | 'light' })
   };
 
   return (
-    <motion.nav 
-      initial={{ y: -40, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-      className="absolute top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-12 py-8"
+    <nav 
+      className="animate-fade-in-down absolute top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-12 py-8"
     >
       {/* Logo */}
       <div className="flex items-center gap-3">
@@ -82,6 +78,6 @@ export default function Navbar({ theme = 'dark' }: { theme?: 'dark' | 'light' })
           Contact Us
         </Link>
       </div>
-    </motion.nav>
+    </nav>
   );
 }

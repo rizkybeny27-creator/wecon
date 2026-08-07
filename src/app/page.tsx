@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import ScrollRevealText from "@/components/ScrollRevealText";
 import HeroReveal from "@/components/HeroReveal";
 import ProcessSection from "@/components/ProcessSection";
 
@@ -14,7 +13,7 @@ export default function Home() {
       {/* 2. Hero Section */}
       <section className="relative h-screen min-h-[700px] flex items-center pt-20">
         <div className="absolute inset-0 z-0">
-          <Image src="/hero-bg.jpg" alt="Construction Worker" fill className="object-cover" priority sizes="100vw" quality={80} />
+          <Image src="/hero-bg.jpg" alt="Construction Worker" fill className="object-cover" priority sizes="100vw" quality={90} fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-wecon-dark"></div>
         </div>
         
@@ -24,10 +23,9 @@ export default function Home() {
       {/* 3. About Section */}
       <section id="about" className="bg-wecon-light text-wecon-dark py-16 md:py-24">
         <div className="container mx-auto px-6 md:px-12 max-w-[1440px]">
-          <ScrollRevealText 
-            text="PT Wecon is a leading Water Engineering Consultant in Indonesia, officially certified to deliver specialized civil construction and water resources infrastructure. Founded in 1973 and led by Ir. Hadi Santoso, MT., we leverage decades of hands-on expertise to execute dam designs, irrigation systems, and hydropower facilities. Our track record spans across 7 provinces, securing ISO-standard quality assurance on National Strategic Projects inaugurated directly by the President of the Republic of Indonesia."
-            className="text-[24px] md:text-[32px] lg:text-[36px] font-sans font-medium leading-[1.4] tracking-tight max-w-[1300px]"
-          />
+          <p className="text-[24px] md:text-[32px] lg:text-[36px] font-sans font-medium leading-[1.4] tracking-tight max-w-[1300px] text-black">
+            PT Wecon is a leading Water Engineering Consultant in Indonesia, officially certified to deliver specialized civil construction and water resources infrastructure. Founded in 1973 and led by Ir. Hadi Santoso, MT., we leverage decades of hands-on expertise to execute dam designs, irrigation systems, and hydropower facilities. Our track record spans across 7 provinces, securing ISO-standard quality assurance on National Strategic Projects inaugurated directly by the President of the Republic of Indonesia.
+          </p>
           <div className="mt-12">
             <Link href="/about" className="inline-block bg-[#e5e5e5] border border-black/5 px-5 py-2.5 rounded-md text-[10px] font-mono font-bold tracking-widest uppercase hover:bg-black/10 transition-colors text-black/80">
               LEARN OUR STORY
@@ -174,7 +172,7 @@ export default function Home() {
       {/* 6. Testimonial CTA Section */}
       <section className="p-4 md:p-8 bg-wecon-light pb-24 md:pb-40">
          <div className="container mx-auto max-w-[1440px] h-[700px] relative rounded-[20px] overflow-hidden flex items-end p-10 md:p-20">
-            <Image src="/testimonial_bg.png" alt="Testimonial Background" fill className="object-cover" sizes="100vw" quality={70} />
+            <Image src="/testimonial_bg.png" alt="Testimonial Background" fill className="object-cover" sizes="(max-width: 768px) 100vw, 100vw" quality={70} />
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
             
@@ -442,7 +440,7 @@ export default function Home() {
       <footer className="relative bg-[#151515] text-white">
          {/* CTA Section */}
          <div className="relative h-[550px] flex flex-col justify-center items-center text-center p-6 overflow-hidden">
-            <Image src="/cta-bg.jpg" alt="Construction Footer Background" fill className="object-cover" />
+            <Image src="/cta-bg.jpg" alt="Construction Footer Background" fill className="object-cover" sizes="(max-width: 768px) 100vw, 100vw" quality={70} loading="lazy" />
             <div className="absolute inset-0 bg-black/30"></div>
             
             {/* Precise Fading Frosted Glass Effect mimicking the screenshot */}
