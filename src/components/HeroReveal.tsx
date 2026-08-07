@@ -3,11 +3,9 @@ import Link from "next/link";
 
 export default function HeroReveal() {
   return (
-    <div className="relative z-10 w-full max-w-[840px] mx-auto px-6 text-center mt-20 flex flex-col items-center">
-      <h1 className="text-[36px] md:text-[64px] font-heading text-white leading-[1.05] tracking-tight drop-shadow-md">
-        PT Wecon: Indonesia&apos;s Trusted{' '}<br className="hidden md:block" />
-        Water Engineering Consultant{' '}<br className="hidden md:block" />
-        Since 1973
+    <div className="relative z-10 w-full max-w-[1000px] mx-auto px-6 text-center mt-20 flex flex-col items-center">
+      <h1 className="text-[36px] md:text-[60px] lg:text-[72px] font-heading text-white leading-[1.1] tracking-tight drop-shadow-md text-balance">
+        PT Wecon: Indonesia&apos;s Trusted Water Engineering Consultant Since 1973
       </h1>
       
       <p className="mt-6 text-[15px] md:text-[17px] text-white/90 leading-[1.7] max-w-[650px] font-sans drop-shadow">
