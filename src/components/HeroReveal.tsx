@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function HeroReveal() {
   return (
-    <div className="relative z-10 w-full max-w-[840px] mx-auto px-6 text-center mt-20 flex flex-col items-center animate-fade-in-up">
-      <h1 className="text-[44px] md:text-[64px] font-heading text-white leading-[1.05] tracking-tight drop-shadow-md">
+    <div className="relative z-10 w-full max-w-[840px] mx-auto px-6 text-center mt-20 flex flex-col items-center">
+      <h1 className="text-[36px] md:text-[64px] font-heading text-white leading-[1.05] tracking-tight drop-shadow-md">
         PT Wecon: Indonesia&apos;s Trusted{' '}<br className="hidden md:block" />
         Water Engineering Consultant{' '}<br className="hidden md:block" />
         Since 1973
