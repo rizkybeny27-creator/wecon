@@ -47,7 +47,7 @@ export default function Navbar({ theme = 'dark' }: { theme?: 'dark' | 'light' })
       
       {/* Right Button */}
       <div className="hidden md:block">
-        <Link href="/#contact" className={`px-6 py-2.5 rounded-md font-mono font-bold text-[10px] tracking-widest uppercase transition-colors inline-block ${btnBg}`}>
+        <Link href="https://wa.me/6281234878660" className={`px-6 py-2.5 rounded-md font-mono font-bold text-[10px] tracking-widest uppercase transition-colors inline-block ${btnBg}`}>
           Contact Us
         </Link>
       </div>

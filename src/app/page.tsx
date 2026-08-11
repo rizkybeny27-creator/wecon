@@ -197,7 +197,7 @@ export default function Home() {
             </div>
             
             <div className="absolute bottom-16 right-16 hidden lg:block">
-              <Link href="#contact" className="bg-white text-black px-6 py-3 rounded text-[11px] font-bold tracking-widest hover:bg-white/90 transition-colors">
+              <Link href="https://wa.me/6281234878660" className="bg-white text-black px-6 py-3 rounded text-[11px] font-bold tracking-widest hover:bg-white/90 transition-colors">
                 CONTACT US
               </Link>
             </div>
@@ -361,7 +361,7 @@ export default function Home() {
       </section>
 
       {/* 12. Contact Form Section (NEW) */}
-      <section className="bg-wecon-light pb-24 md:pb-40">
+      <section id="contact" className="bg-wecon-light pb-24 md:pb-40">
         <div className="container mx-auto px-6 md:px-12 max-w-[1200px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             
@@ -458,7 +458,7 @@ export default function Home() {
                <h2 className="text-[36px] md:text-[46px] lg:text-[54px] font-heading font-medium leading-[1.1] tracking-tight text-white mb-8">
                   Explore how Wecon can bring your<br className="hidden md:block" /> next development to life.
                </h2>
-               <Link href="#contact" className="inline-flex items-center gap-2 bg-white text-black px-6 py-4 rounded-[6px] text-[10px] font-mono font-bold tracking-[0.15em] uppercase hover:bg-white/90 transition-colors">
+               <Link href="https://wa.me/6281234878660" className="inline-flex items-center gap-2 bg-white text-black px-6 py-4 rounded-[6px] text-[10px] font-mono font-bold tracking-[0.15em] uppercase hover:bg-white/90 transition-colors">
                   CONTACT US <span aria-hidden="true" className="font-sans text-[14px] leading-none -mt-0.5">↗</span>
                </Link>
             </div>
@@ -474,7 +474,7 @@ export default function Home() {
                   <p className="text-[#888888] text-[13px] leading-[1.6] max-w-[280px] mb-8">
                      Partner with us to turn strategic ambition into measurable business results.
                   </p>
-                  <Link href="#contact" className="inline-flex items-center gap-2 bg-white text-black px-5 py-3.5 rounded-md text-[10px] font-bold tracking-widest uppercase hover:bg-white/90 transition-colors">
+                  <Link href="https://wa.me/6281234878660" className="inline-flex items-center gap-2 bg-white text-black px-5 py-3.5 rounded-md text-[10px] font-bold tracking-widest uppercase hover:bg-white/90 transition-colors">
                      CONTACT US <span aria-hidden="true" className="font-sans text-[14px] leading-none -mt-0.5">↗</span>
                   </Link>
                </div>
@@ -486,7 +486,7 @@ export default function Home() {
                      <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
                      <li><Link href="/projects" className="hover:text-white transition-colors">Projects</Link></li>
                      <li><Link href="/blog" className="hover:text-white transition-colors">Blogs</Link></li>
-                     <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+                     <li><Link href="https://wa.me/6281234878660" className="hover:text-white transition-colors">Contact</Link></li>
                   </ul>
                </div>
                

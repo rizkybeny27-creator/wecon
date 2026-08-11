@@ -15,7 +15,7 @@ quote:
   text: "By acting as the central project management and water engineering consultant, we bridge complex civil contracting with the client's strategic vision to deliver sustainable energy."
   author: "Ir. Hadi Santoso, MT"
   authorRole: "President Director, PT. WECON"
-  authorAvatar: "/avatar.png"
+  authorAvatar: "/hadi-santoso.png"
 gallery:
   - "/dam_sustainable.png"
   - "/river_diversion.png"

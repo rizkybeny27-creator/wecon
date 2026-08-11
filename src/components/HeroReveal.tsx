@@ -19,7 +19,7 @@ export default function HeroReveal() {
         <Link href="#contact" className="bg-white text-black px-6 py-3 rounded-md font-mono font-bold text-[10px] tracking-widest uppercase hover:bg-white/90 transition-colors flex items-center gap-2">
           WORK WITH US <span>↗</span>
         </Link>
-        <Link href="#services" className="bg-transparent text-white border border-white/30 px-6 py-3 rounded-md font-mono font-bold text-[10px] tracking-widest uppercase hover:bg-white/10 transition-colors">
+        <Link href="#expertise" className="bg-transparent text-white border border-white/30 px-6 py-3 rounded-md font-mono font-bold text-[10px] tracking-widest uppercase hover:bg-white/10 transition-colors">
           OUR SERVICES
         </Link>
       </div>
