@@ -39,7 +39,7 @@ export default function LanguageSwitcher({ className = "" }: { className?: strin
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex items-center justify-between gap-3 outline-none cursor-pointer ${className}`}
+        className={`flex items-center justify-between gap-3 whitespace-nowrap outline-none cursor-pointer ${className}`}
       >
         <span>{activeLocaleLabel}</span>
         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className={`opacity-70 transition-transform ${isOpen ? 'rotate-180' : ''}`}>

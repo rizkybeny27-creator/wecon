@@ -52,7 +52,7 @@ export default function Navbar({ theme = 'dark' }: { theme?: 'dark' | 'light' })
       {/* Right Button & Switcher */}
       <div className="hidden md:flex items-center gap-4">
         <div className="flex items-center">
-           <LanguageSwitcher className={`px-4 py-2.5 rounded-md font-mono font-bold text-[10px] tracking-widest uppercase transition-colors inline-block ${outlineBtn}`} />
+           <LanguageSwitcher className={`px-4 py-2.5 rounded-md font-mono font-bold text-[10px] tracking-widest uppercase transition-colors ${outlineBtn}`} />
         </div>
         <Link href="https://wa.me/6281234878660" className={`px-6 py-2.5 rounded-md font-mono font-bold text-[10px] tracking-widest uppercase transition-colors inline-block ${btnBg}`}>
           {t('contact_us')}
