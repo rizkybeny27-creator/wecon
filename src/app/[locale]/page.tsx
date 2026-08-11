@@ -1,5 +1,6 @@
 import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
+import { getAllPosts } from "@/lib/markdown";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import HeroReveal from "@/components/HeroReveal";
@@ -7,9 +8,10 @@ import dynamic from 'next/dynamic';
 
 const ProcessSection = dynamic(() => import('@/components/ProcessSection'), { ssr: true });
 
-export default async function Home() {
+export default async function Home({ params }: { params: { locale: string } }) {
   const t = await getTranslations('Footer');
   const tHome = await getTranslations('HomePage');
+  const latestBlogs = getAllPosts('blog', params.locale).slice(0, 2);
 
   return (
     <main className="flex flex-col min-h-screen">
@@ -336,30 +338,22 @@ export default async function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-             <Link href="/blog/panduan-perijinan-pengalihan-air-sungai" className="group flex flex-col bg-white rounded-[24px] border border-black/5 p-3 transition-shadow hover:shadow-lg">
+            {latestBlogs.map((post) => (
+             <Link key={post.slug} href={`/blog/${post.slug}`} className="group flex flex-col bg-white rounded-[24px] border border-black/5 p-3 transition-shadow hover:shadow-lg">
                 <div className="aspect-[4/3] relative overflow-hidden bg-gray-100 rounded-[20px] mb-6">
-                   <Image src="/dam_sustainable.png" alt="Blog" fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
-                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded uppercase text-[10px] font-mono tracking-widest text-black">
-                      Engineering
-                   </div>
+                   <Image src={post.image || '/placeholder-blog.jpg'} alt={post.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
+                   {post.category && (
+                     <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded uppercase text-[10px] font-mono tracking-widest text-black">
+                        {post.category}
+                     </div>
+                   )}
                 </div>
                 <div className="px-3 pb-3 flex flex-col flex-grow">
-                   <h3 className="text-2xl font-heading mb-6 group-hover:text-blue-600 transition-colors text-black">Panduan Lengkap Perijinan Pengalihan Air Sungai di Indonesia</h3>
-                   <p className="text-black/60 text-sm mt-auto">August 05, 2026 • 5 min read</p>
+                   <h3 className="text-2xl font-heading mb-6 group-hover:text-blue-600 transition-colors text-black">{post.title}</h3>
+                   <p className="text-black/60 text-sm mt-auto">{post.date} • 5 min read</p>
                 </div>
              </Link>
-             <Link href="/blog/panduan-perijinan-pengalihan-air-sungai" className="group flex flex-col bg-white rounded-[24px] border border-black/5 p-3 transition-shadow hover:shadow-lg">
-                <div className="aspect-[4/3] relative overflow-hidden bg-gray-100 rounded-[20px] mb-6">
-                   <Image src="/hydropower_turbine.png" alt="Blog" fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
-                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded uppercase text-[10px] font-mono tracking-widest text-black">
-                      Projects
-                   </div>
-                </div>
-                <div className="px-3 pb-3 flex flex-col flex-grow">
-                   <h3 className="text-2xl font-heading mb-6 group-hover:text-blue-600 transition-colors text-black">Pentingnya Survey Topografi Sebelum Konstruksi Bendungan</h3>
-                   <p className="text-black/60 text-sm mt-auto">July 12, 2026 • 4 min read</p>
-                </div>
-             </Link>
+            ))}
           </div>
         </div>
       </section>
