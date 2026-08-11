@@ -1,20 +1,20 @@
 ---
-title: "Merangin Hydroelectric Power Plant - Water Engineering Consultant"
+title: "Merangin 水力发电厂 - 水利工程顾问"
 date: "2024-01-01"
-excerpt: "PT. WECON, an expert water engineering consultant, provides project management for the 350 MW Merangin Hydroelectric Power Plant."
+excerpt: "PT. WECON 作为专业的水利工程顾问，为 350 MW Merangin 水力发电厂提供项目管理。"
 image: "/merangin.jpg"
-tag: "Hydropower"
-location: "Kerinci, Jambi, Indonesia"
-completedIn: "Targeted 2024"
-services: "Project Management Consulting"
+tag: "水力发电"
+location: "印度尼西亚占碑省 Kerinci"
+completedIn: "目标 2024"
+services: "项目管理咨询"
 client: "PT. Kerinci Merangin Hidro"
-projectStructure: "Concrete Gravity Dam (62.5m height)"
-visibilitySettings: "Public"
+projectStructure: "混凝土重力坝 (高度 62.5 米)"
+visibilitySettings: "公开"
 servicesConsultant: "PT. WECON"
 quote:
-  text: "By acting as the central project management and water engineering consultant, we bridge complex civil contracting with the client's strategic vision to deliver sustainable energy."
+  text: "作为核心项目管理和水利工程顾问，我们将复杂的土木承包与客户的战略愿景联系起来，以提供可持续能源。"
   author: "Ir. Hadi Santoso, MT"
-  authorRole: "President Director, PT. WECON"
+  authorRole: "总裁, PT. WECON"
   authorAvatar: "/hadi-santoso.png"
 gallery:
   - "/dam_sustainable.png"
@@ -23,6 +23,6 @@ gallery:
   - "/construction_supervision.png"
 ---
 
-The Merangin Hydroelectric Power Plant utilizes Lake Kerinci as an annual natural storage, paired with the Sanggaran Agung Regulatory Dam functioning as a regulating dam with a height of 9 meters. Additionally, the daily artificial storage is achieved by utilizing the Kerinci Dam—a robust concrete gravity dam type standing at a height of 62.5 meters.
+Merangin 水力发电厂利用 Kerinci 湖作为天然的年度蓄水池，同时结合高度为 9 米的 Sanggaran Agung 调节坝作为调节。此外，利用高度为 62.5 米的坚固混凝土重力坝（Kerinci 坝）实现每日人工蓄水。
 
-To ensure seamless execution, PT. WECON contributes as the primary Project Management Consultant and **Water Engineering Consultant**. We actively bridge the communication and technical alignment between the job owner, PT. Kerinci Merangin Hidro, and the main contractor, PT. Bukaka Utama Teknik. This large-scale hydroelectric power plant is targeted to become fully operational in 2024, providing sustainable energy to the region.
+为确保无缝执行，PT. WECON 作为主要的项目管理顾问和**水利工程顾问**，积极协调业主 PT. Kerinci Merangin Hidro 和主承包商 PT. Bukaka Utama Teknik 之间的沟通和技术对接。这座大型水力发电厂计划于 2024 年全面投入运营，为该地区提供可持续能源。

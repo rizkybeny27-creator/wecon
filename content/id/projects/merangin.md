@@ -1,20 +1,20 @@
 ---
-title: "Merangin Hydroelectric Power Plant - Water Engineering Consultant"
+title: "Pembangkit Listrik Tenaga Air Merangin - Konsultan Teknik Sumber Daya Air"
 date: "2024-01-01"
-excerpt: "PT. WECON, an expert water engineering consultant, provides project management for the 350 MW Merangin Hydroelectric Power Plant."
+excerpt: "PT. WECON, konsultan ahli teknik sumber daya air, menyediakan manajemen proyek untuk PLTA Merangin 350 MW."
 image: "/merangin.jpg"
-tag: "Hydropower"
+tag: "Pembangkit Listrik Tenaga Air"
 location: "Kerinci, Jambi, Indonesia"
-completedIn: "Targeted 2024"
-services: "Project Management Consulting"
+completedIn: "Target 2024"
+services: "Konsultan Manajemen Proyek"
 client: "PT. Kerinci Merangin Hidro"
-projectStructure: "Concrete Gravity Dam (62.5m height)"
-visibilitySettings: "Public"
+projectStructure: "Bendungan Gravitasi Beton (Tinggi 62.5m)"
+visibilitySettings: "Publik"
 servicesConsultant: "PT. WECON"
 quote:
-  text: "By acting as the central project management and water engineering consultant, we bridge complex civil contracting with the client's strategic vision to deliver sustainable energy."
+  text: "Dengan bertindak sebagai pusat manajemen proyek dan konsultan teknik air, kami menjembatani kontrak sipil yang kompleks dengan visi strategis klien untuk menghadirkan energi yang berkelanjutan."
   author: "Ir. Hadi Santoso, MT"
-  authorRole: "President Director, PT. WECON"
+  authorRole: "Presiden Direktur, PT. WECON"
   authorAvatar: "/hadi-santoso.png"
 gallery:
   - "/dam_sustainable.png"
@@ -23,6 +23,6 @@ gallery:
   - "/construction_supervision.png"
 ---
 
-The Merangin Hydroelectric Power Plant utilizes Lake Kerinci as an annual natural storage, paired with the Sanggaran Agung Regulatory Dam functioning as a regulating dam with a height of 9 meters. Additionally, the daily artificial storage is achieved by utilizing the Kerinci Dam—a robust concrete gravity dam type standing at a height of 62.5 meters.
+Pembangkit Listrik Tenaga Air Merangin memanfaatkan Danau Kerinci sebagai waduk alami tahunan, dipadukan dengan Bendungan Pengatur Sanggaran Agung yang berfungsi sebagai bendungan pengatur dengan tinggi 9 meter. Selain itu, waduk buatan harian dicapai dengan memanfaatkan Bendungan Kerinci — jenis bendungan gravitasi beton yang kokoh dengan ketinggian 62,5 meter.
 
-To ensure seamless execution, PT. WECON contributes as the primary Project Management Consultant and **Water Engineering Consultant**. We actively bridge the communication and technical alignment between the job owner, PT. Kerinci Merangin Hidro, and the main contractor, PT. Bukaka Utama Teknik. This large-scale hydroelectric power plant is targeted to become fully operational in 2024, providing sustainable energy to the region.
+Untuk memastikan eksekusi yang mulus, PT. WECON berkontribusi sebagai Konsultan Manajemen Proyek utama dan **Konsultan Teknik Sumber Daya Air**. Kami secara aktif menjembatani komunikasi dan penyelarasan teknis antara pemilik pekerjaan, PT. Kerinci Merangin Hidro, dan kontraktor utama, PT. Bukaka Utama Teknik. Pembangkit listrik tenaga air skala besar ini ditargetkan beroperasi penuh pada tahun 2024, menyediakan energi berkelanjutan bagi kawasan tersebut.
