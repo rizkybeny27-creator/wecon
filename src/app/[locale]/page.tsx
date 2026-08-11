@@ -8,10 +8,11 @@ import dynamic from 'next/dynamic';
 
 const ProcessSection = dynamic(() => import('@/components/ProcessSection'), { ssr: true });
 
-export default async function Home({ params }: { params: { locale: string } }) {
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   const t = await getTranslations('Footer');
   const tHome = await getTranslations('HomePage');
-  const latestBlogs = getAllPosts('blog', params.locale).slice(0, 2);
+  const latestBlogs = getAllPosts('blog', locale).slice(0, 2);
 
   return (
     <main className="flex flex-col min-h-screen">

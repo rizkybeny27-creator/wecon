@@ -48,7 +48,7 @@ export default function LanguageSwitcher({ className = "" }: { className?: strin
       </button>
 
       {isOpen && (
-        <div className="absolute top-full mt-2 right-0 bg-white border border-black/5 rounded-md shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] py-1.5 min-w-[100px] z-50 flex flex-col overflow-hidden">
+        <div className="absolute lg:top-full lg:mt-2 lg:bottom-auto bottom-full mb-2 left-0 w-[120px] bg-white rounded-lg shadow-lg border border-black/5 py-1 z-50 flex flex-col overflow-hidden">
           {LOCALES.map((l) => (
             <button
               key={l.code}
