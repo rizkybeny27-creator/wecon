@@ -1,34 +1,34 @@
 ---
-title: "Panduan Lengkap Perijinan Pengalihan Air Sungai di Indonesia"
-date: "August 05, 2026"
+title: "印尼河水导流许可完整指南"
+date: "2026-08-05"
 author: "Gani"
-category: "Industry Insights"
-excerpt: "Proses pengalihan aliran air sungai untuk keperluan konstruksi bendungan memerlukan tahapan perizinan yang ketat sesuai regulasi pemerintah."
+category: "行业洞察"
+excerpt: "用于水坝建设的河水导流过程需要根据政府法规经过严格的许可阶段。"
 image: "/river_diversion.png"
 ---
 
-**Perijinan Pengalihan Air Sungai** (atau *river diversion permit*) adalah persetujuan resmi dari otoritas pengelola sumber daya air (seperti Balai Wilayah Sungai/BWS) yang wajib dimiliki sebelum kontraktor membelokkan aliran sungai alami untuk keperluan konstruksi bendungan, jembatan, atau infrastruktur air lainnya. 
+**河水导流许可**（或*河流导流许可*）是水资源管理机构（如河流流域组织/BWS）的官方批准，在承包商改变自然河水流向以进行水坝、桥梁或其他水利基础设施建设之前，必须获得该批准。
 
-Tanpa izin pengalihan ini, area tapak bendungan utama tidak akan bisa dikeringkan dengan aman dan legal untuk memulai pekerjaan pondasi. 
+如果没有这项导流许可，主坝址区域就无法安全、合法地进行排水以开始基础工作。
 
-Berikut adalah panduan lengkap mengenai tahapan perijinan pengalihan air sungai di Indonesia.
+以下是印尼河水导流许可各阶段的完整指南。
 
-## 1. Persyaratan Administratif dan Legalitas
-Sebelum mengajukan izin teknis, pemrakarsa proyek harus memastikan bahwa proyek tersebut masuk dalam Rencana Tata Ruang Wilayah (RTRW) dan memiliki izin lokasi. Kelengkapan dokumen dasar ini menjadi pintu gerbang bagi proses evaluasi teknis.
+## 1. 行政和合法性要求
+在申请技术许可之前，项目发起人必须确保该项目已纳入区域空间规划（RTRW）并拥有选址许可。这些基本文件的完整性是技术评估过程的门户。
 
-## 2. Kajian Hidrologi dan Desain Hidrolika
-Pemerintah akan meminta dokumen teknis yang komprehensif. Dokumen ini harus membuktikan bahwa desain pengalihan air (baik melalui *conduit*, *tunnel*, maupun saluran terbuka) memiliki kapasitas yang cukup.
-- **Analisis Debit Banjir:** Perhitungan debit banjir rancangan (misalnya periode ulang 25 atau 50 tahun) saat masa konstruksi.
-- **Desain Cofferdam:** Desain tanggul penutup (*cofferdam*) yang aman agar tidak jebol dan memicu banjir bandang di hilir.
+## 2. 水文研究和水力设计
+政府将要求提供全面的技术文件。这些文件必须证明导流设计（无论是通过*管道*、*隧道*还是明渠）具有足够的容量。
+- **洪水流量分析：** 施工期间设计洪水流量（例如，25 年或 50 年一遇）的计算。
+- **围堰设计：** 安全的封堵路堤（*围堰*）设计，使其不会决堤并引发下游山洪。
 
-## 3. AMDAL (Analisis Mengenai Dampak Lingkungan)
-Sungai adalah ekosistem hidup. Memindahkan jalurnya berarti mengubah habitat biota air secara signifikan. 
-Persetujuan AMDAL wajib mencakup:
-- Rencana mitigasi kelestarian ikan endemik.
-- Pengelolaan tingkat sedimentasi dan kekeruhan air (*Total Suspended Solids*) selama proses penutupan sungai.
-- Pemeliharaan pasokan air irigasi untuk masyarakat di hilir.
+## 3. AMDAL（环境影响分析）
+河流是一个活的生态系统。改变其路线意味着显著改变水生生物的栖息地。
+AMDAL 批准必须包括：
+- 保护特有鱼类的缓解计划。
+- 在河流封堵过程中管理沉积水平和水浊度（*总悬浮固体*）。
+- 维持下游社区的灌溉供水。
 
-## Mengapa Konsultan Berperan Penting?
-Mengurus perizinan ini membutuhkan keahlian rekayasa yang presisi. PT Wecon, sebagai *Water Engineering Consultant* dengan lebih dari 33 tahun pengalaman, telah membantu puluhan proyek menavigasi kerumitan teknis dan birokrasi ini. 
+## 为什么顾问发挥着重要作用？
+处理这些许可需要精确的工程专业知识。PT Wecon 作为一家拥有超过 33 年经验的*水利工程顾问*，已帮助数十个项目应对这种技术和官僚的复杂性。
 
-Dengan pemodelan *software* hidrolika yang canggih, tim kami dapat mensimulasikan debit banjir secara akurat untuk memastikan saluran pengelak didesain dengan tingkat keamanan maksimal dan siap disetujui oleh otoritas terkait.
+借助先进的水力*软件*建模，我们的团队可以准确模拟洪水流量，以确保导流渠道以最大的安全性进行设计，并准备好获得相关部门的批准。

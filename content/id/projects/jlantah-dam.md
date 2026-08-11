@@ -1,19 +1,19 @@
 ---
-title: "Jlantah Dam"
+title: "Bendungan Jlantah"
 date: "2023-01-01"
-excerpt: "This embankment dam has a capacity of 10.97 million m3 with a height of 70m. PT. WECON contributed from planning to construction."
+excerpt: "Bendungan urugan ini memiliki kapasitas 10,97 juta m3 dengan tinggi 70m. PT. WECON berkontribusi dari perencanaan hingga konstruksi."
 image: "/dam_sustainable.png"
-tag: "DAM Infrastructure"
+tag: "Infrastruktur Bendungan"
 location: "Indonesia"
-completedIn: "Ongoing"
-services: "Planning, Construction Supervision"
-client: "Confidential"
-projectStructure: "Embankment Dam"
-visibilitySettings: "Public"
+completedIn: "Sedang Berlangsung"
+services: "Perencanaan, Supervisi Konstruksi"
+client: "Rahasia"
+projectStructure: "Bendungan Urugan"
+visibilitySettings: "Publik"
 servicesConsultant: "PT. WECON"
 quote:
-  text: "PT. WECON contributed from planning to construction of this 70m high embankment dam, ensuring a capacity of 10.97 million m3."
-  author: "Project Manager"
+  text: "PT. WECON berkontribusi dari perencanaan hingga konstruksi bendungan urugan setinggi 70m ini, memastikan kapasitas 10,97 juta m3."
+  author: "Manajer Proyek"
   authorRole: "WECON"
   authorAvatar: "/avatar.png"
 gallery:
@@ -23,6 +23,6 @@ gallery:
   - "/construction_supervision.png"
 ---
 
-This dam is an embankment dam. The capacity of this dam is 10.97 million m3. The height of this dam is 70 m.
+Bendungan ini merupakan jenis bendungan urugan. Kapasitas bendungan ini adalah 10,97 juta m3. Ketinggian bendungan ini adalah 70 m.
 
-PT. WECON contributed from the initial planning stages all the way through to the construction of this dam, ensuring safety, structural integrity, and long-term water infrastructure reliability.
+PT. WECON berkontribusi dari tahap perencanaan awal hingga tahap konstruksi bendungan ini, memastikan keselamatan, integritas struktural, dan keandalan infrastruktur air jangka panjang.

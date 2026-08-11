@@ -1,20 +1,20 @@
 ---
-title: "Ladongi Dam by Top Water Engineering Consultant"
+title: "Bendungan Ladongi oleh Konsultan Teknik Air Terkemuka"
 date: "2021-11-01"
-excerpt: "Discover how PT. WECON, a leading Water Engineering Consultant, contributed to the planning, permitting, and supervision of the Ladongi Dam in Southeast Sulawesi."
+excerpt: "Temukan bagaimana PT. WECON, Konsultan Teknik Air terkemuka, berkontribusi dalam perencanaan, perizinan, dan pengawasan Bendungan Ladongi di Sulawesi Tenggara."
 image: "/ladongi.jpg"
-tag: "Dam / Water Infrastructure"
-location: "East Kolaka, Southeast Sulawesi, Indonesia"
+tag: "Bendungan / Infrastruktur Air"
+location: "Kolaka Timur, Sulawesi Tenggara, Indonesia"
 completedIn: "November 2021"
-services: "Planning, Permitting, Construction Supervision"
-client: "Governmental Ministry of Public Works and Housing"
-projectStructure: "Embankment Dam (66m height)"
-visibilitySettings: "Public"
+services: "Perencanaan, Perizinan, Supervisi Konstruksi"
+client: "Kementerian PUPR"
+projectStructure: "Bendungan Urugan (Tinggi 66m)"
+visibilitySettings: "Publik"
 servicesConsultant: "PT. WECON"
 quote:
-  text: "As a premier water engineering consultant in Indonesia, PT. WECON ensures every structural detail of the Ladongi Dam meets the highest safety standards for long-term water security."
+  text: "Sebagai konsultan teknik air utama di Indonesia, PT. WECON memastikan setiap detail struktural Bendungan Ladongi memenuhi standar keamanan tertinggi untuk ketahanan air jangka panjang."
   author: "Ir. Hadi Santoso, MT"
-  authorRole: "President Director, PT. WECON"
+  authorRole: "Presiden Direktur, PT. WECON"
   authorAvatar: "/hadi-santoso.png"
 gallery:
   - "/dam_sustainable.png"
@@ -23,6 +23,6 @@ gallery:
   - "/construction_supervision.png"
 ---
 
-The Ladongi Dam was officially inaugurated by Indonesian President Joko Widodo in November 2021. With a total capacity of 45.945 million m³, it serves as a critical infrastructure piece for regional water management.
+Bendungan Ladongi diresmikan secara resmi oleh Presiden Indonesia Joko Widodo pada November 2021. Dengan kapasitas total 45,945 juta m³, bendungan ini berfungsi sebagai infrastruktur penting untuk pengelolaan air regional.
 
-Standing at a height of 66 meters from the deepest foundation, this massive structure is classified as an embankment dam. As a trusted **Water Engineering Consultant**, PT. WECON played a vital role in realizing this infrastructure. Our contribution to the Ladongi Dam project encompassed comprehensive planning, critical permitting processes, and meticulous supervising of the construction phases to guarantee engineering excellence.
+Berdiri setinggi 66 meter dari fondasi terdalam, struktur masif ini diklasifikasikan sebagai bendungan urugan. Sebagai **Konsultan Teknik Air** tepercaya, PT. WECON memainkan peran penting dalam mewujudkan infrastruktur ini. Kontribusi kami pada proyek Bendungan Ladongi mencakup perencanaan komprehensif, proses perizinan penting, dan pengawasan ketat terhadap fase konstruksi untuk menjamin keunggulan teknik.

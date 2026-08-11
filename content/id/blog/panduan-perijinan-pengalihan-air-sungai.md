@@ -1,8 +1,8 @@
 ---
 title: "Panduan Lengkap Perijinan Pengalihan Air Sungai di Indonesia"
-date: "August 05, 2026"
+date: "2026-08-05"
 author: "Gani"
-category: "Industry Insights"
+category: "Wawasan Industri"
 excerpt: "Proses pengalihan aliran air sungai untuk keperluan konstruksi bendungan memerlukan tahapan perizinan yang ketat sesuai regulasi pemerintah."
 image: "/river_diversion.png"
 ---

@@ -1,34 +1,34 @@
 ---
-title: "Panduan Lengkap Perijinan Pengalihan Air Sungai di Indonesia"
-date: "August 05, 2026"
+title: "Complete Guide to River Water Diversion Permitting in Indonesia"
+date: "2026-08-05"
 author: "Gani"
 category: "Industry Insights"
-excerpt: "Proses pengalihan aliran air sungai untuk keperluan konstruksi bendungan memerlukan tahapan perizinan yang ketat sesuai regulasi pemerintah."
+excerpt: "The process of diverting river water flow for dam construction requires strict permitting stages in accordance with government regulations."
 image: "/river_diversion.png"
 ---
 
-**Perijinan Pengalihan Air Sungai** (atau *river diversion permit*) adalah persetujuan resmi dari otoritas pengelola sumber daya air (seperti Balai Wilayah Sungai/BWS) yang wajib dimiliki sebelum kontraktor membelokkan aliran sungai alami untuk keperluan konstruksi bendungan, jembatan, atau infrastruktur air lainnya. 
+**River Water Diversion Permitting** (or *river diversion permit*) is official approval from the water resources management authority (such as the River Basin Organization/BWS) that is mandatory before a contractor can divert natural river flows for the construction of dams, bridges, or other water infrastructure. 
 
-Tanpa izin pengalihan ini, area tapak bendungan utama tidak akan bisa dikeringkan dengan aman dan legal untuk memulai pekerjaan pondasi. 
+Without this diversion permit, the main dam site area cannot be drained safely and legally to begin foundation work. 
 
-Berikut adalah panduan lengkap mengenai tahapan perijinan pengalihan air sungai di Indonesia.
+Here is a complete guide on the stages of river water diversion permitting in Indonesia.
 
-## 1. Persyaratan Administratif dan Legalitas
-Sebelum mengajukan izin teknis, pemrakarsa proyek harus memastikan bahwa proyek tersebut masuk dalam Rencana Tata Ruang Wilayah (RTRW) dan memiliki izin lokasi. Kelengkapan dokumen dasar ini menjadi pintu gerbang bagi proses evaluasi teknis.
+## 1. Administrative and Legality Requirements
+Before applying for a technical permit, the project initiator must ensure that the project is included in the Regional Spatial Plan (RTRW) and has a location permit. The completeness of these basic documents is the gateway to the technical evaluation process.
 
-## 2. Kajian Hidrologi dan Desain Hidrolika
-Pemerintah akan meminta dokumen teknis yang komprehensif. Dokumen ini harus membuktikan bahwa desain pengalihan air (baik melalui *conduit*, *tunnel*, maupun saluran terbuka) memiliki kapasitas yang cukup.
-- **Analisis Debit Banjir:** Perhitungan debit banjir rancangan (misalnya periode ulang 25 atau 50 tahun) saat masa konstruksi.
-- **Desain Cofferdam:** Desain tanggul penutup (*cofferdam*) yang aman agar tidak jebol dan memicu banjir bandang di hilir.
+## 2. Hydrology Study and Hydraulics Design
+The government will request comprehensive technical documents. These documents must prove that the water diversion design (whether through a *conduit*, *tunnel*, or open channel) has sufficient capacity.
+- **Flood Discharge Analysis:** Calculation of design flood discharge (e.g., 25 or 50 year return period) during the construction period.
+- **Cofferdam Design:** The design of a secure closure embankment (*cofferdam*) so that it does not breach and trigger flash floods downstream.
 
-## 3. AMDAL (Analisis Mengenai Dampak Lingkungan)
-Sungai adalah ekosistem hidup. Memindahkan jalurnya berarti mengubah habitat biota air secara signifikan. 
-Persetujuan AMDAL wajib mencakup:
-- Rencana mitigasi kelestarian ikan endemik.
-- Pengelolaan tingkat sedimentasi dan kekeruhan air (*Total Suspended Solids*) selama proses penutupan sungai.
-- Pemeliharaan pasokan air irigasi untuk masyarakat di hilir.
+## 3. AMDAL (Environmental Impact Analysis)
+A river is a living ecosystem. Changing its course means significantly altering the habitat of aquatic biota. 
+AMDAL approval must include:
+- Mitigation plans for the preservation of endemic fish.
+- Management of sedimentation levels and water turbidity (*Total Suspended Solids*) during the river closure process.
+- Maintenance of irrigation water supply for downstream communities.
 
-## Mengapa Konsultan Berperan Penting?
-Mengurus perizinan ini membutuhkan keahlian rekayasa yang presisi. PT Wecon, sebagai *Water Engineering Consultant* dengan lebih dari 33 tahun pengalaman, telah membantu puluhan proyek menavigasi kerumitan teknis dan birokrasi ini. 
+## Why Do Consultants Play an Important Role?
+Processing these permits requires precise engineering expertise. PT Wecon, as a *Water Engineering Consultant* with over 33 years of experience, has helped dozens of projects navigate this technical and bureaucratic complexity. 
 
-Dengan pemodelan *software* hidrolika yang canggih, tim kami dapat mensimulasikan debit banjir secara akurat untuk memastikan saluran pengelak didesain dengan tingkat keamanan maksimal dan siap disetujui oleh otoritas terkait.
+With advanced hydraulic *software* modeling, our team can simulate flood discharges accurately to ensure diversion channels are designed with maximum safety and are ready to be approved by relevant authorities.
