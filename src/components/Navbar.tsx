@@ -12,6 +12,7 @@ export default function Navbar({ theme = 'dark' }: { theme?: 'dark' | 'light' })
   const pillBg = isLight ? "bg-black/5 border-black/10" : "bg-black/20 border-white/10";
   const linkText = isLight ? "text-black/70 hover:text-black hover:bg-black/5" : "text-white/80 hover:text-white hover:bg-white/10";
   const btnBg = isLight ? "bg-black text-white hover:bg-black/80" : "bg-white text-black hover:bg-white/90";
+  const outlineBtn = isLight ? "border border-black/20 text-black hover:bg-black/5" : "border border-white/20 text-white hover:bg-white/10";
 
   return (
     <nav 
@@ -50,12 +51,12 @@ export default function Navbar({ theme = 'dark' }: { theme?: 'dark' | 'light' })
       
       {/* Right Button & Switcher */}
       <div className="hidden md:flex items-center gap-4">
+        <div className="flex items-center">
+           <LanguageSwitcher className={`px-4 py-2.5 rounded-md font-mono font-bold text-[10px] tracking-widest uppercase transition-colors inline-block ${outlineBtn}`} />
+        </div>
         <Link href="https://wa.me/6281234878660" className={`px-6 py-2.5 rounded-md font-mono font-bold text-[10px] tracking-widest uppercase transition-colors inline-block ${btnBg}`}>
           {t('contact_us')}
         </Link>
-        <div className="flex items-center">
-           <LanguageSwitcher className={`px-4 py-2.5 rounded-md font-mono font-bold text-[10px] tracking-widest uppercase transition-colors inline-block ${btnBg}`} />
-        </div>
       </div>
     </nav>
   );
