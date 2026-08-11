@@ -1,14 +1,15 @@
 import { getPostData, getAllPosts } from '@/lib/markdown';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
+import { getTranslations } from "next-intl/server";
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 
 import Navbar from '@/components/Navbar';
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export async function generateMetadata({ params }: { params: Promise<{ slug: string, locale: string }> }) {
+  const { slug, locale } = await params;
   try {
-    const project = await getPostData('projects', slug);
+    const project = await getPostData('projects', slug, locale);
     return {
       title: `${project.title} - Projects - PT. WECON`,
       description: project.excerpt,
@@ -18,11 +19,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 }
 
-export default async function ProjectDetail({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function ProjectDetail({ params }: { params: Promise<{ slug: string, locale: string }> }) {
+  const { slug, locale } = await params;
+  const t = await getTranslations('Footer');
   let project;
   try {
-    project = await getPostData('projects', slug);
+    project = await getPostData('projects', slug, locale);
   } catch (e) {
     notFound();
   }
@@ -197,10 +199,10 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             
             <div className="relative z-10 mt-8">
                <h2 className="text-[36px] md:text-[46px] lg:text-[54px] font-heading font-medium leading-[1.1] tracking-tight text-white mb-8">
-                  Explore how Wecon can bring your<br className="hidden md:block" /> next development to life.
+                  {t('cta_title')}
                </h2>
                <Link href="https://wa.me/6281234878660" className="inline-flex items-center gap-2 bg-white text-black px-6 py-4 rounded-[6px] text-[10px] font-mono font-bold tracking-[0.15em] uppercase hover:bg-white/90 transition-colors">
-                  CONTACT US <span className="font-sans text-[14px] leading-none -mt-0.5">↗</span>
+                  {t('contact_us')} <span className="font-sans text-[14px] leading-none -mt-0.5">↗</span>
                </Link>
             </div>
          </div>
@@ -213,26 +215,26 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
                      <Image src="/logo-white.png" alt="PT Wecon" width={110} height={22} className="h-[22px] w-auto object-contain" />
                   </div>
                   <p className="text-[#888888] text-[13px] leading-[1.6] max-w-[280px] mb-8">
-                     Partner with us to turn strategic ambition into measurable business results.
+                     {t('partner_text')}
                   </p>
                   <Link href="https://wa.me/6281234878660" className="inline-flex items-center gap-2 bg-white text-black px-5 py-3.5 rounded-md text-[10px] font-bold tracking-widest uppercase hover:bg-white/90 transition-colors">
-                     CONTACT US <span className="font-sans text-[14px] leading-none -mt-0.5">↗</span>
+                     {t('contact_us')} <span className="font-sans text-[14px] leading-none -mt-0.5">↗</span>
                   </Link>
                </div>
                
                <div className="md:col-span-3 md:col-start-8 lg:col-span-2 lg:col-start-9">
-                  <h4 className="text-[10px] font-mono tracking-[0.15em] uppercase text-[#ffffff] mb-6 font-semibold">MAIN PAGES</h4>
+                  <h4 className="text-[10px] font-mono tracking-[0.15em] uppercase text-[#ffffff] mb-6 font-semibold">{t('main_pages')}</h4>
                   <ul className="flex flex-col gap-4 text-[13px] text-[#888888]">
-                     <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+                     <li><Link href="/" className="hover:text-white transition-colors">{t('home')}</Link></li>
                      <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
                      <li><Link href="/projects" className="hover:text-white transition-colors">Projects</Link></li>
                      <li><Link href="/blog" className="hover:text-white transition-colors">Blogs</Link></li>
-                     <li><Link href="https://wa.me/6281234878660" className="hover:text-white transition-colors">Contact</Link></li>
+                     <li><Link href="https://wa.me/6281234878660" className="hover:text-white transition-colors">{t('contact')}</Link></li>
                   </ul>
                </div>
                
                <div className="md:col-span-4 md:col-start-11 lg:col-span-2 lg:col-start-11">
-                  <h4 className="text-[10px] font-mono tracking-[0.15em] uppercase text-[#ffffff] mb-6 font-semibold">CONTACT</h4>
+                  <h4 className="text-[10px] font-mono tracking-[0.15em] uppercase text-[#ffffff] mb-6 font-semibold">{t('contact')}</h4>
                   <ul className="flex flex-col gap-4 text-[13px] text-[#888888]">
                      <li><a href="mailto:hello@wecon.com" className="hover:text-white transition-colors">hello@wecon.com</a></li>
                      <li><a href="tel:+6281234878660" className="hover:text-white transition-colors">+62 812-3487-8660</a></li>

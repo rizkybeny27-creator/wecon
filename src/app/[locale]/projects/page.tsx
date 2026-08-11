@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import { getAllPosts } from '@/lib/markdown';
 
@@ -7,8 +7,9 @@ export const metadata = {
   description: 'Explore featured water resources engineering projects by PT. WECON.',
 };
 
-export default function ProjectsList() {
-  const projects = getAllPosts('projects');
+export default async function ProjectsList({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const projects = getAllPosts('projects', locale);
 
   return (
     <main className="min-h-screen bg-wecon-light pt-32 pb-24 text-wecon-dark">

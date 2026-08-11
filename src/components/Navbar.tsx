@@ -1,8 +1,11 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import React from "react";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "./LanguageSwitcher";
 import Image from "next/image";
 
 export default function Navbar({ theme = 'dark' }: { theme?: 'dark' | 'light' }) {
+  const t = useTranslations('Navbar');
   const isLight = theme === 'light';
 
   const textColor = isLight ? "text-black" : "text-white";
@@ -32,24 +35,27 @@ export default function Navbar({ theme = 'dark' }: { theme?: 'dark' | 'light' })
       {/* Center Links */}
       <div className={`hidden lg:flex items-center gap-1 backdrop-blur-md rounded-full p-1 border ${pillBg}`}>
         <Link href="/#about" className={`px-4 py-2 rounded-full text-[10px] font-mono tracking-widest transition-colors uppercase ${linkText}`}>
-          About
+          {t('about')}
         </Link>
         <Link href="/#expertise" className={`px-4 py-2 rounded-full text-[10px] font-mono tracking-widest transition-colors uppercase ${linkText}`}>
-          Our Expertise
+          {t('expertise')}
         </Link>
         <Link href="/projects" className={`px-4 py-2 rounded-full text-[10px] font-mono tracking-widest transition-colors uppercase ${linkText}`}>
-          Projects
+          {t('projects')}
         </Link>
         <Link href="/blog" className={`px-4 py-2 rounded-full text-[10px] font-mono tracking-widest transition-colors uppercase ${linkText}`}>
-          Newsroom
+          {t('newsroom')}
         </Link>
       </div>
       
-      {/* Right Button */}
-      <div className="hidden md:block">
+      {/* Right Button & Switcher */}
+      <div className="hidden md:flex items-center gap-4">
         <Link href="https://wa.me/6281234878660" className={`px-6 py-2.5 rounded-md font-mono font-bold text-[10px] tracking-widest uppercase transition-colors inline-block ${btnBg}`}>
-          Contact Us
+          {t('contact_us')}
         </Link>
+        <div className="flex items-center">
+           <LanguageSwitcher className={`px-4 py-2.5 rounded-md font-mono font-bold text-[10px] tracking-widest uppercase transition-colors inline-block ${btnBg}`} />
+        </div>
       </div>
     </nav>
   );

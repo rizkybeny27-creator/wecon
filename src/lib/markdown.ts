@@ -33,8 +33,8 @@ export type PostData = {
   [key: string]: any;
 };
 
-export function getAllPosts(type: string): PostData[] {
-  const dir = path.join(contentDirectory, type);
+export function getAllPosts(type: string, locale: string = 'en'): PostData[] {
+  const dir = path.join(contentDirectory, locale, type);
   if (!fs.existsSync(dir)) return [];
   
   const fileNames = fs.readdirSync(dir);
@@ -59,8 +59,8 @@ export function getAllPosts(type: string): PostData[] {
   });
 }
 
-export async function getPostData(type: string, slug: string): Promise<PostData> {
-  const fullPath = path.join(contentDirectory, type, `${slug}.md`);
+export async function getPostData(type: string, slug: string, locale: string = 'en'): Promise<PostData> {
+  const fullPath = path.join(contentDirectory, locale, type, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
 

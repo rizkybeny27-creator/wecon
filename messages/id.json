@@ -1,0 +1,102 @@
+{
+  "Navbar": {
+    "about": "Tentang Kami",
+    "expertise": "Keahlian",
+    "projects": "Proyek",
+    "newsroom": "Berita",
+    "contact_us": "Hubungi Kami"
+  },
+  "Hero": {
+    "title": "PT Wecon: Konsultan Teknik Air Terpercaya di Indonesia Sejak 1973",
+    "subtitle": "Melampaui Teknologi. Selama lebih dari 50 tahun, kami telah bermitra dengan instansi pemerintah dan industri untuk merancang, mengawasi, dan mensertifikasi infrastruktur air — mulai dari bendungan terpanjang di Asia Tenggara hingga pembangkit listrik tenaga air nasional.",
+    "work_with_us": "KERJA SAMA",
+    "our_services": "LAYANAN KAMI"
+  },
+  "Footer": {
+    "cta_title": "Temukan bagaimana Wecon dapat mewujudkan pengembangan Anda selanjutnya.",
+    "partner_text": "Bermitra dengan kami untuk mengubah ambisi strategis menjadi hasil bisnis yang terukur.",
+    "main_pages": "HALAMAN UTAMA",
+    "contact": "KONTAK",
+    "home": "Beranda",
+    "contact_us": "HUBUNGI KAMI"
+  },
+  "HomePage": {
+    "About": {
+      "text": "PT Wecon adalah Konsultan Teknik Sumber Daya Air terkemuka di Indonesia, bersertifikat resmi untuk memberikan layanan konstruksi sipil khusus dan infrastruktur sumber daya air. Didirikan pada tahun 1973 dan dipimpin oleh Ir. Hadi Santoso, MT., kami memanfaatkan pengalaman puluhan tahun untuk mengerjakan desain bendungan, sistem irigasi, dan fasilitas PLTA. Rekam jejak kami tersebar di 7 provinsi, memastikan standar kualitas ISO pada Proyek Strategis Nasional yang diresmikan langsung oleh Presiden Republik Indonesia.",
+      "btn": "PELAJARI CERITA KAMI"
+    },
+    "Projects": {
+      "badge": "Proyek",
+      "title": "Proyek Unggulan Kami",
+      "desc": "Jelajahi proyek di mana rekayasa presisi bertemu dengan eksekusi yang andal — masing-masing dibangun untuk bertahan dalam kondisi dunia nyata."
+    },
+    "Experience": {
+      "title": "10 Tahun Pengalaman"
+    },
+    "Testimonial": {
+      "text": "Tim pengawas PT. WECON sangat teliti dan tajam secara teknis. Masukan mereka selama konstruksi memberi kami keyakinan bahwa bendungan akan memenuhi setiap persyaratan keselamatan"
+    },
+    "Services": {
+      "badge": "Layanan Kami",
+      "title": "Keahlian mendalam di sektor yang penting",
+      "items": {
+        "s1_title": "Survei Teknis & Investigasi",
+        "s1_desc": "Pengumpulan data lapangan komprehensif yang membentuk dasar teknis untuk setiap keputusan desain dan perizinan.",
+        "s2_title": "Desain Rekayasa",
+        "s2_desc": "Desain teknik detail dan perencanaan arsitektur untuk infrastruktur air dan sipil, dari konsep hingga gambar siap bangun.",
+        "s3_title": "Supervisi Konstruksi & Manajemen Proyek",
+        "s3_desc": "Pengawasan fase penuh untuk memastikan proyek dikerjakan dengan aman, tepat waktu, dan sesuai standar teknik bersertifikat.",
+        "s4_title": "Geologi, Pertambangan & Solusi Digital",
+        "s4_desc": "Investigasi geologi khusus yang dipasangkan dengan alat digital yang mendukung pengambilan keputusan berbasis data."
+      }
+    },
+    "Process": {
+      "badge": "Proses Kami",
+      "title": "Bagaimana kami memberikan setiap proyek",
+      "desc": "Metodologi empat fase yang terbukti dibangun untuk pembangunan yang kompleks — dari brief pertama hingga serah terima akhir, tidak ada yang ditinggalkan secara kebetulan.",
+      "steps": {
+        "step1_title": "Penemuan & Penilaian Situs",
+        "step1_desc": "Setiap proyek dimulai dengan pengumpulan data dan investigasi lapangan — survei topografi, hidrologi, dan geoteknik yang menentukan kondisi lokasi, risiko, dan batasan desain sebelum satu gambar pun dibuat.",
+        "step2_title": "Desain Rekayasa",
+        "step2_desc": "Insinyur kami menerjemahkan data lapangan menjadi desain terperinci dan siap bangun — untuk bendungan, sistem irigasi, infrastruktur tenaga air, dan fasilitas pendukung — yang ditinjau terhadap standar keselamatan dan peraturan nasional.",
+        "step3_title": "Supervisi Konstruksi",
+        "step3_desc": "Tim pengawas di lokasi memantau kualitas konstruksi, jadwal, dan biaya, berkoordinasi langsung dengan kontraktor dan pemilik proyek untuk menjaga pelaksanaan selaras dengan desain yang disetujui.",
+        "step4_title": "Sertifikasi & Serah Terima",
+        "step4_desc": "Tinjauan teknis akhir, sertifikasi keamanan bendungan, dan pemrosesan izin memastikan infrastruktur yang selesai memenuhi persyaratan peraturan sebelum serah terima resmi kepada pemilik."
+      }
+    },
+    "Stats": {
+      "badge": "Dampak",
+      "title": "Angka berbicara sendiri",
+      "desc": "Dibangun di atas pengalaman puluhan tahun yang terbukti, memberikan teknik presisi untuk infrastruktur paling kritis di Indonesia.",
+      "stat1_title": "Infrastruktur Air",
+      "stat1_desc": "Berhasil dirancang dan diawasi di berbagai wilayah.",
+      "stat2_title": "Proyek Strategis Nasional",
+      "stat2_desc": "Diresmikan langsung oleh Presiden Republik Indonesia.",
+      "stat3_title": "Provinsi",
+      "stat3_desc": "Beroperasi aktif di 7 provinsi di Indonesia.",
+      "stat4_title": "Penghargaan & Sertifikasi",
+      "stat4_desc": "Diakui untuk keunggulan teknik dan standar kualitas."
+    },
+    "Blog": {
+      "badge": "Ruang Berita",
+      "title": "Wawasan & Pembaruan Industri",
+      "btn": "Lihat Semua Berita"
+    },
+    "Contact": {
+      "badge": "Hubungi Kami",
+      "title": "Siap membangun sesuatu yang bertahan lama?",
+      "desc": "Baik itu proyek perumahan, ruang komersial, atau renovasi, kami di sini untuk mewujudkan visi Anda—dengan kualitas, kejelasan, dan pengiriman tepat waktu.",
+      "form_title": "Mari bicara tentang tujuan Anda",
+      "form_desc": "Isi formulir di bawah ini dan kantor regional terdekat kami akan menghubungi Anda dalam 24 jam.",
+      "name": "Nama",
+      "email": "Email",
+      "address": "Alamat",
+      "service": "Anda tertarik pada",
+      "message": "Pesan",
+      "newsletter": "Ya, saya ingin menerima pembaruan produk dan wawasan dari Wecon. Berhenti berlangganan kapan saja.",
+      "submit": "Kirim Pertanyaan",
+      "select_service": "Pilih layanan..."
+    }
+  }
+}

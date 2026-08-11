@@ -2,13 +2,12 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
-const processSteps = [
+const processIcons = [
   {
     id: 1,
-    title: "Discovery & Site Assessment",
     phase: "PHASE 01",
-    desc: "Every project begins with data collection and field investigation — topographic, hydrological, and geotechnical surveys that define site conditions, risks, and design constraints before a single drawing is made.",
     image: "/process-1.jpg",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -18,9 +17,7 @@ const processSteps = [
   },
   {
     id: 2,
-    title: "Engineering Design",
     phase: "PHASE 02",
-    desc: "Our engineers translate field data into detailed, construction-ready designs — for dams, irrigation systems, hydropower infrastructure, and supporting facilities — reviewed against national safety and regulatory standards.",
     image: "/process-2.jpg",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -30,9 +27,7 @@ const processSteps = [
   },
   {
     id: 3,
-    title: "Construction Supervision",
     phase: "PHASE 03",
-    desc: "On-site supervision teams monitor construction quality, schedule, and cost, coordinating directly with contractors and project owners to keep execution aligned with the approved design.",
     image: "/process-3.jpg",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -42,9 +37,7 @@ const processSteps = [
   },
   {
     id: 4,
-    title: "Certification & Handover",
     phase: "PHASE 04",
-    desc: "Final technical review, dam safety certification, and permit processing ensure the completed infrastructure meets regulatory requirements before formal handover to the owner.",
     image: "/process-4.jpg",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -55,6 +48,17 @@ const processSteps = [
 ];
 
 export default function ProcessSection() {
+  const t = useTranslations('HomePage.Process.steps');
+  
+  const processSteps = processIcons.map((item, index) => ({
+    id: item.id,
+    title: t(`step${item.id}_title`),
+    phase: item.phase,
+    desc: t(`step${item.id}_desc`),
+    image: item.image,
+    icon: item.icon
+  }));
+
   const [activeTab, setActiveTab] = useState(1);
   const activeData = processSteps.find((step) => step.id === activeTab)!;
 

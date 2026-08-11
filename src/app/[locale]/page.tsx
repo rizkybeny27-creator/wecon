@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import HeroReveal from "@/components/HeroReveal";
@@ -6,7 +7,10 @@ import dynamic from 'next/dynamic';
 
 const ProcessSection = dynamic(() => import('@/components/ProcessSection'), { ssr: true });
 
-export default function Home() {
+export default async function Home() {
+  const t = await getTranslations('Footer');
+  const tHome = await getTranslations('HomePage');
+
   return (
     <main className="flex flex-col min-h-screen">
       {/* 1. Navigation */}
@@ -26,11 +30,11 @@ export default function Home() {
       <section id="about" className="bg-wecon-light text-wecon-dark py-16 md:py-24">
         <div className="container mx-auto px-6 md:px-12 max-w-[1440px]">
           <p className="text-[24px] md:text-[32px] lg:text-[36px] font-sans font-medium leading-[1.4] tracking-tight max-w-[1300px] text-black">
-            PT Wecon is a leading Water Engineering Consultant in Indonesia, officially certified to deliver specialized civil construction and water resources infrastructure. Founded in 1973 and led by Ir. Hadi Santoso, MT., we leverage decades of hands-on expertise to execute dam designs, irrigation systems, and hydropower facilities. Our track record spans across 7 provinces, securing ISO-standard quality assurance on National Strategic Projects inaugurated directly by the President of the Republic of Indonesia.
+            {tHome('About.text')}
           </p>
           <div className="mt-12">
             <Link href="/about" className="inline-block bg-[#e5e5e5] border border-black/5 px-5 py-2.5 rounded-md text-[10px] font-mono font-bold tracking-widest uppercase hover:bg-black/10 transition-colors text-black/80">
-              LEARN OUR STORY
+              {tHome('About.btn')}
             </Link>
           </div>
         </div>
@@ -43,12 +47,12 @@ export default function Home() {
             <div>
               <div className="inline-flex items-center gap-2.5 bg-[#e4e4e4] px-4 py-2 rounded-full mb-10">
                 <div className="w-1.5 h-1.5 rounded-full bg-black/60"></div>
-                <span className="text-[10px] font-mono tracking-widest uppercase text-black/70">Projects</span>
+                <span className="text-[10px] font-mono tracking-widest uppercase text-black/70">{tHome('Projects.badge')}</span>
               </div>
-              <h2 className="text-[44px] md:text-[56px] font-heading leading-[1.05] tracking-tight text-[#222222]">Our Featured Projects</h2>
+              <h2 className="text-[44px] md:text-[56px] font-heading leading-[1.05] tracking-tight text-[#222222]">{tHome('Projects.title')}</h2>
             </div>
             <p className="text-black/60 max-w-[420px] text-lg leading-[1.6] pt-3">
-              Explore projects where precise engineering meets reliable execution — each one built to withstand real-world demands.
+              {tHome('Projects.desc')}
             </p>
           </div>
         </div>
@@ -116,7 +120,7 @@ export default function Home() {
       <section className="bg-wecon-light pb-24 md:pb-40 text-wecon-dark">
         <div className="container mx-auto px-6 md:px-12 max-w-[1440px] border-t border-black/10 pt-24">
           <div className="mb-16">
-            <h2 className="text-[36px] md:text-[48px] font-heading leading-[1.1] tracking-tight">10 Years of Experience</h2>
+            <h2 className="text-[36px] md:text-[48px] font-heading leading-[1.1] tracking-tight">{tHome('Experience.title')}</h2>
           </div>
           
           <div className="flex flex-col border-t border-black/10">
@@ -188,7 +192,7 @@ export default function Home() {
                 </div>
               </div>
               <h3 className="text-[28px] md:text-[36px] lg:text-[42px] font-heading text-white leading-[1.2] mb-12 tracking-tight">
-                PT. WECON&apos;s supervision team was thorough and technically sharp. Their input during construction gave us confidence the dam would meet every safety requirement
+                {tHome('Testimonial.text')}
               </h3>
               <div>
                 <p className="font-sans font-bold text-white text-[15px]">Priya Verma</p>
@@ -211,17 +215,17 @@ export default function Home() {
             <div className="xl:col-span-4 xl:sticky xl:top-32 self-start mb-8 xl:mb-0">
               <div className="inline-flex items-center gap-2.5 bg-[#e4e4e4] px-4 py-2 rounded-full mb-10">
                 <div className="w-1.5 h-1.5 rounded-full bg-black/60"></div>
-                <span className="text-[10px] font-mono tracking-widest uppercase text-black/70">Services We Provide</span>
+                <span className="text-[10px] font-mono tracking-widest uppercase text-black/70">{tHome('Services.badge')}</span>
               </div>
-              <h2 className="text-[44px] md:text-[56px] font-heading leading-[1.05] tracking-tight text-[#222222]">Deep expertise across the sectors that matter</h2>
+              <h2 className="text-[44px] md:text-[56px] font-heading leading-[1.05] tracking-tight text-[#222222]">{tHome('Services.title')}</h2>
             </div>
             
             <div className="xl:col-span-8 flex flex-col gap-6">
               {[
-                { title: "Technical Survey & Investigation", desc: "Comprehensive field data collection that forms the technical foundation for every design and permitting decision.", tags: ["TOPOGRAPHIC & TERRESTRIAL MAPPING", "HYDROGRAPHIC & BATHYMETRIC SURVEY", "HYDROLOGICAL & HYDROGEOLOGICAL SURVEY", "GEOTECHNICAL INVESTIGATION & LAB TESTING"], image: "/service_survey.png" },
-                { title: "Engineering Design", desc: "Detailed engineering design and architectural planning for water and civil infrastructure, from concept through construction-ready drawings.", tags: ["DETAILED ENGINEERING DESIGN", "RIVER, SWAMP & COASTAL AREA DESIGN", "CIVIL & ARCHITECTURAL DESIGN", "LANDSCAPE & INTERIOR DESIGN"], image: "/service_design.png" },
-                { title: "Construction Supervision & Project Management", desc: "Full-phase oversight to ensure projects are delivered safely, on schedule, and to certified engineering standards.", tags: ["DAM & RESERVOIR CONSTRUCTION SUPERVISION", "ROAD, BRIDGE & BUILDING SUPERVISION", "PROJECT SUPERVISION AND CONTROL", "CONSTRUCTION MANAGEMENT & HR PROVISION"], image: "/construction_supervision.png" },
-                { title: "Geology, Mining & Digital Solutions", desc: "Specialized geological investigation paired with digital tools that support data-driven decision-making.", tags: ["MINERAL & GEOTHERMAL EXPLORATION", "GEOLOGICAL & MINING DATA COMPILATION", "GIS DEVELOPMENT & SPATIAL DATA PROCESSING", "APPLICATION & SOFTWARE DEVELOPMENT"], image: "/service_geology.png" }
+                { title: tHome("Services.items.s1_title"), desc: tHome("Services.items.s1_desc"), tags: ["TOPOGRAPHIC & TERRESTRIAL MAPPING", "HYDROGRAPHIC & BATHYMETRIC SURVEY", "HYDROLOGICAL & HYDROGEOLOGICAL SURVEY", "GEOTECHNICAL INVESTIGATION & LAB TESTING"], image: "/service_survey.png" },
+                { title: tHome("Services.items.s2_title"), desc: tHome("Services.items.s2_desc"), tags: ["DETAILED ENGINEERING DESIGN", "RIVER, SWAMP & COASTAL AREA DESIGN", "CIVIL & ARCHITECTURAL DESIGN", "LANDSCAPE & INTERIOR DESIGN"], image: "/service_design.png" },
+                { title: tHome("Services.items.s3_title"), desc: tHome("Services.items.s3_desc"), tags: ["DAM & RESERVOIR CONSTRUCTION SUPERVISION", "ROAD, BRIDGE & BUILDING SUPERVISION", "PROJECT SUPERVISION AND CONTROL", "CONSTRUCTION MANAGEMENT & HR PROVISION"], image: "/construction_supervision.png" },
+                { title: tHome("Services.items.s4_title"), desc: tHome("Services.items.s4_desc"), tags: ["MINERAL & GEOTHERMAL EXPLORATION", "GEOLOGICAL & MINING DATA COMPILATION", "GIS DEVELOPMENT & SPATIAL DATA PROCESSING", "APPLICATION & SOFTWARE DEVELOPMENT"], image: "/service_geology.png" }
               ].map((service, idx) => (
                 <div key={idx} className="bg-white rounded-[24px] p-6 lg:p-12 flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-10 items-start">
                   <div className="lg:col-span-4 aspect-[4/3] w-full rounded-[16px] overflow-hidden bg-gray-100 relative">
@@ -252,12 +256,12 @@ export default function Home() {
             <div>
               <div className="inline-flex items-center gap-2.5 bg-[#252525] px-4 py-2 rounded-full mb-8">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#999999]"></div>
-                <span className="text-[10px] font-mono tracking-widest uppercase text-[#cccccc]">Our Process</span>
+                <span className="text-[10px] font-mono tracking-widest uppercase text-[#cccccc]">{tHome('Process.badge')}</span>
               </div>
-              <h2 className="text-[40px] md:text-[56px] font-heading leading-[1.1] tracking-tight text-white max-w-[500px]">How we deliver every project</h2>
+              <h2 className="text-[40px] md:text-[56px] font-heading leading-[1.1] tracking-tight text-white max-w-[500px]">{tHome('Process.title')}</h2>
             </div>
             <p className="text-white/60 max-w-[420px] text-lg leading-[1.6] pt-3">
-              A proven four-phase methodology built for complex builds — from first brief to final handover, nothing is left to chance.
+              {tHome('Process.desc')}
             </p>
           </div>
 
@@ -272,12 +276,12 @@ export default function Home() {
             <div>
               <div className="inline-flex items-center gap-2.5 bg-[#252525] px-4 py-2 rounded-full mb-8">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#999999]"></div>
-                <span className="text-[10px] font-mono tracking-widest uppercase text-[#cccccc]">Impact</span>
+                <span className="text-[10px] font-mono tracking-widest uppercase text-[#cccccc]">{tHome('Stats.badge')}</span>
               </div>
-              <h2 className="text-[40px] md:text-[56px] font-heading leading-[1.1] tracking-tight text-white max-w-[500px]">Numbers speak for themselves</h2>
+              <h2 className="text-[40px] md:text-[56px] font-heading leading-[1.1] tracking-tight text-white max-w-[500px]">{tHome('Stats.title')}</h2>
             </div>
             <p className="text-white/60 max-w-[420px] text-lg leading-[1.6] pt-3">
-              Built on decades of proven expertise, delivering precision engineering for Indonesia&apos;s most critical infrastructure projects.
+              {tHome('Stats.desc')}
             </p>
           </div>
 
@@ -285,29 +289,29 @@ export default function Home() {
             <div className="bg-[#1c1b1a] rounded-[32px] p-12 border border-white/[0.03] flex flex-col justify-between aspect-square md:aspect-auto md:h-[400px]">
                <h3 className="text-[80px] md:text-[100px] font-heading text-white leading-none tracking-tight">50+</h3>
                <div>
-                  <p className="text-white font-medium mb-2">Water Infrastructure</p>
-                  <p className="text-white/50 text-sm">Successfully designed and supervised across multiple regions.</p>
+                  <p className="text-white font-medium mb-2">{tHome('Stats.stat1_title')}</p>
+                  <p className="text-white/50 text-sm">{tHome('Stats.stat1_desc')}</p>
                </div>
             </div>
             <div className="bg-[#1c1b1a] rounded-[32px] p-12 border border-white/[0.03] flex flex-col justify-between aspect-square md:aspect-auto md:h-[400px]">
                <h3 className="text-[80px] md:text-[100px] font-heading text-white leading-none tracking-tight">2</h3>
                <div>
-                  <p className="text-white font-medium mb-2">National Strategic Projects</p>
-                  <p className="text-white/50 text-sm">Directly inaugurated by the President of the Republic of Indonesia.</p>
+                  <p className="text-white font-medium mb-2">{tHome('Stats.stat2_title')}</p>
+                  <p className="text-white/50 text-sm">{tHome('Stats.stat2_desc')}</p>
                </div>
             </div>
             <div className="bg-[#1c1b1a] rounded-[32px] p-12 border border-white/[0.03] flex flex-col justify-between aspect-square md:aspect-auto md:h-[400px]">
                <h3 className="text-[80px] md:text-[100px] font-heading text-white leading-none tracking-tight">7</h3>
                <div>
-                  <p className="text-white font-medium mb-2">Provinces</p>
-                  <p className="text-white/50 text-sm">Operating actively across 7 provinces in Indonesia.</p>
+                  <p className="text-white font-medium mb-2">{tHome('Stats.stat3_title')}</p>
+                  <p className="text-white/50 text-sm">{tHome('Stats.stat3_desc')}</p>
                </div>
             </div>
             <div className="bg-[#1c1b1a] rounded-[32px] p-12 border border-white/[0.03] flex flex-col justify-between aspect-square md:aspect-auto md:h-[400px]">
                <h3 className="text-[80px] md:text-[100px] font-heading text-white leading-none tracking-tight">10+</h3>
                <div>
-                  <p className="text-white font-medium mb-2">Awards & Certifications</p>
-                  <p className="text-white/50 text-sm">Recognized for engineering excellence and quality standards.</p>
+                  <p className="text-white font-medium mb-2">{tHome('Stats.stat4_title')}</p>
+                  <p className="text-white/50 text-sm">{tHome('Stats.stat4_desc')}</p>
                </div>
             </div>
           </div>
@@ -322,12 +326,12 @@ export default function Home() {
             <div>
               <div className="inline-flex items-center gap-2.5 bg-[#e4e4e4] px-4 py-2 rounded-full mb-10">
                 <div className="w-1.5 h-1.5 rounded-full bg-black/60"></div>
-                <span className="text-[10px] font-mono tracking-widest uppercase text-black/70">Newsroom</span>
+                <span className="text-[10px] font-mono tracking-widest uppercase text-black/70">{tHome('Blog.badge')}</span>
               </div>
-              <h2 className="text-[44px] md:text-[56px] font-heading leading-[1.05] tracking-tight text-[#222222]">Insights & Industry Updates</h2>
+              <h2 className="text-[44px] md:text-[56px] font-heading leading-[1.05] tracking-tight text-[#222222]">{tHome('Blog.title')}</h2>
             </div>
             <Link href="/blog" className="px-6 py-4 bg-white border border-black/10 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-gray-50 transition-colors text-black">
-               View All News
+               {tHome('Blog.btn')}
             </Link>
           </div>
           
@@ -369,43 +373,43 @@ export default function Home() {
             <div className="lg:pr-8">
               <div className="inline-flex items-center gap-2 bg-[#e4e4e4] px-3 py-1.5 rounded-full mb-8">
                 <div className="w-1.5 h-1.5 rounded-full bg-black/60"></div>
-                <span className="text-[10px] font-mono tracking-[0.2em] uppercase font-bold text-black/70">Get In Touch</span>
+                <span className="text-[10px] font-mono tracking-[0.2em] uppercase font-bold text-black/70">{tHome('Contact.badge')}</span>
               </div>
               <h2 className="text-[44px] md:text-[56px] font-heading leading-[1.05] tracking-tight text-[#1a1a1a] mb-6">
-                 Ready to build<br/>something<br/>that lasts?
+                 {tHome('Contact.title')}
               </h2>
               <p className="text-black/70 text-[15px] leading-[1.6] max-w-[380px]">
-                 Whether it&apos;s a residential project, commercial space, or renovation, we&apos;re here to bring your vision to life—with quality, clarity, and on-time delivery.
+                 {tHome('Contact.desc')}
               </p>
             </div>
             
             {/* Right Column (Form Card) */}
             <div className="bg-white rounded-[16px] p-8 md:p-12 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-black/5">
-               <h3 className="text-2xl font-bold font-sans text-black mb-2">Let&apos;s talk about your goals</h3>
+               <h3 className="text-2xl font-bold font-sans text-black mb-2">{tHome('Contact.form_title')}</h3>
                <p className="text-black/60 text-[13px] mb-8 leading-[1.6]">
-                  Fill out the form below and our nearest regional office will get back to you within 24 hours.
+                  {tHome('Contact.form_desc')}
                </p>
                
                <form className="flex flex-col gap-5">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                      <div className="flex flex-col gap-2">
-                        <label htmlFor="name" className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#555555]">Name</label>
+                        <label htmlFor="name" className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#555555]">{tHome('Contact.name')}</label>
                         <input id="name" type="text" className="bg-[#f5f5f5] rounded-[6px] px-4 py-3.5 w-full outline-none focus:ring-2 focus:ring-black/30 text-[13px] text-black" placeholder="Jane Smith" />
                      </div>
                      <div className="flex flex-col gap-2">
-                        <label htmlFor="email" className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#555555]">Email</label>
+                        <label htmlFor="email" className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#555555]">{tHome('Contact.email')}</label>
                         <input id="email" type="email" className="bg-[#f5f5f5] rounded-[6px] px-4 py-3.5 w-full outline-none focus:ring-2 focus:ring-black/30 text-[13px] text-black" placeholder="jane@framer.com" />
                      </div>
                   </div>
                   <div className="flex flex-col gap-2">
-                     <label htmlFor="address" className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#555555]">Address</label>
+                     <label htmlFor="address" className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#555555]">{tHome('Contact.address')}</label>
                      <input id="address" type="text" className="bg-[#f5f5f5] rounded-[6px] px-4 py-3.5 w-full outline-none focus:ring-2 focus:ring-black/30 text-[13px] text-black" placeholder="Jakarta, Indonesia" />
                   </div>
                   <div className="flex flex-col gap-2">
-                     <label htmlFor="service" className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#555555]">You are interested in</label>
+                     <label htmlFor="service" className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#555555]">{tHome('Contact.service')}</label>
                      <div className="relative">
                         <select id="service" defaultValue="" className="appearance-none bg-[#f5f5f5] rounded-[6px] px-4 py-3.5 w-full outline-none focus:ring-2 focus:ring-black/30 text-[13px] text-black cursor-pointer">
-                           <option value="" disabled>Select a service...</option>
+                           <option value="" disabled>{tHome('Contact.select_service')}</option>
                            <option value="survey">Topographic Survey</option>
                            <option value="design">Engineering Design</option>
                            <option value="supervision">Construction Supervision</option>
@@ -418,19 +422,19 @@ export default function Home() {
                      </div>
                   </div>
                   <div className="flex flex-col gap-2">
-                     <label htmlFor="message" className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#555555]">Message</label>
+                     <label htmlFor="message" className="text-[9px] font-mono font-bold uppercase tracking-[0.15em] text-[#555555]">{tHome('Contact.message')}</label>
                      <textarea id="message" rows={4} className="bg-[#f5f5f5] rounded-[6px] px-4 py-3.5 w-full outline-none focus:ring-2 focus:ring-black/30 resize-none text-[13px] text-black" placeholder="Write your message..." />
                   </div>
                   
                   <div className="flex items-start gap-3 mt-2">
                      <input id="newsletter" type="checkbox" className="mt-0.5 w-4 h-4 rounded-[4px] border-[#dddddd] bg-[#f5f5f5] checked:bg-black checked:border-black cursor-pointer appearance-none relative checked:after:content-['✓'] checked:after:text-white checked:after:text-[10px] checked:after:font-bold checked:after:absolute checked:after:inset-0 checked:after:flex checked:after:items-center checked:after:justify-center" />
                      <label htmlFor="newsletter" className="text-[#555555] text-[11px] leading-[1.6] cursor-pointer">
-                        Yes, I&apos;d like to receive product updates and insights from Wecon. Unsubscribe anytime.
+                        {tHome('Contact.newsletter')}
                      </label>
                   </div>
                   
                   <button type="submit" className="bg-[#151515] text-white w-full py-4 rounded-[6px] font-mono font-bold text-[10px] tracking-[0.15em] uppercase hover:bg-black/80 transition-colors mt-2 focus:ring-2 focus:ring-offset-2 focus:ring-black">
-                     Send Enquiry
+                     {tHome('Contact.submit')}
                   </button>
                </form>
             </div>
@@ -456,10 +460,10 @@ export default function Home() {
             
             <div className="relative z-10 mt-8">
                <h2 className="text-[36px] md:text-[46px] lg:text-[54px] font-heading font-medium leading-[1.1] tracking-tight text-white mb-8">
-                  Explore how Wecon can bring your<br className="hidden md:block" /> next development to life.
+                  {t('cta_title')}
                </h2>
                <Link href="https://wa.me/6281234878660" className="inline-flex items-center gap-2 bg-white text-black px-6 py-4 rounded-[6px] text-[10px] font-mono font-bold tracking-[0.15em] uppercase hover:bg-white/90 transition-colors">
-                  CONTACT US <span aria-hidden="true" className="font-sans text-[14px] leading-none -mt-0.5">↗</span>
+                  {t('contact_us')} <span aria-hidden="true" className="font-sans text-[14px] leading-none -mt-0.5">↗</span>
                </Link>
             </div>
          </div>
@@ -472,26 +476,26 @@ export default function Home() {
                      <Image src="/logo-white.png" alt="PT Wecon" width={110} height={22} className="h-[22px] w-auto object-contain" />
                   </div>
                   <p className="text-[#888888] text-[13px] leading-[1.6] max-w-[280px] mb-8">
-                     Partner with us to turn strategic ambition into measurable business results.
+                     {t('partner_text')}
                   </p>
                   <Link href="https://wa.me/6281234878660" className="inline-flex items-center gap-2 bg-white text-black px-5 py-3.5 rounded-md text-[10px] font-bold tracking-widest uppercase hover:bg-white/90 transition-colors">
-                     CONTACT US <span aria-hidden="true" className="font-sans text-[14px] leading-none -mt-0.5">↗</span>
+                     {t('contact_us')} <span aria-hidden="true" className="font-sans text-[14px] leading-none -mt-0.5">↗</span>
                   </Link>
                </div>
                
                <div className="md:col-span-3 md:col-start-8 lg:col-span-2 lg:col-start-9">
-                  <h4 className="text-[10px] font-mono tracking-[0.15em] uppercase text-[#ffffff] mb-6 font-semibold">MAIN PAGES</h4>
+                  <h4 className="text-[10px] font-mono tracking-[0.15em] uppercase text-[#ffffff] mb-6 font-semibold">{t('main_pages')}</h4>
                   <ul className="flex flex-col gap-4 text-[13px] text-[#888888]">
-                     <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+                     <li><Link href="/" className="hover:text-white transition-colors">{t('home')}</Link></li>
                      <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
                      <li><Link href="/projects" className="hover:text-white transition-colors">Projects</Link></li>
                      <li><Link href="/blog" className="hover:text-white transition-colors">Blogs</Link></li>
-                     <li><Link href="https://wa.me/6281234878660" className="hover:text-white transition-colors">Contact</Link></li>
+                     <li><Link href="https://wa.me/6281234878660" className="hover:text-white transition-colors">{t('contact')}</Link></li>
                   </ul>
                </div>
                
                <div className="md:col-span-4 md:col-start-11 lg:col-span-2 lg:col-start-11">
-                  <h4 className="text-[10px] font-mono tracking-[0.15em] uppercase text-[#ffffff] mb-6 font-semibold">CONTACT</h4>
+                  <h4 className="text-[10px] font-mono tracking-[0.15em] uppercase text-[#ffffff] mb-6 font-semibold">{t('contact')}</h4>
                   <ul className="flex flex-col gap-4 text-[13px] text-[#888888]">
                      <li><a href="mailto:hello@wecon.com" className="hover:text-white transition-colors">hello@wecon.com</a></li>
                      <li><a href="tel:+6281234878660" className="hover:text-white transition-colors">+62 812-3487-8660</a></li>
