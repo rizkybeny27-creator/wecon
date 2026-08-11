@@ -126,23 +126,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
           </div>
           
           <div className="flex flex-col border-t border-black/10">
-            {[
-              { category: "PERMIT & PREPARATION", desc: "Preparation and Operation Permit of Way Jepara and Way Rarem dam Lampung Province" },
-              { category: "CERTIFICATION", desc: "Final Certification of Cibeet Dam Design Bogor Regency West Java Province" },
-              { category: "REVIEW DESIGN", desc: "Review Design of Cijurey Dam Bogor Regency West Java Province" },
-              { category: "CERTIFICATION & STUDY", desc: "Certification and Seismic Study of Wairoro Dam North Maluku Province" },
-              { category: "DETAILED DESIGN", desc: "Detailed Design of Cidanau Dam Part 2 West Java Province" },
-              { category: "CERTIFICATION & STUDY", desc: "Design Certification and Advance Geological Study Surumana Dam, Donggala Regency Central Sulawesi Province" },
-              { category: "DETAILED DESIGN", desc: "Detailed Design of Cidanau Dam Part 1 West Java Province" },
-              { category: "DETAILED DESIGN", desc: "Detailed Engineering Design of Ngibio Dam North Maluku Province" },
-              { category: "ASSESSMENT & PREPARATION", desc: "Performance assessment and Preparation Dam/Reservoir/Other Reservoir Riau Island" },
-              { category: "POTENTIAL STUDY", desc: "Potensial Study of Dam in West Sumatera" },
-              { category: "FEASIBILITY STUDY", desc: "Feasibility Study Tohaki Reservoir Construction North Maluku Province" },
-              { category: "GEOLOGICAL STUDY", desc: "Advance Geological Study of Wuno Dam Sigi Regency Central Sulawesi Province" },
-              { category: "REVIEW DESIGN", desc: "Review of Sukodono Reservoir Detailed Design in Gresik Regency Part II East Java Province" },
-              { category: "DETAILED DESIGN", desc: "Detailed Engineering Design PLTM Mekarwangi (2x4,000 KW) Garut Regency East Java Province" },
-              { category: "DETAILED DESIGN", desc: "Detailed Design of Wuno Dam In Sigi Regency Central Sulawesi Province" }
-            ].map((exp, idx) => (
+            {(tHome.raw('Experience.items') as Array<{ category: string, desc: string }>).map((exp, idx) => (
               <div key={idx} className="grid grid-cols-1 md:grid-cols-12 py-8 md:py-10 border-b border-black/10 items-start gap-4 md:gap-12 hover:bg-black/[0.02] transition-colors px-4 -mx-4 md:px-8 md:-mx-8">
                 <div className="md:col-span-4 lg:col-span-3">
                   <span className="font-mono text-[11px] md:text-[12px] font-bold tracking-[0.15em] uppercase text-black">{exp.category}</span>

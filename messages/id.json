@@ -31,7 +31,69 @@
       "desc": "Jelajahi proyek di mana rekayasa presisi bertemu dengan eksekusi yang andal — masing-masing dibangun untuk bertahan dalam kondisi dunia nyata."
     },
     "Experience": {
-      "title": "10 Tahun Pengalaman"
+      "title": "10 Tahun Pengalaman",
+      "items": [
+        {
+          "category": "IZIN & PERSIAPAN",
+          "desc": "Izin Persiapan dan Operasi Bendungan Way Jepara dan Way Rarem Provinsi Lampung"
+        },
+        {
+          "category": "SERTIFIKASI",
+          "desc": "Sertifikasi Akhir Desain Bendungan Cibeet Kabupaten Bogor Provinsi Jawa Barat"
+        },
+        {
+          "category": "TINJAUAN DESAIN",
+          "desc": "Tinjauan Desain Bendungan Cijurey Kabupaten Bogor Provinsi Jawa Barat"
+        },
+        {
+          "category": "SERTIFIKASI & STUDI",
+          "desc": "Sertifikasi dan Studi Seismik Bendungan Wairoro Provinsi Maluku Utara"
+        },
+        {
+          "category": "DESAIN DETAIL",
+          "desc": "Desain Detail Bendungan Cidanau Bagian 2 Provinsi Jawa Barat"
+        },
+        {
+          "category": "SERTIFIKASI & STUDI",
+          "desc": "Sertifikasi Desain dan Studi Geologi Lanjutan Bendungan Surumana, Kabupaten Donggala Provinsi Sulawesi Tengah"
+        },
+        {
+          "category": "DESAIN DETAIL",
+          "desc": "Desain Detail Bendungan Cidanau Bagian 1 Provinsi Jawa Barat"
+        },
+        {
+          "category": "DESAIN DETAIL",
+          "desc": "Detail Engineering Design Bendungan Ngibio Provinsi Maluku Utara"
+        },
+        {
+          "category": "PENILAIAN & PERSIAPAN",
+          "desc": "Penilaian Kinerja dan Persiapan Bendungan/Waduk/Embung Lainnya di Kepulauan Riau"
+        },
+        {
+          "category": "STUDI POTENSI",
+          "desc": "Studi Potensi Bendungan di Sumatera Barat"
+        },
+        {
+          "category": "STUDI KELAYAKAN",
+          "desc": "Studi Kelayakan Pembangunan Waduk Tohaki Provinsi Maluku Utara"
+        },
+        {
+          "category": "STUDI GEOLOGI",
+          "desc": "Studi Geologi Lanjutan Bendungan Wuno Kabupaten Sigi Provinsi Sulawesi Tengah"
+        },
+        {
+          "category": "TINJAUAN DESAIN",
+          "desc": "Tinjauan Desain Detail Waduk Sukodono di Kabupaten Gresik Bagian II Provinsi Jawa Timur"
+        },
+        {
+          "category": "DESAIN DETAIL",
+          "desc": "Detail Engineering Design PLTM Mekarwangi (2x4.000 KW) Kabupaten Garut Provinsi Jawa Barat"
+        },
+        {
+          "category": "DESAIN DETAIL",
+          "desc": "Desain Detail Bendungan Wuno di Kabupaten Sigi Provinsi Sulawesi Tengah"
+        }
+      ]
     },
     "Testimonial": {
       "text": "Tim pengawas PT. WECON sangat teliti dan tajam secara teknis. Masukan mereka selama konstruksi memberi kami keyakinan bahwa bendungan akan memenuhi setiap persyaratan keselamatan"
