@@ -126,7 +126,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
           </div>
           
           <div className="flex flex-col border-t border-black/10">
-            {(tHome.raw('Experience.items') as Array<{ category: string, desc: string }>).map((exp, idx) => (
+            {Object.values(tHome.raw('Experience.items') as Record<string, { category: string, desc: string }>).map((exp, idx) => (
               <div key={idx} className="grid grid-cols-1 md:grid-cols-12 py-8 md:py-10 border-b border-black/10 items-start gap-4 md:gap-12 hover:bg-black/[0.02] transition-colors px-4 -mx-4 md:px-8 md:-mx-8">
                 <div className="md:col-span-4 lg:col-span-3">
                   <span className="font-mono text-[11px] md:text-[12px] font-bold tracking-[0.15em] uppercase text-black">{exp.category}</span>

@@ -32,68 +32,68 @@
     },
     "Experience": {
       "title": "10 Years of Experience",
-      "items": [
-        {
+      "items": {
+        "item_0": {
           "category": "PERMIT & PREPARATION",
           "desc": "Preparation and Operation Permit of Way Jepara and Way Rarem dam Lampung Province"
         },
-        {
+        "item_1": {
           "category": "CERTIFICATION",
           "desc": "Final Certification of Cibeet Dam Design Bogor Regency West Java Province"
         },
-        {
+        "item_2": {
           "category": "REVIEW DESIGN",
           "desc": "Review Design of Cijurey Dam Bogor Regency West Java Province"
         },
-        {
+        "item_3": {
           "category": "CERTIFICATION & STUDY",
           "desc": "Certification and Seismic Study of Wairoro Dam North Maluku Province"
         },
-        {
+        "item_4": {
           "category": "DETAILED DESIGN",
           "desc": "Detailed Design of Cidanau Dam Part 2 West Java Province"
         },
-        {
+        "item_5": {
           "category": "CERTIFICATION & STUDY",
           "desc": "Design Certification and Advance Geological Study Surumana Dam, Donggala Regency Central Sulawesi Province"
         },
-        {
+        "item_6": {
           "category": "DETAILED DESIGN",
           "desc": "Detailed Design of Cidanau Dam Part 1 West Java Province"
         },
-        {
+        "item_7": {
           "category": "DETAILED DESIGN",
           "desc": "Detailed Engineering Design of Ngibio Dam North Maluku Province"
         },
-        {
+        "item_8": {
           "category": "ASSESSMENT & PREPARATION",
           "desc": "Performance assessment and Preparation Dam/Reservoir/Other Reservoir Riau Island"
         },
-        {
+        "item_9": {
           "category": "POTENTIAL STUDY",
           "desc": "Potensial Study of Dam in West Sumatera"
         },
-        {
+        "item_10": {
           "category": "FEASIBILITY STUDY",
           "desc": "Feasibility Study Tohaki Reservoir Construction North Maluku Province"
         },
-        {
+        "item_11": {
           "category": "GEOLOGICAL STUDY",
           "desc": "Advance Geological Study of Wuno Dam Sigi Regency Central Sulawesi Province"
         },
-        {
+        "item_12": {
           "category": "REVIEW DESIGN",
           "desc": "Review of Sukodono Reservoir Detailed Design in Gresik Regency Part II East Java Province"
         },
-        {
+        "item_13": {
           "category": "DETAILED DESIGN",
           "desc": "Detailed Engineering Design PLTM Mekarwangi (2x4,000 KW) Garut Regency East Java Province"
         },
-        {
+        "item_14": {
           "category": "DETAILED DESIGN",
           "desc": "Detailed Design of Wuno Dam In Sigi Regency Central Sulawesi Province"
         }
-      ]
+      }
     },
     "Testimonial": {
       "text": "PT. WECON's supervision team was thorough and technically sharp. Their input during construction gave us confidence the dam would meet every safety requirement"

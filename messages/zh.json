@@ -32,68 +32,68 @@
     },
     "Experience": {
       "title": "10年经验",
-      "items": [
-        {
+      "items": {
+        "item_0": {
           "category": "许可证与准备",
           "desc": "楠榜省 Way Jepara 和 Way Rarem 大坝的准备和运营许可证"
         },
-        {
+        "item_1": {
           "category": "认证",
           "desc": "西爪哇省茂物县 Cibeet 大坝设计最终认证"
         },
-        {
+        "item_2": {
           "category": "设计审查",
           "desc": "西爪哇省茂物县 Cijurey 大坝设计审查"
         },
-        {
+        "item_3": {
           "category": "认证与研究",
           "desc": "北马鲁古省 Wairoro 大坝认证和地震研究"
         },
-        {
+        "item_4": {
           "category": "详细设计",
           "desc": "西爪哇省 Cidanau 大坝第二部分详细设计"
         },
-        {
+        "item_5": {
           "category": "认证与研究",
           "desc": "中苏拉威西省栋加拉县 Surumana 大坝设计认证和高级地质研究"
         },
-        {
+        "item_6": {
           "category": "详细设计",
           "desc": "西爪哇省 Cidanau 大坝第一部分详细设计"
         },
-        {
+        "item_7": {
           "category": "详细设计",
           "desc": "北马鲁古省 Ngibio 大坝详细工程设计"
         },
-        {
+        "item_8": {
           "category": "评估与准备",
           "desc": "廖内群岛大坝/水库/其他水库的性能评估和准备"
         },
-        {
+        "item_9": {
           "category": "潜力研究",
           "desc": "西苏门答腊省大坝潜力研究"
         },
-        {
+        "item_10": {
           "category": "可行性研究",
           "desc": "北马鲁古省 Tohaki 水库建设可行性研究"
         },
-        {
+        "item_11": {
           "category": "地质研究",
           "desc": "中苏拉威西省希吉县 Wuno 大坝高级地质研究"
         },
-        {
+        "item_12": {
           "category": "设计审查",
           "desc": "东爪哇省格雷西克县 Sukodono 水库详细设计第二部分审查"
         },
-        {
+        "item_13": {
           "category": "详细设计",
           "desc": "西爪哇省加鲁特县 Mekarwangi 微型水电站 (2x4,000 KW) 详细工程设计"
         },
-        {
+        "item_14": {
           "category": "详细设计",
           "desc": "中苏拉威西省希吉县 Wuno 大坝详细设计"
         }
-      ]
+      }
     },
     "Testimonial": {
       "text": "PT. WECON 的监理团队非常全面，技术敏锐。他们在施工期间的意见让我们相信大坝将满足所有安全要求"
