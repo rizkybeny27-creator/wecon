@@ -36,9 +36,98 @@ const overusedGrotesk = localFont({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://weconsultant.id';
+
 export const metadata: Metadata = {
-  title: "PT. WECON - Water Resources Engineering Consultant",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "PT. WECON - Water Resources Engineering Consultant",
+    template: "%s | PT. WECON"
+  },
   description: "PT Wecon is Indonesia's trusted Water Engineering Consultant since 1973. We specialize in dam design, irrigation, hydropower, and construction supervision.",
+  keywords: [
+    "PT WECON",
+    "Water Resources Engineering",
+    "Water Engineering Consultant Indonesia",
+    "Dam Design Consultant",
+    "Hydropower Engineering",
+    "Irrigation Engineering",
+    "Geotechnical Investigation",
+    "Topographic Survey",
+    "Konsultan Teknik Pengairan",
+    "Konsultan Bendungan Indonesia"
+  ],
+  authors: [{ name: "PT. WECON" }],
+  creator: "PT. WECON",
+  publisher: "PT. WECON",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  verification: {
+    google: "google55a6da75d36e63eb",
+  },
+  alternates: {
+    canonical: './',
+    languages: {
+      'en': '/en',
+      'id': '/id',
+      'zh': '/zh',
+      'x-default': '/en',
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    title: "PT. WECON - Water Resources Engineering Consultant",
+    description: "Indonesia's trusted Water Engineering Consultant since 1973. Specializing in dam design, irrigation, hydropower, and construction supervision.",
+    url: siteUrl,
+    siteName: "PT. WECON",
+    images: [
+      {
+        url: "/hero-bg.jpg",
+        width: 1200,
+        height: 630,
+        alt: "PT. WECON Water Resources Engineering",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PT. WECON - Water Resources Engineering Consultant",
+    description: "Indonesia's trusted Water Engineering Consultant since 1973.",
+    images: ["/hero-bg.jpg"],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "PT. WECON",
+  "url": siteUrl,
+  "logo": `${siteUrl}/logo-black.png`,
+  "image": `${siteUrl}/hero-bg.jpg`,
+  "description": "PT Wecon is Indonesia's trusted Water Engineering Consultant since 1973. Specializing in dam design, irrigation, hydropower, and construction supervision.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sidoarjo",
+    "addressRegion": "East Java",
+    "addressCountry": "ID"
+  },
+  "telephone": "+6281234878660",
+  "priceRange": "$$$"
 };
 
 export default async function RootLayout({
@@ -50,7 +139,7 @@ export default async function RootLayout({
 }) {
   const { locale } = await params;
   
-  if (!routing.locales.includes(locale as any)) {
+  if (!(routing.locales as readonly string[]).includes(locale)) {
     notFound();
   }
 
@@ -61,6 +150,12 @@ export default async function RootLayout({
       lang={locale}
       className={`${inter.variable} ${ibmPlexMono.variable} ${overusedGrotesk.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages}>
           {children}

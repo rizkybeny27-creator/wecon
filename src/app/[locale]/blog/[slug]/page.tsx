@@ -9,12 +9,39 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug, locale } = await params;
   try {
     const post = await getPostData('blog', slug, locale);
+    const title = `${post.title} - PT. WECON`;
+    const description = post.excerpt || `Blog article: ${post.title} by PT. WECON Water Resources Engineering Consultant.`;
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://weconsultant.id';
+    const canonicalUrl = `${siteUrl}/${locale}/blog/${slug}`;
+
     return {
-      title: `${post.title} - PT. WECON`,
-      description: post.excerpt,
+      title,
+      description,
+      alternates: {
+        canonical: canonicalUrl,
+        languages: {
+          en: `${siteUrl}/en/blog/${slug}`,
+          id: `${siteUrl}/id/blog/${slug}`,
+          zh: `${siteUrl}/zh/blog/${slug}`,
+        },
+      },
+      openGraph: {
+        title,
+        description,
+        url: canonicalUrl,
+        siteName: 'PT. WECON',
+        images: post.image ? [{ url: post.image.startsWith('http') ? post.image : `${siteUrl}${post.image}` }] : [],
+        type: 'article',
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title,
+        description,
+        images: post.image ? [post.image] : [],
+      },
     };
-  } catch (e) {
-    return { title: 'Not Found' };
+  } catch {
+    return { title: 'Not Found - PT. WECON' };
   }
 }
 
@@ -24,7 +51,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   let post;
   try {
     post = await getPostData('blog', slug, locale);
-  } catch (e) {
+  } catch {
     notFound();
   }
   
@@ -58,7 +85,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           {/* Left Column: Meta */}
           <div className="lg:col-span-3">
              <div className="text-[12px] uppercase tracking-wider font-mono text-black/40 mb-1">Written by</div>
-             <div className="text-[14px] font-medium">{post.author || 'Wecon Team'}</div>
+             <div className="text-[14px] font-medium">{(post.author as string) || 'Wecon Team'}</div>
           </div>
           
           {/* Right Column: Markdown Content */}
@@ -90,7 +117,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                        </h3>
                    </div>
                    <div className="flex justify-between items-end text-[12px] font-medium text-black/50 border-t border-black/5 pt-5 mt-auto">
-                       <div>By {related.author || 'Wecon Team'}</div>
+                       <div>By {(related.author as string) || 'Wecon Team'}</div>
                        <div>{related.date}</div>
                    </div>
                 </div>

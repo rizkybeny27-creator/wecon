@@ -50,7 +50,7 @@ const processIcons = [
 export default function ProcessSection() {
   const t = useTranslations('HomePage.Process.steps');
   
-  const processSteps = processIcons.map((item, index) => ({
+  const processSteps = processIcons.map((item) => ({
     id: item.id,
     title: t(`step${item.id}_title`),
     phase: item.phase,

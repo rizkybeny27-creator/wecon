@@ -1,4 +1,4 @@
-import { getPostData, getAllPosts } from '@/lib/markdown';
+import { getPostData } from '@/lib/markdown';
 import { Link } from '@/i18n/routing';
 import { getTranslations } from "next-intl/server";
 import { notFound } from 'next/navigation';
@@ -10,12 +10,39 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug, locale } = await params;
   try {
     const project = await getPostData('projects', slug, locale);
+    const title = `${project.title} - PT. WECON`;
+    const description = project.excerpt || `Project detail for ${project.title} by PT. WECON Water Resources Engineering Consultant.`;
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://weconsultant.id';
+    const canonicalUrl = `${siteUrl}/${locale}/projects/${slug}`;
+
     return {
-      title: `${project.title} - Projects - PT. WECON`,
-      description: project.excerpt,
+      title,
+      description,
+      alternates: {
+        canonical: canonicalUrl,
+        languages: {
+          en: `${siteUrl}/en/projects/${slug}`,
+          id: `${siteUrl}/id/projects/${slug}`,
+          zh: `${siteUrl}/zh/projects/${slug}`,
+        },
+      },
+      openGraph: {
+        title,
+        description,
+        url: canonicalUrl,
+        siteName: 'PT. WECON',
+        images: project.image ? [{ url: project.image.startsWith('http') ? project.image : `${siteUrl}${project.image}` }] : [],
+        type: 'article',
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title,
+        description,
+        images: project.image ? [project.image] : [],
+      },
     };
-  } catch (e) {
-    return { title: 'Not Found' };
+  } catch {
+    return { title: 'Not Found - PT. WECON' };
   }
 }
 
@@ -25,7 +52,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
   let project;
   try {
     project = await getPostData('projects', slug, locale);
-  } catch (e) {
+  } catch {
     notFound();
   }
 
@@ -111,7 +138,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             {project.quote && (
               <div className="bg-[#f0f0f0]/50 rounded-2xl p-8 md:p-12 mt-12 border border-black/5">
                 <p className="text-2xl md:text-3xl font-medium italic text-black leading-snug tracking-tight mb-8">
-                  "{project.quote.text}"
+                  &quot;{project.quote.text}&quot;
                 </p>
                 <div className="flex items-center gap-4">
                   {project.quote.authorAvatar && (

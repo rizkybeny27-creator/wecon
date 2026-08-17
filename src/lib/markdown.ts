@@ -30,7 +30,8 @@ export type PostData = {
     authorAvatar: string;
   };
   gallery?: string[];
-  [key: string]: any;
+  author?: string;
+  [key: string]: unknown;
 };
 
 export function getAllPosts(type: string, locale: string = 'en'): PostData[] {
@@ -72,6 +73,6 @@ export async function getPostData(type: string, slug: string, locale: string = '
   return {
     slug,
     contentHtml,
-    ...(matterResult.data as { [key: string]: any }),
+    ...(matterResult.data as Record<string, unknown>),
   } as PostData;
 }
