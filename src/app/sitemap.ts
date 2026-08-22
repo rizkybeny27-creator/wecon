@@ -5,19 +5,28 @@ import { routing } from '@/i18n/routing';
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://weconsultant.id';
   const locales = routing.locales;
-  const staticPages = ['', '/about', '/projects', '/blog'];
+  const staticPages = [
+    '', 
+    '/about', 
+    '/projects', 
+    '/blog',
+    '/services/river-diversion-permit',
+    '/services/water-intake-permit-sippa',
+    '/services/dam-construction-permit'
+  ];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
-  // Static pages for each locale
+  // Static & Service Pillar pages for each locale
   staticPages.forEach((page) => {
     locales.forEach((locale) => {
       const path = page === '' ? `/${locale}` : `/${locale}${page}`;
+      const isService = page.startsWith('/services/');
       sitemapEntries.push({
         url: `${siteUrl}${path}`,
         lastModified: new Date(),
-        changeFrequency: page === '' ? 'daily' : 'weekly',
-        priority: page === '' ? 1.0 : 0.8,
+        changeFrequency: page === '' ? 'daily' : isService ? 'weekly' : 'weekly',
+        priority: page === '' ? 1.0 : isService ? 0.9 : 0.8,
         alternates: {
           languages: {
             en: `${siteUrl}/en${page}`,

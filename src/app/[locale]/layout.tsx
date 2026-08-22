@@ -38,97 +38,97 @@ const overusedGrotesk = localFont({
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://weconsultant.id';
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: "PT. WECON - Water Resources Engineering Consultant",
-    template: "%s | PT. WECON"
-  },
-  description: "PT Wecon is Indonesia's trusted Water Engineering Consultant since 1973. We specialize in dam design, irrigation, hydropower, and construction supervision.",
-  keywords: [
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const isId = locale === 'id';
+
+  const title = isId 
+    ? "PT WECON - Konsultan Rekayasa Sumber Daya Air & Perijinan Sungai Indonesia"
+    : "PT WECON - Water Resources Engineering & Licensing Consultant Indonesia";
+
+  const description = isId
+    ? "PT WECON adalah konsultan teknik pengairan terpercaya sejak 1973. Melayani Perijinan Pengalihan Sungai (Permen PUPR No. 4/2024), Perijinan Pengambilan Sungai (SIPPA / SIP SDA), dan Sertifikasi Pembangunan Bendungan."
+    : "PT Wecon is Indonesia's trusted Water Engineering Consultant since 1973. Specializing in river diversion permits, water intake licensing, dam design, and construction supervision.";
+
+  const keywords = isId ? [
+    "Perijinan Pengalihan Sungai",
+    "Perijinan Pengambilan Sungai",
+    "Perijinan Pembangunan Bendungan",
+    "SIPPA",
+    "SIP SDA Kementerian PUPR",
+    "Permen PUPR No 4 Tahun 2024",
+    "Konsultan Teknik Pengairan",
+    "Konsultan Bendungan Indonesia",
+    "PT WECON",
+    "Rekayasa Sumber Daya Air"
+  ] : [
     "PT WECON",
     "Water Resources Engineering",
     "Water Engineering Consultant Indonesia",
     "Dam Design Consultant",
     "Hydropower Engineering",
-    "Irrigation Engineering",
-    "Geotechnical Investigation",
-    "Topographic Survey",
-    "Konsultan Teknik Pengairan",
-    "Konsultan Bendungan Indonesia"
-  ],
-  authors: [{ name: "PT. WECON" }],
-  creator: "PT. WECON",
-  publisher: "PT. WECON",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  verification: {
-    google: "google55a6da75d36e63eb",
-  },
-  alternates: {
-    canonical: './',
-    languages: {
-      'en': '/en',
-      'id': '/id',
-      'zh': '/zh',
-      'x-default': '/en',
+    "River Diversion Permit Indonesia",
+    "SIPPA Water Permit"
+  ];
+
+  return {
+    metadataBase: new URL(siteUrl),
+    title: {
+      default: title,
+      template: "%s | PT. WECON"
     },
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    description: description,
+    keywords: keywords,
+    authors: [{ name: "PT. WECON" }],
+    creator: "PT. WECON",
+    publisher: "PT. WECON",
+    verification: {
+      google: "google55a6da75d36e63eb",
+    },
+    alternates: {
+      canonical: `https://weconsultant.id/${locale}`,
+      languages: {
+        'en': 'https://weconsultant.id/en',
+        'id': 'https://weconsultant.id/id',
+        'zh': 'https://weconsultant.id/zh',
+        'x-default': 'https://weconsultant.id/en',
+      },
+    },
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: "PT. WECON - Water Resources Engineering Consultant",
-    description: "Indonesia's trusted Water Engineering Consultant since 1973. Specializing in dam design, irrigation, hydropower, and construction supervision.",
-    url: siteUrl,
-    siteName: "PT. WECON",
-    images: [
-      {
-        url: "/hero-bg.jpg",
-        width: 1200,
-        height: 630,
-        alt: "PT. WECON Water Resources Engineering",
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
       },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "PT. WECON - Water Resources Engineering Consultant",
-    description: "Indonesia's trusted Water Engineering Consultant since 1973.",
-    images: ["/hero-bg.jpg"],
-  },
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "PT. WECON",
-  "url": siteUrl,
-  "logo": `${siteUrl}/logo-black.png`,
-  "image": `${siteUrl}/hero-bg.jpg`,
-  "description": "PT Wecon is Indonesia's trusted Water Engineering Consultant since 1973. Specializing in dam design, irrigation, hydropower, and construction supervision.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Sidoarjo",
-    "addressRegion": "East Java",
-    "addressCountry": "ID"
-  },
-  "telephone": "+6281234878660",
-  "priceRange": "$$$"
-};
+    },
+    openGraph: {
+      title: title,
+      description: description,
+      url: `${siteUrl}/${locale}`,
+      siteName: "PT. WECON",
+      images: [
+        {
+          url: "/hero-bg.jpg",
+          width: 1200,
+          height: 630,
+          alt: "PT. WECON Water Resources Engineering",
+        },
+      ],
+      locale: isId ? "id_ID" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: title,
+      description: description,
+      images: ["/hero-bg.jpg"],
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -144,6 +144,32 @@ export default async function RootLayout({
   }
 
   const messages = await getMessages();
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "PT. WECON (Water Resources Engineering Consultant)",
+    "url": siteUrl,
+    "logo": `${siteUrl}/logo-black.png`,
+    "image": `${siteUrl}/hero-bg.jpg`,
+    "description": "Konsultan Teknik Pengairan & Perizinan Sumber Daya Air di Indonesia. Pengalaman 33+ tahun dalam perizinan pengalihan sungai, pengusahaan air permukaan (SIPPA), dan sertifikasi bendungan.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sidoarjo",
+      "addressRegion": "Jawa Timur",
+      "addressCountry": "ID"
+    },
+    "telephone": "+6281234878660",
+    "priceRange": "$$$",
+    "knowsAbout": [
+      "Perijinan Pengalihan Sungai",
+      "Perijinan Pengambilan Sungai",
+      "Perijinan Pembangunan Bendungan",
+      "SIPPA",
+      "Permen PUPR No. 4 Tahun 2024",
+      "Rekayasa Sumber Daya Air"
+    ]
+  };
 
   return (
     <html

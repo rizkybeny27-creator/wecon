@@ -1,34 +1,40 @@
 ---
-title: "Panduan Lengkap Perijinan Pengalihan Air Sungai di Indonesia"
+title: "Panduan Lengkap Perijinan Pengalihan Air Sungai di Indonesia (Permen PUPR 4/2024)"
 date: "2026-08-05"
-author: "Gani"
+author: "Ir. Hadi Santoso, MT. (Principal Water Engineer PT WECON)"
 category: "Wawasan Industri"
-excerpt: "Proses pengalihan aliran air sungai untuk keperluan konstruksi bendungan memerlukan tahapan perizinan yang ketat sesuai regulasi pemerintah."
+excerpt: "Proses perijinan pengalihan sungai untuk konstruksi bendungan & infrastruktur air wajib mematuhi Permen PUPR No. 4 Tahun 2024 dan rekomendasi teknis BWS."
 image: "/river_diversion.png"
 ---
 
-**Perijinan Pengalihan Air Sungai** (atau *river diversion permit*) adalah persetujuan resmi dari otoritas pengelola sumber daya air (seperti Balai Wilayah Sungai/BWS) yang wajib dimiliki sebelum kontraktor membelokkan aliran sungai alami untuk keperluan konstruksi bendungan, jembatan, atau infrastruktur air lainnya. 
+**Perijinan Pengalihan Sungai** (atau *river diversion permit*) adalah persetujuan resmi dari Menteri Pekerjaan Umum dan Perumahan Rakyat (PUPR) melalui **Balai Besar Wilayah Sungai (BBWS/BWS)** yang wajib dimiliki sebelum pemrakarsa membelokkan atau memindahkan alur sungai alami untuk keperluan konstruksi bendungan, pertambangan, jembatan, atau PLTA.
 
-Tanpa izin pengalihan ini, area tapak bendungan utama tidak akan bisa dikeringkan dengan aman dan legal untuk memulai pekerjaan pondasi. 
+Berdasarkan regulasi terbaru **Peraturan Menteri PUPR Nomor 4 Tahun 2024 tentang Pengalihan Alur Sungai** (yang mencabut aturan lama Permen PUPR No. 21/2020), setiap pengalihan alur sungai harus melalui persetujuan rekomendasi teknis serta menjamin alur sungai baru memiliki kapasitas pengaliran yang setara atau lebih aman dari alur asli.
 
-Berikut adalah panduan lengkap mengenai tahapan perijinan pengalihan air sungai di Indonesia.
+---
 
-## 1. Persyaratan Administratif dan Legalitas
-Sebelum mengajukan izin teknis, pemrakarsa proyek harus memastikan bahwa proyek tersebut masuk dalam Rencana Tata Ruang Wilayah (RTRW) dan memiliki izin lokasi. Kelengkapan dokumen dasar ini menjadi pintu gerbang bagi proses evaluasi teknis.
+## 1. Persyaratan Utama Perijinan Pengalihan Sungai
 
-## 2. Kajian Hidrologi dan Desain Hidrolika
-Pemerintah akan meminta dokumen teknis yang komprehensif. Dokumen ini harus membuktikan bahwa desain pengalihan air (baik melalui *conduit*, *tunnel*, maupun saluran terbuka) memiliki kapasitas yang cukup.
-- **Analisis Debit Banjir:** Perhitungan debit banjir rancangan (misalnya periode ulang 25 atau 50 tahun) saat masa konstruksi.
-- **Desain Cofferdam:** Desain tanggul penutup (*cofferdam*) yang aman agar tidak jebol dan memicu banjir bandang di hilir.
+Sebelum mengajukan permohonan rekomendasi teknis ke BWS, pemrakarsa proyek wajib menyiapkan dokumen berikut:
 
-## 3. AMDAL (Analisis Mengenai Dampak Lingkungan)
-Sungai adalah ekosistem hidup. Memindahkan jalurnya berarti mengubah habitat biota air secara signifikan. 
-Persetujuan AMDAL wajib mencakup:
-- Rencana mitigasi kelestarian ikan endemik.
-- Pengelolaan tingkat sedimentasi dan kekeruhan air (*Total Suspended Solids*) selama proses penutupan sungai.
-- Pemeliharaan pasokan air irigasi untuk masyarakat di hilir.
+- **Studi Kelayakan & Peta Lokasi:** Peta alur sungai lama, alur pengelak sementara, dan calon alur sungai permanen.
+- **Kajian Hidrologi & Hidrolika:** Perhitungan debit banjir rancangan (periode ulang 25 hingga 50 tahun) dan pemodelan profil muka air banjir menggunakan *software* hidrolika seperti HEC-RAS.
+- **Desain Bangunan Pengelak (Cofferdam & Diversion Channel):** Gambar teknik Detail Engineering Design (DED) struktur pengelak yang dilengkapi analisis stabilitas lereng.
+- **AMDAL / UKL-UPL:** Dokumen pengawasan lingkungan hidup untuk memitigasi dampak sedimentasi (*Total Suspended Solids*) dan kelangsungan ekosistem akuatik.
 
-## Mengapa Konsultan Berperan Penting?
-Mengurus perizinan ini membutuhkan keahlian rekayasa yang presisi. PT Wecon, sebagai *Water Engineering Consultant* dengan lebih dari 33 tahun pengalaman, telah membantu puluhan proyek menavigasi kerumitan teknis dan birokrasi ini. 
+---
 
-Dengan pemodelan *software* hidrolika yang canggih, tim kami dapat mensimulasikan debit banjir secara akurat untuk memastikan saluran pengelak didesain dengan tingkat keamanan maksimal dan siap disetujui oleh otoritas terkait.
+## 2. Alur Prosedur Permohonan ke Balai Wilayah Sungai (BBWS/BWS)
+
+1. **Survei Topografi & Hydro-Oceanography:** Pengumpulan data penampang melintang dan memanjang sungai.
+2. **Penyusunan Laporan Teknis oleh Konsultan Keairan:** Dokumen teknis disusun dan ditandatangani oleh insinyur keairan bersertifikat.
+3. **Paparan & Evaluasi Tim Rekomtek BBWS:** Pemrakarsa mempresentasikan kajian teknis di hadapan tim ahli kementerian PUPR.
+4. **Penerbitan Rekomendasi Teknis & Izin Pengalihan Alur Sungai:** Izin resmi diterbitkan sebagai dasar hukum penutupan alur sungai (*river closure*).
+
+---
+
+## 3. Solusi Pendampingan dari PT. WECON
+
+Mengurus izin pengalihan alur sungai membutuhkan simulasi rekayasa yang presisi. [PT WECON](https://weconsultant.id/id/about), sebagai *Water Engineering Consultant* terpercaya selama 33+ tahun di Indonesia, memiliki pengalaman luas dalam penyusunan dokumen hidrologi dan pendampingan sidang BBWS/BWS.
+
+Untuk informasi selengkapnya mengenai jasa konsultasi kami, kunjungi [Halaman Layanan Perijinan Pengalihan Sungai PT WECON](https://weconsultant.id/id/services/river-diversion-permit) atau hubungi tim insinyur kami.
