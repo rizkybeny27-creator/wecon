@@ -1,19 +1,19 @@
 ---
-title: "Ladongi Dam by Top Water Engineering Consultant"
+title: "Ladongi Dam East Kolaka — Technical Consultant PT. WECON"
 date: "2021-11-01"
-excerpt: "Discover how PT. WECON, a leading Water Engineering Consultant, contributed to the planning, permitting, and supervision of the Ladongi Dam in Southeast Sulawesi."
+excerpt: "PT. WECON contributed to the engineering planning, permitting, and construction supervision of the Ladongi Dam (45.94 million m³) in Southeast Sulawesi."
 image: "/ladongi.jpg"
 tag: "Dam / Water Infrastructure"
 location: "East Kolaka, Southeast Sulawesi, Indonesia"
 completedIn: "November 2021"
-services: "Planning, Permitting, Construction Supervision"
-client: "Governmental Ministry of Public Works and Housing"
-projectStructure: "Embankment Dam (66m height)"
+services: "Engineering Planning, Permitting, Construction Supervision"
+client: "Ministry of PUPR (BWS Sulawesi IV)"
+projectStructure: "Zonal Earthfill Dam (Height 66m)"
 visibilitySettings: "Public"
 servicesConsultant: "PT. WECON"
 quote:
-  text: "As a premier water engineering consultant in Indonesia, PT. WECON ensures every structural detail of the Ladongi Dam meets the highest safety standards for long-term water security."
-  author: "Ir. Hadi Santoso, MT"
+  text: "As a lead water engineering consultant in Indonesia, PT. WECON ensured every structural aspect of Ladongi Dam met the highest safety standards."
+  author: "Ir. Hadi Santoso, MT."
   authorRole: "President Director, PT. WECON"
   authorAvatar: "/hadi-santoso.png"
 gallery:
@@ -23,6 +23,29 @@ gallery:
   - "/construction_supervision.png"
 ---
 
-The Ladongi Dam was officially inaugurated by Indonesian President Joko Widodo in November 2021. With a total capacity of 45.945 million m³, it serves as a critical infrastructure piece for regional water management.
+The **Ladongi Dam** in East Kolaka Regency, Southeast Sulawesi, was officially inaugurated by the President of Indonesia in November 2021. With a total storage capacity of **45.945 million cubic meters (m³)**, the dam serves as a regional backbone for water security and food resilience.
 
-Standing at a height of 66 meters from the deepest foundation, this massive structure is classified as an embankment dam. As a trusted **Water Engineering Consultant**, PT. WECON played a vital role in realizing this infrastructure. Our contribution to the Ladongi Dam project encompassed comprehensive planning, critical permitting processes, and meticulous supervising of the construction phases to guarantee engineering excellence.
+Standing 66 meters high from foundation, the dam is classified as a zonal rockfill structure. PT. WECON is proud to have been selected by the Sulawesi IV River Basin Authority (BWS Sulawesi IV) for engineering planning, technical permitting, and field supervision.
+
+---
+
+### Technical Specifications Matrix
+
+| Parameter | Specification Details |
+|---|---|
+| **Structure Type** | Zonal Rockfill / Earthfill Dam |
+| **Dam Height** | 66 meters from deepest foundation |
+| **Crest Length** | 160 meters |
+| **Storage Capacity** | 45.945 million cubic meters (m³) |
+| **Irrigation Benefit** | Provides irrigation water for 3,604 hectares of farmland |
+| **Flood Reduction** | Reduces peak flood discharge by 132.25 m³/second |
+| **Authority / Client** | Ministry of PUPR — BWS Sulawesi IV |
+| **WECON Role** | DED Planning, Permitting Support, & Construction Supervision |
+
+---
+
+### Key Role & Regulatory Compliance
+
+PT. WECON provided full lifecycle engineering support from initial feasibility to physical construction QA/QC.
+
+Safety compliance followed Indonesian [Dam Construction Permitting Services](https://weconsultant.id/en/services/dam-construction-permit) under Dam Safety Commission rules, while irrigation intake models aligned with [Surface Water Intake & SIPPA Permitting Services](https://weconsultant.id/en/services/water-intake-permit-sippa).

@@ -1,19 +1,20 @@
 ---
-title: "Pembangkit Listrik Tenaga Air Merangin - Konsultan Teknik Sumber Daya Air"
+title: "Pembangkit Listrik Tenaga Air Merangin 350 MW — Konsultan PT. WECON"
 date: "2024-01-01"
-excerpt: "PT. WECON, konsultan ahli teknik sumber daya air, menyediakan manajemen proyek untuk PLTA Merangin 350 MW."
+author: "Ir. Hadi Santoso, MT."
+excerpt: "PT. WECON bertindak sebagai Konsultan Manajemen Proyek dan Konsultan Teknik Sumber Daya Air utama untuk PLTA Merangin 350 MW di Jambi."
 image: "/merangin.jpg"
 tag: "Pembangkit Listrik Tenaga Air"
 location: "Kerinci, Jambi, Indonesia"
 completedIn: "Target 2024"
-services: "Konsultan Manajemen Proyek"
+services: "Konsultan Manajemen Proyek & Rekayasa Keairan"
 client: "PT. Kerinci Merangin Hidro"
-projectStructure: "Bendungan Gravitasi Beton (Tinggi 62.5m)"
+projectStructure: "Bendungan Gravitasi Beton (Tinggi 62,5m)"
 visibilitySettings: "Publik"
 servicesConsultant: "PT. WECON"
 quote:
-  text: "Dengan bertindak sebagai pusat manajemen proyek dan konsultan teknik air, kami menjembatani kontrak sipil yang kompleks dengan visi strategis klien untuk menghadirkan energi yang berkelanjutan."
-  author: "Ir. Hadi Santoso, MT"
+  text: "Sebagai konsultan teknik air dan manajemen proyek PLTA Merangin 350 MW, kami menjembatani kontrak sipil kompleks untuk menghadirkan energi hijau berkelanjutan di Sumatera."
+  author: "Ir. Hadi Santoso, MT."
   authorRole: "Presiden Direktur, PT. WECON"
   authorAvatar: "/hadi-santoso.png"
 gallery:
@@ -23,6 +24,29 @@ gallery:
   - "/construction_supervision.png"
 ---
 
-Pembangkit Listrik Tenaga Air Merangin memanfaatkan Danau Kerinci sebagai waduk alami tahunan, dipadukan dengan Bendungan Pengatur Sanggaran Agung yang berfungsi sebagai bendungan pengatur dengan tinggi 9 meter. Selain itu, waduk buatan harian dicapai dengan memanfaatkan Bendungan Kerinci — jenis bendungan gravitasi beton yang kokoh dengan ketinggian 62,5 meter.
+**Pembangkit Listrik Tenaga Air (PLTA) Merangin** berkapasitas 350 Megawatt (MW) di Kabupaten Kerinci, Jambi, adalah salah satu mega-proyek energi terbarukan terbesar di Pulau Sumatera. 
 
-Untuk memastikan eksekusi yang mulus, PT. WECON berkontribusi sebagai Konsultan Manajemen Proyek utama dan **Konsultan Teknik Sumber Daya Air**. Kami secara aktif menjembatani komunikasi dan penyelarasan teknis antara pemilik pekerjaan, PT. Kerinci Merangin Hidro, dan kontraktor utama, PT. Bukaka Utama Teknik. Pembangkit listrik tenaga air skala besar ini ditargetkan beroperasi penuh pada tahun 2024, menyediakan energi berkelanjutan bagi kawasan tersebut.
+PLTA ini memanfaatkan Danau Kerinci sebagai waduk alami tahunan, dipadukan dengan Bendungan Pengatur Sanggaran Agung (tinggi 9m) serta Bendungan Kerinci — struktur bendungan gravitasi beton (*Concrete Gravity Dam*) setinggi 62,5 meter.
+
+---
+
+### Matriks Spesifikasi Teknis PLTA Merangin 350 MW
+
+| Parameter Teknis | Spesifikasi Proyek |
+|---|---|
+| **Kapasitas Listrik** | 350 MW (MegaWatt) Energi Terbarukan |
+| **Tipe Struktur Utama** | Bendungan Gravitasi Beton (*Concrete Gravity Dam*) |
+| **Tinggi Bendungan** | 62,5 meter dari fondasi terdalam |
+| **Bendungan Pengatur** | Sanggaran Agung (Tinggi 9 meter) |
+| **Sumber Air / Waduk** | Danau Kerinci & Sungai Merangin |
+| **Pemilik Proyek (Klien)** | PT. Kerinci Merangin Hidro |
+| **Kontraktor Utama** | PT. Bukaka Utama Teknik |
+| **Konsultan Keairan** | **PT. WECON** (Manajemen Proyek & Rekayasa Keairan) |
+
+---
+
+### Peran Kunci PT. WECON & Dukungan Perizinan
+
+PT. WECON berkontribusi sebagai Konsultan Manajemen Proyek utama dan **Konsultan Teknik Sumber Daya Air**. Tim kami menjembatani komunikasi teknis, tinjauan desain hidrolika, serta audit keselamatan konstruksi sipil antara pemilik pekerjaan dan kontraktor.
+
+Selain itu, skema skenario alokasi debit air PLTA dikaji mendalam mengikuti prosedur [Perijinan Pengambilan Sungai & SIPPA](https://weconsultant.id/id/services/water-intake-permit-sippa) serta standar [Perijinan Pengalihan Sungai](https://weconsultant.id/id/services/river-diversion-permit) untuk terowongan pengelak (*diversion tunnel*).

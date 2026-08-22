@@ -10,14 +10,29 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug, locale } = await params;
   try {
     const project = await getPostData('projects', slug, locale);
-    const title = `${project.title} - PT. WECON`;
-    const description = project.excerpt || `Project detail for ${project.title} by PT. WECON Water Resources Engineering Consultant.`;
+    const isId = locale === 'id';
+    const isZh = locale === 'zh';
+
+    let titleSuffix = "PT. WECON Water Resources Engineering";
+    if (isId) titleSuffix = "Konsultan Teknik Air PT. WECON";
+    if (isZh) titleSuffix = "PT. WECON 水利工程顾问";
+
+    const title = `${project.title} | ${titleSuffix}`;
+    const description = project.excerpt || `${project.title} - Portofolio proyek rekayasa sumber daya air, perizinan, dan pengawasan konstruksi oleh PT. WECON.`;
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://weconsultant.id';
     const canonicalUrl = `${siteUrl}/${locale}/projects/${slug}`;
 
     return {
       title,
       description,
+      keywords: [
+        project.title,
+        project.location || "Indonesia",
+        project.client || "Kementerian PUPR",
+        "Konsultan Bendungan Indonesia",
+        "PT WECON Proyek",
+        "Water Engineering Consultant"
+      ],
       alternates: {
         canonical: canonicalUrl,
         languages: {
@@ -56,8 +71,33 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
     notFound();
   }
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://weconsultant.id';
+
+  const projectSchema = {
+    "@context": "https://schema.org",
+    "@type": "Project",
+    "name": project.title,
+    "description": project.excerpt,
+    "url": `${siteUrl}/${locale}/projects/${slug}`,
+    "image": project.image ? `${siteUrl}${project.image}` : `${siteUrl}/hero-bg.jpg`,
+    "location": {
+      "@type": "Place",
+      "name": project.location || "Indonesia"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "PT. WECON",
+      "url": siteUrl
+    }
+  };
+
   return (
     <main className="min-h-screen bg-[#fafafa] font-sans antialiased">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
+      />
+      
       {/* Navbar Overlay */}
       <Navbar theme="dark" />
 
@@ -86,42 +126,39 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
           
           {/* Left Sidebar: Property Details */}
           <div className="lg:col-span-4">
-            <h3 className="text-lg font-medium text-black mb-6">Property details</h3>
+            <h3 className="text-lg font-medium text-black mb-6">
+              {locale === 'id' ? "Rincian Proyek" : locale === 'zh' ? "项目详情" : "Project Details"}
+            </h3>
             <div className="flex flex-col border-t border-black/10">
               
               <div className="py-4 border-b border-black/10 flex flex-col sm:flex-row justify-between gap-2">
-                <span className="text-sm text-black/50 w-full sm:w-1/3">Location</span>
+                <span className="text-sm text-black/50 w-full sm:w-1/3">{locale === 'id' ? "Lokasi" : locale === 'zh' ? "地点" : "Location"}</span>
                 <span className="text-sm font-medium text-black/90 w-full sm:w-2/3">{project.location || '-'}</span>
               </div>
               
               <div className="py-4 border-b border-black/10 flex flex-col sm:flex-row justify-between gap-2">
-                <span className="text-sm text-black/50 w-full sm:w-1/3">Completed In</span>
+                <span className="text-sm text-black/50 w-full sm:w-1/3">{locale === 'id' ? "Tahun Selesai" : locale === 'zh' ? "完成时间" : "Completed In"}</span>
                 <span className="text-sm font-medium text-black/90 w-full sm:w-2/3">{project.completedIn || '-'}</span>
               </div>
               
               <div className="py-4 border-b border-black/10 flex flex-col sm:flex-row justify-between gap-2">
-                <span className="text-sm text-black/50 w-full sm:w-1/3">Services</span>
+                <span className="text-sm text-black/50 w-full sm:w-1/3">{locale === 'id' ? "Layanan" : locale === 'zh' ? "服务内容" : "Services"}</span>
                 <span className="text-sm font-medium text-black/90 w-full sm:w-2/3">{project.services || '-'}</span>
               </div>
               
               <div className="py-4 border-b border-black/10 flex flex-col sm:flex-row justify-between gap-2">
-                <span className="text-sm text-black/50 w-full sm:w-1/3">Client</span>
+                <span className="text-sm text-black/50 w-full sm:w-1/3">{locale === 'id' ? "Klien / Pemilik" : locale === 'zh' ? "客户" : "Client"}</span>
                 <span className="text-sm font-medium text-black/90 w-full sm:w-2/3">{project.client || '-'}</span>
               </div>
               
               <div className="py-4 border-b border-black/10 flex flex-col sm:flex-row justify-between gap-2">
-                <span className="text-sm text-black/50 w-full sm:w-1/3">Project Structure</span>
+                <span className="text-sm text-black/50 w-full sm:w-1/3">{locale === 'id' ? "Struktur Proyek" : locale === 'zh' ? "项目结构" : "Project Structure"}</span>
                 <span className="text-sm font-medium text-black/90 w-full sm:w-2/3">{project.projectStructure || '-'}</span>
               </div>
               
               <div className="py-4 border-b border-black/10 flex flex-col sm:flex-row justify-between gap-2">
-                <span className="text-sm text-black/50 w-full sm:w-1/3">Visibility Settings</span>
-                <span className="text-sm font-medium text-black/90 w-full sm:w-2/3">{project.visibilitySettings || '-'}</span>
-              </div>
-              
-              <div className="py-4 border-b border-black/10 flex flex-col sm:flex-row justify-between gap-2">
-                <span className="text-sm text-black/50 w-full sm:w-1/3">Services Consultant</span>
-                <span className="text-sm font-medium text-black/90 w-full sm:w-2/3">{project.servicesConsultant || '-'}</span>
+                <span className="text-sm text-black/50 w-full sm:w-1/3">{locale === 'id' ? "Konsultan Utama" : locale === 'zh' ? "主工程顾问" : "Services Consultant"}</span>
+                <span className="text-sm font-medium text-black/90 w-full sm:w-2/3">{project.servicesConsultant || 'PT. WECON'}</span>
               </div>
               
             </div>
@@ -130,7 +167,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
           {/* Right Main: Content & Quote */}
           <div className="lg:col-span-8">
             <div 
-              className="markdown-content max-w-none text-black/80 leading-relaxed mb-16"
+              className="markdown-content max-w-none text-black/80 leading-relaxed mb-16 space-y-6"
               dangerouslySetInnerHTML={{ __html: project.contentHtml || "" }}
             />
 
@@ -177,7 +214,9 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 
         {/* Related Projects */}
         <div className="mt-32 mb-16">
-          <h2 className="text-3xl font-medium text-black mb-10 tracking-tight">You also might like</h2>
+          <h2 className="text-3xl font-medium text-black mb-10 tracking-tight">
+            {locale === 'id' ? "Proyek Lainnya" : locale === 'zh' ? "相关项目" : "You also might like"}
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
             <Link href="/projects/merangin" className="group relative block w-full aspect-[4/3] rounded-2xl overflow-hidden bg-gray-200">
@@ -208,14 +247,12 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
         </div>
       </section>
 
-      {/* 13. Footer CTA & Footer */}
+      {/* Footer */}
       <footer className="relative bg-[#151515] text-white">
-         {/* CTA Section */}
          <div className="relative h-[550px] flex flex-col justify-center items-center text-center p-6 overflow-hidden">
             <Image src="/cta-bg.jpg" alt="Construction Footer Background" fill className="object-cover" />
             <div className="absolute inset-0 bg-black/30"></div>
             
-            {/* Precise Fading Frosted Glass Effect mimicking the screenshot */}
             <div 
                className="absolute inset-x-0 bottom-0 h-[250px] backdrop-blur-[12px] bg-black/10"
                style={{ 
@@ -234,7 +271,6 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             </div>
          </div>
          
-         {/* Footer Section */}
          <div className="bg-[#151515] pb-24 pt-20 px-8 md:px-12">
             <div className="container mx-auto max-w-[1440px] grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-6">
                <div className="md:col-span-5 lg:col-span-4">
@@ -271,7 +307,6 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             </div>
          </div>
       </footer>
-
     </main>
   );
 }

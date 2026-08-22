@@ -1,21 +1,21 @@
 ---
-title: "Nganjuk 的 Semantok 大坝"
+title: "恩甘朱克 Semantok 大坝 — PT. WECON 施工监理项目"
 date: "2022-12-20"
-excerpt: "建设东南亚最长的大坝，以支持东爪哇的水资源和粮食安全。"
+excerpt: "PT. WECON 担任恩甘朱克 Semantok 大坝工程监理顾问，该大坝是东南亚最长的土石坝（坝顶长3,100米）。"
 image: "/semantok.jpg"
-tag: "大坝和水库"
-location: "东爪哇，Nganjuk"
-completedIn: "2022 年 12 月"
-services: "施工监理，质量保证"
-client: "公共工程和住房部 (BWS Brantas)"
-projectStructure: "土石坝"
+tag: "大坝与水库"
+location: "印尼东爪哇省恩甘朱克"
+completedIn: "2022年12月"
+services: "施工监理与质量保证"
+client: "公共工程与公共住房部 (BBWS Brantas)"
+projectStructure: "心墙土石坝 (Zonal Earthfill Dam)"
 visibilitySettings: "公开"
-servicesConsultant: "PT. WECON 及其合作伙伴"
+servicesConsultant: "PT. WECON"
 quote:
-  text: "Semantok 大坝不仅是最长的大坝，也是水资源恢复力的象征，将使 Nganjuk 地区的农民繁荣昌盛。"
-  author: "Budi Santoso"
-  authorRole: "项目负责人, BWS Brantas"
-  authorAvatar: "/avatar.png"
+  text: "Semantok 大坝不仅打破了工程纪录，更是保障东爪哇农业繁荣与水资源安全的核心支柱。"
+  author: "Ir. Hadi Santoso, MT."
+  authorRole: "PT. WECON 总裁"
+  authorAvatar: "/hadi-santoso.png"
 gallery:
   - "/dam_sustainable.png"
   - "/river_diversion.png"
@@ -23,15 +23,29 @@ gallery:
   - "/construction_supervision.png"
 ---
 
-位于东爪哇 Nganjuk 县的 Semantok 大坝是由印度尼西亚共和国总统亲自主持落成典礼的国家战略项目（PSN）之一。
+位於印尼东爪哇省恩甘朱克县的 **Semantok 大坝** 是印尼国家战略项目 (PSN)，于2022年12月由印尼总统亲自主持揭幕。该大坝坝顶长度达 3,100 米，创下**东南亚最长土石坝**纪录。
 
-Semantok 大坝的坝顶长度达到 3100 米，被誉为东南亚最长的大坝。PT. WECON 很荣幸能够参与提供*施工监理*服务，确保施工的每个阶段都符合最高的工程安全和质量标准。
+PT. WECON 受公共工程部 (PUPR) 旗下 Brantas 流域管理机构 (BBWS Brantas) 委托，担任首席*施工监理顾问 (Construction Supervision)*，全程保障工程质量与安全。
 
-### 项目目标
-* 将 Nganjuk 县地区的洪水风险降低多达 30%。
-* 为 1900 公顷的稻田提供灌溉用水，从而提高当地农民的收成。
-* 提供每秒 312 升的原水。
-* Nganjuk 地区新的旅游潜力。
+---
 
-### WECON 的角色
-我们的工程师团队进行每日检查，对土壤和混凝土材料进行质量测试，并确保精确安装大坝仪器（如*测压管*和*测斜仪*），以监测大坝的长期状况。
+### 技术规格矩阵
+
+| 技术参数 | 详细规格 |
+|---|---|
+| **结构类型** | 黏土心墙土石坝 (Zonal Earthfill Dam) |
+| **坝顶长度** | 3,100 米 (东南亚最长) |
+| **坝高** | 基础以上 38.5 米 |
+| **水库容量** | 3,267 万立方米 (m³) |
+| **防洪削峰** | 减少恩甘朱克地区 30% 洪峰流量 |
+| **灌溉供水** | 覆盖 1,900 公顷当地农田 |
+| **原水供应** | 312 升/秒 居民原水供应 |
+| **主管机构** | 印尼 PUPR 部 — BBWS Brantas |
+
+---
+
+### PT. WECON 核心职责与法规合规
+
+PT. WECON 水利工程师开展现场每日质量检测、黏土心墙压实测试及渗流测压计监控。
+
+项目严格遵循印尼 [大坝建设许可咨询](https://weconsultant.id/zh/services/dam-construction-permit) 标准及 [河流改道许可咨询](https://weconsultant.id/zh/services/river-diversion-permit) 导流规范。

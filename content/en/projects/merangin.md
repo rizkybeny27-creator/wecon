@@ -1,19 +1,20 @@
 ---
-title: "Merangin Hydroelectric Power Plant - Water Engineering Consultant"
+title: "Merangin 350 MW Hydropower Project — PT. WECON Engineering Consultant"
 date: "2024-01-01"
-excerpt: "PT. WECON, an expert water engineering consultant, provides project management for the 350 MW Merangin Hydroelectric Power Plant."
+author: "Ir. Hadi Santoso, MT."
+excerpt: "PT. WECON provides project management and water resources engineering consultancy for the Merangin 350 MW Hydroelectric Power Plant in Jambi."
 image: "/merangin.jpg"
-tag: "Hydropower"
+tag: "Hydropower Engineering"
 location: "Kerinci, Jambi, Indonesia"
-completedIn: "Targeted 2024"
-services: "Project Management Consulting"
+completedIn: "Target 2024"
+services: "Project Management & Water Engineering Consultancy"
 client: "PT. Kerinci Merangin Hidro"
-projectStructure: "Concrete Gravity Dam (62.5m height)"
+projectStructure: "Concrete Gravity Dam (Height 62.5m)"
 visibilitySettings: "Public"
 servicesConsultant: "PT. WECON"
 quote:
-  text: "By acting as the central project management and water engineering consultant, we bridge complex civil contracting with the client's strategic vision to deliver sustainable energy."
-  author: "Ir. Hadi Santoso, MT"
+  text: "As project management and water engineering consultant for the Merangin 350 MW hydropower plant, we bridge complex civil contracts to deliver sustainable green energy."
+  author: "Ir. Hadi Santoso, MT."
   authorRole: "President Director, PT. WECON"
   authorAvatar: "/hadi-santoso.png"
 gallery:
@@ -23,6 +24,29 @@ gallery:
   - "/construction_supervision.png"
 ---
 
-The Merangin Hydroelectric Power Plant utilizes Lake Kerinci as an annual natural storage, paired with the Sanggaran Agung Regulatory Dam functioning as a regulating dam with a height of 9 meters. Additionally, the daily artificial storage is achieved by utilizing the Kerinci Dam—a robust concrete gravity dam type standing at a height of 62.5 meters.
+The **Merangin Hydroelectric Power Plant (PLTA Merangin)** with a capacity of 350 Megawatts (MW) in Kerinci Regency, Jambi, is one of the largest renewable energy infrastructure projects in Sumatra.
 
-To ensure seamless execution, PT. WECON contributes as the primary Project Management Consultant and **Water Engineering Consultant**. We actively bridge the communication and technical alignment between the job owner, PT. Kerinci Merangin Hidro, and the main contractor, PT. Bukaka Utama Teknik. This large-scale hydroelectric power plant is targeted to become fully operational in 2024, providing sustainable energy to the region.
+The project utilizes Lake Kerinci as a natural annual reservoir, combined with the Sanggaran Agung Regulating Dam (9m height) and Kerinci Dam — a massive 62.5-meter concrete gravity structure.
+
+---
+
+### Technical Specifications Matrix
+
+| Parameter | Project Details |
+|---|---|
+| **Capacity** | 350 MW Renewable Hydropower |
+| **Main Dam Type** | Concrete Gravity Dam |
+| **Dam Height** | 62.5 meters from foundation |
+| **Regulating Dam** | Sanggaran Agung (9 meters height) |
+| **Water Source** | Lake Kerinci & Merangin River |
+| **Project Owner** | PT. Kerinci Merangin Hidro |
+| **Main Contractor** | PT. Bukaka Utama Teknik |
+| **Lead Consultant** | **PT. WECON** (Project Management & Water Engineering) |
+
+---
+
+### PT. WECON Key Role & Licensing Compliance
+
+PT. WECON serves as the Lead Project Management & **Water Resources Engineering Consultant**, overseeing hydraulic design reviews, civil contract coordination, and dam safety audits.
+
+Water intake allocation models complied with Indonesian [Surface Water Intake & SIPPA Permitting Services](https://weconsultant.id/en/services/water-intake-permit-sippa) and [River Diversion Permitting Services](https://weconsultant.id/en/services/river-diversion-permit).
