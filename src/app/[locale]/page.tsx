@@ -171,9 +171,6 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             
             <div className="relative z-10 max-w-[800px]">
               <div className="flex -space-x-4 mb-10">
-                <div className="w-[52px] h-[52px] rounded-full border-[3px] border-wecon-dark bg-gray-300 overflow-hidden relative">
-                  <Image src="/avatar.png" alt="Avatar" fill className="object-cover" sizes="60px" />
-                </div>
                 <div className="w-[52px] h-[52px] rounded-full border-[3px] border-wecon-dark bg-[#3d63d2] flex items-center justify-center text-white text-2xl">
                   ❋
                 </div>
@@ -182,8 +179,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                 {tHome('Testimonial.text')}
               </h3>
               <div>
-                <p className="font-sans font-bold text-white text-[15px]">Priya Verma</p>
-                <p className="text-white/70 text-[13px] mt-0.5">Real Estate Developer</p>
+                <p className="font-sans font-bold text-white text-[15px]">Gani Abdurrahman</p>
+                <p className="text-white/70 text-[13px] mt-0.5">Director, PT Wecon</p>
               </div>
             </div>
             
