@@ -1,7 +1,7 @@
 ---
 title: "印尼河流改道许可全指南 (PUPR 2024年第4号条例)"
 date: "2026-08-05"
-author: "Ir. Hadi Santoso, MT. (PT WECON 首席水利工程师)"
+author: "Gani Abdurrahman | PT Wecon 董事"
 category: "行业洞察"
 excerpt: "大坝与水利基础设施建设中的河流改道许可必须符合印尼公共工程部 (PUPR) 2024年第4号条例及 BWS 技术推荐信要求。"
 image: "/river_diversion.png"

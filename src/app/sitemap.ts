@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/about', 
     '/projects', 
     '/blog',
+    '/services',
     '/services/river-diversion-permit',
     '/services/water-intake-permit-sippa',
     '/services/dam-construction-permit'
@@ -21,17 +22,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   staticPages.forEach((page) => {
     locales.forEach((locale) => {
       const path = page === '' ? `/${locale}` : `/${locale}${page}`;
-      const isService = page.startsWith('/services/');
+      const isService = page.startsWith('/services');
       sitemapEntries.push({
         url: `${siteUrl}${path}`,
         lastModified: new Date(),
         changeFrequency: page === '' ? 'daily' : isService ? 'weekly' : 'weekly',
-        priority: page === '' ? 1.0 : isService ? 0.9 : 0.8,
+        priority: page === '' ? 1.0 : page === '/services' ? 0.9 : isService ? 0.9 : 0.8,
         alternates: {
           languages: {
             en: `${siteUrl}/en${page}`,
             id: `${siteUrl}/id${page}`,
             zh: `${siteUrl}/zh${page}`,
+            'x-default': `${siteUrl}/en${page}`,
           },
         },
       });
@@ -57,6 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             en: `${siteUrl}/en/projects/${slug}`,
             id: `${siteUrl}/id/projects/${slug}`,
             zh: `${siteUrl}/zh/projects/${slug}`,
+            'x-default': `${siteUrl}/en/projects/${slug}`,
           },
         },
       });
@@ -82,6 +85,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             en: `${siteUrl}/en/blog/${slug}`,
             id: `${siteUrl}/id/blog/${slug}`,
             zh: `${siteUrl}/zh/blog/${slug}`,
+            'x-default': `${siteUrl}/en/blog/${slug}`,
           },
         },
       });

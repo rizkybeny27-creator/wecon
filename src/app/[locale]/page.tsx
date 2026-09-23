@@ -12,6 +12,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const { locale } = await params;
   const t = await getTranslations('Footer');
   const tHome = await getTranslations('HomePage');
+  const tPermits = await getTranslations('Permits');
   const latestBlogs = getAllPosts('blog', locale).slice(0, 2);
 
   return (
@@ -233,6 +234,38 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </div>
       </section>
 
+      {/* 7b. SDA Permitting Services (SEO pillar links) */}
+      <section className="bg-wecon-light pb-24 md:pb-32">
+        <div className="container mx-auto px-6 md:px-12 max-w-[1440px]">
+          <div className="grid grid-cols-1 xl:grid-cols-12 gap-16 xl:gap-24 items-start">
+            <div className="xl:col-span-4 xl:sticky xl:top-32 self-start">
+              <div className="inline-flex items-center gap-2.5 bg-[#e4e4e4] px-4 py-2 rounded-full mb-10">
+                <div className="w-1.5 h-1.5 rounded-full bg-black/60"></div>
+                <span className="text-[10px] font-mono tracking-widest uppercase text-black/70">{tPermits('title')}</span>
+              </div>
+              <h2 className="text-[44px] md:text-[56px] font-heading leading-[1.05] tracking-tight text-[#222222]">{tPermits('allServices')}</h2>
+            </div>
+            <div className="xl:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-5">
+              <Link href="/services/river-diversion-permit" className="group bg-white rounded-[24px] p-8 border border-black/5 transition-shadow hover:shadow-lg flex flex-col">
+                <h3 className="text-[22px] font-heading tracking-tight text-[#222] mb-3 group-hover:text-blue-600 transition-colors">{tPermits('riverDiversion')}</h3>
+                <p className="text-[13px] text-black/50 mb-6 flex-grow">{tHome('About.permitShort_river')}</p>
+                <span className="text-[10px] font-mono tracking-widest uppercase text-blue-700 group-hover:text-blue-600">Permen PUPR 4/2024 ↗</span>
+              </Link>
+              <Link href="/services/water-intake-permit-sippa" className="group bg-white rounded-[24px] p-8 border border-black/5 transition-shadow hover:shadow-lg flex flex-col">
+                <h3 className="text-[22px] font-heading tracking-tight text-[#222] mb-3 group-hover:text-blue-600 transition-colors">{tPermits('waterIntake')}</h3>
+                <p className="text-[13px] text-black/50 mb-6 flex-grow">{tHome('About.permitShort_intake')}</p>
+                <span className="text-[10px] font-mono tracking-widest uppercase text-blue-700 group-hover:text-blue-600">SIPPA / SIP SDA PUPR ↗</span>
+              </Link>
+              <Link href="/services/dam-construction-permit" className="group bg-white rounded-[24px] p-8 border border-black/5 transition-shadow hover:shadow-lg flex flex-col md:col-span-2">
+                <h3 className="text-[22px] font-heading tracking-tight text-[#222] mb-3 group-hover:text-blue-600 transition-colors">{tPermits('damConstruction')}</h3>
+                <p className="text-[13px] text-black/50 mb-6 flex-grow max-w-[720px]">{tHome('About.permitShort_dam')}</p>
+                <span className="text-[10px] font-mono tracking-widest uppercase text-blue-700 group-hover:text-blue-600">KKB · Permen PUPR 27/2015 ↗</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 8. Process Section */}
       <section className="bg-wecon-dark py-24 md:py-40">
         <div className="container mx-auto px-6 md:px-12 max-w-[1440px]">
@@ -447,7 +480,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
          {/* Footer Section */}
          <div className="bg-[#151515] pb-24 pt-20 px-8 md:px-12">
             <div className="container mx-auto max-w-[1440px] grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-6">
-               <div className="md:col-span-5 lg:col-span-4">
+               <div className="md:col-span-4">
                   <div className="mb-6">
                      <Image src="/logo-white.png" alt="PT Wecon" width={110} height={22} className="h-[22px] w-auto object-contain" />
                   </div>
@@ -459,18 +492,27 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                   </Link>
                </div>
                
-               <div className="md:col-span-3 md:col-start-8 lg:col-span-2 lg:col-start-9">
+               <div className="md:col-span-3 md:col-start-5">
                   <h4 className="text-[10px] font-mono tracking-[0.15em] uppercase text-[#ffffff] mb-6 font-semibold">{t('main_pages')}</h4>
                   <ul className="flex flex-col gap-4 text-[13px] text-[#888888]">
                      <li><Link href="/" className="hover:text-white transition-colors">{t('home')}</Link></li>
                      <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+                     <li><Link href="/services" className="hover:text-white transition-colors">{tPermits('allServices')}</Link></li>
                      <li><Link href="/projects" className="hover:text-white transition-colors">Projects</Link></li>
                      <li><Link href="/blog" className="hover:text-white transition-colors">Blogs</Link></li>
-                     <li><Link href="https://wa.me/6281234878660" className="hover:text-white transition-colors">{t('contact')}</Link></li>
                   </ul>
                </div>
                
-               <div className="md:col-span-4 md:col-start-11 lg:col-span-2 lg:col-start-11">
+               <div className="md:col-span-3">
+                  <h4 className="text-[10px] font-mono tracking-[0.15em] uppercase text-[#ffffff] mb-6 font-semibold">{tPermits('title')}</h4>
+                  <ul className="flex flex-col gap-4 text-[13px] text-[#888888]">
+                     <li><Link href="/services/river-diversion-permit" className="hover:text-white transition-colors">{tPermits('riverDiversion')}</Link></li>
+                     <li><Link href="/services/water-intake-permit-sippa" className="hover:text-white transition-colors">{tPermits('waterIntake')}</Link></li>
+                     <li><Link href="/services/dam-construction-permit" className="hover:text-white transition-colors">{tPermits('damConstruction')}</Link></li>
+                  </ul>
+               </div>
+               
+               <div className="md:col-span-2">
                   <h4 className="text-[10px] font-mono tracking-[0.15em] uppercase text-[#ffffff] mb-6 font-semibold">{t('contact')}</h4>
                   <ul className="flex flex-col gap-4 text-[13px] text-[#888888]">
                      <li><a href="mailto:hello@wecon.com" className="hover:text-white transition-colors">hello@wecon.com</a></li>

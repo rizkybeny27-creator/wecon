@@ -2,11 +2,28 @@ import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import { getAllPosts } from '@/lib/markdown';
 import Navbar from '@/components/Navbar';
+import type { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Newsroom - PT. WECON',
-  description: 'Latest news, insights, and engineering updates from PT. WECON.',
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+
+  const META: Record<string, Metadata> = {
+    en: {
+      title: 'Water Engineering & Licensing Insights',
+      description: 'Latest news, insights, and engineering updates on dam construction, river diversion & water intake permits (SIPPA) from PT. WECON.',
+    },
+    id: {
+      title: 'Wawasan Perizinan & Rekayasa Sumber Daya Air',
+      description: 'Panduan, berita, dan wawasan terbaru tentang perizinan pengalihan sungai, pengambilan air (SIPPA), pembangunan bendungan, dan rekayasa air dari PT. WECON.',
+    },
+    zh: {
+      title: '印尼水利工程与许可资讯',
+      description: '来自 PT WECON 的最新见解 — 大坝建设、河流改道、取水许可 (SIPPA) 及水资源工程指南与行业新闻。',
+    },
+  };
+
+  return META[locale] || META.en;
+}
 
 export default async function BlogList({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

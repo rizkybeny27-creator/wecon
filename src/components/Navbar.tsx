@@ -45,6 +45,9 @@ export default function Navbar({ theme = 'dark' }: { theme?: 'dark' | 'light' })
           <Link href="/#expertise" className={`px-4 py-2 rounded-full text-[10px] font-mono tracking-widest transition-colors uppercase ${linkText}`}>
             {t('expertise')}
           </Link>
+          <Link href="/services" className={`px-4 py-2 rounded-full text-[10px] font-mono tracking-widest transition-colors uppercase ${linkText}`}>
+            {t('services')}
+          </Link>
           <Link href="/projects" className={`px-4 py-2 rounded-full text-[10px] font-mono tracking-widest transition-colors uppercase ${linkText}`}>
             {t('projects')}
           </Link>
@@ -88,6 +91,9 @@ export default function Navbar({ theme = 'dark' }: { theme?: 'dark' | 'light' })
             </Link>
             <Link onClick={() => setIsMobileMenuOpen(false)} href="/#expertise" className="text-3xl font-heading tracking-tight border-b border-black/10 pb-4">
               {t('expertise')}
+            </Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/services" className="text-3xl font-heading tracking-tight border-b border-black/10 pb-4">
+              {t('services')}
             </Link>
             <Link onClick={() => setIsMobileMenuOpen(false)} href="/projects" className="text-3xl font-heading tracking-tight border-b border-black/10 pb-4">
               {t('projects')}

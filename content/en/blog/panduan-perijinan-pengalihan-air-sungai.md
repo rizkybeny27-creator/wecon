@@ -1,7 +1,7 @@
 ---
 title: "Complete Guide to River Diversion Permitting in Indonesia (PUPR Reg. 4/2024)"
 date: "2026-08-05"
-author: "Ir. Hadi Santoso, MT. (Principal Water Engineer PT WECON)"
+author: "Gani Abdurrahman | Director, PT Wecon"
 category: "Industry Insights"
 excerpt: "River diversion permitting for dam and water infrastructure construction must comply with PUPR Ministerial Regulation No. 4/2024 and BWS technical recommendations."
 image: "/river_diversion.png"

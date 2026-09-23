@@ -4,10 +4,20 @@
     "expertise": "专业领域",
     "projects": "项目",
     "newsroom": "新闻中心",
+    "services": "许可服务",
     "contact_us": "联系我们"
   },
+  "Permits": {
+    "title": "许可服务",
+    "riverDiversion": "河流改道许可",
+    "waterIntake": "取水许可与 SIPPA",
+    "damConstruction": "大坝建设许可",
+    "allServices": "所有许可服务",
+    "relatedTitle": "相关许可服务",
+    "viewAll": "所有印尼水资源许可服务"
+  },
   "Hero": {
-    "title": "PT Wecon：自1973年以来印度尼西亚值得信赖的水务工程顾问",
+    "title": "PT Wecon：自1973年以来印尼值得信赖的水利工程与许可咨询顾问",
     "subtitle": "超越技术。50多年来，我们与政府机构和行业合作，设计、监督和认证水务基础设施——从东南亚最长的水坝到全国性的水力发电厂。",
     "work_with_us": "与我们合作",
     "our_services": "我们的服务"
@@ -23,6 +33,9 @@
   "HomePage": {
     "About": {
       "text": "PT Wecon 是印度尼西亚领先的水利工程顾问，获得官方认证，提供专门的土木建设和水资源基础设施。成立于 1973 年，由 Ir. Hadi Santoso, MT. 领导，我们利用数十年的实践经验执行大坝设计、灌溉系统和水电设施。我们的业绩遍布 7 个省，在由印度尼西亚共和国总统亲自主持的国家战略项目上确保 ISO 标准质量保证。",
+      "permitShort_river": "根据 PUPR 2024年第4号条例，施工前合法改造天然河道 — 水文研究、HEC-RAS 建模与 BWS 推荐信。",
+      "permitShort_intake": "面向工业与水电站的地表水取水许可证 (SIPPA / SIP SDA)，含水资源平衡研究与取水结构 DED。",
+      "permitShort_dam": "大坝全周期许可 — 设计认证、施工、蓄水与运行许可，经大坝安全委员会 (KKB, PUPR 27/2015)。",
       "btn": "了解我们的故事"
     },
     "Projects": {

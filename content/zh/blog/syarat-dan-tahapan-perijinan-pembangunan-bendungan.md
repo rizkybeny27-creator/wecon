@@ -1,7 +1,7 @@
 ---
 title: "印尼大坝建设许可的 4 个阶段 (PUPR 2015年第27号条例)"
 date: "2026-08-15"
-author: "Ir. Hadi Santoso, MT. (PT WECON 首席水利工程师)"
+author: "Gani Abdurrahman | PT Wecon 董事"
 category: "工程洞察"
 excerpt: "印尼大坝建设许可 4 阶段全指南：从大坝安全委员会 (KKB) 设计认证到蓄水及运行许可证。"
 image: "/dam_sustainable.png"

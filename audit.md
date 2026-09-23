@@ -32,13 +32,40 @@ Berdasarkan data kueri teratas GSC yang dilampirkan:
 
 ## 2. SEO & GEO Scorecard
 
-| Kategori Audit | Skor (1-5) | Status | Ringkasan Masalah / Potensi |
+| Kategori Audit | Skor Awal (1-5) | Skor Revisi (23 Sep 2026) | Status | Ringkasan Masalah / Potensi |
+|---|---|---|---|---|
+| **On-Page SEO (Keywords & Headings)** | 2.0 / 5.0 | 4.0 / 5.0 | 🟢 Diperbaiki | Landing page dedicated untuk 3 perizinan sudah dibuat di `/id/services/*` + hub `/id/services`. Keyword target ada di Meta Title & H1 id tiap halaman. |
+| **Content Depth & Topical Authority** | 2.5 / 5.0 | 4.0 / 5.0 | 🟢 Diperbaiki | Blog id 3 postingan diperluas (±1000 kata): Permen PUPR 4/2024, 27/2015, SIPPA, biaya/durasi, sanksi. Halaman layanan ditambah seksi durasi/biaya/kriteria konsultan. |
+| **GEO (AI Citation Readiness)** | 2.0 / 5.0 | 4.5 / 5.0 | 🟢 Diperbaiki | Inverted pyramid block + tabel matriks + Schema `Service`, `FAQPage`, `BreadcrumbList`, `BlogPosting`, `ProfessionalService`. Siap Rich Results & AI Overview. |
+| **Technical SEO & Metadata i18n** | 3.0 / 5.0 | 4.5 / 5.0 | 🟢 Diperbaiki | `generateMetadata` dinamis 3 bahasa (id/en/zh) di layout + semua halaman. Canonical pakai `siteUrl`, alternates + `x-default`, OG/Twitter absolut, dedupe judul brand, sitemap 54 URL, robots clean. |
+| **E-E-A-T & Credibility Signals** | 3.5 / 5.0 | 4.0 / 5.0 | 🟢 Diperbaiki | Author dikonsistensikan ke **Gani Abdurrahman** (proyek + blog permit). Referensi Bendungan Semantok & Ladongi ditautkan ke halaman izin & blog. |
+
+### Log Implementasi & Status (diperbarui 23 September 2026)
+
+| # | Perubahan | File Utama | Status | Verifikasi |
+|---|---|---|---|---|
+| 1 | Buat hub `/services` (3 bahasa) + metadata + JSON-LD Service/BreadcrumbList | `src/app/[locale]/services/page.tsx` | ✅ Selesai | Build pass, render 200 |
+| 2 | Buat 3 halaman pillar perizinan (konten id/en/zh, tabel, FAQ, sidebar related, footer links) | `services/{river-diversion-permit,water-intake-permit-sippa,dam-construction-permit}/page.tsx` | ✅ Selesai | Runtime curl 200 id/en/zh |
+| 3 | Interlink silo: hub↔pillar↔blog (guide link), related servicing sidebar, footer | 3 halaman layanan + `page.tsx` hub | ✅ Selesai | `href` terlocalisasi terverifikasi |
+| 4 | Perluas konten id: durasi/biaya/kriteria konsultan di 3 halaman layanan | halaman layanan | ✅ Selesai | — |
+| 5 | Perluas 3 blog id permit (±1000 kata) + rename author → Gani Abdurrahman (9 file) | `content/{id,en,zh}/blog/*permit*.md` | ✅ Selesai | Frontmatter terverifikasi |
+| 6 | Metadata dinamis 3 bahasa + canonical `siteUrl` + OG/Twitter absolut + JSON-LD lokal | `src/app/[locale]/layout.tsx` | ✅ Selesai | Title/brand single, og:title sesuai keyword |
+| 7 | Dedupe judul brand + localize metadata listing (blog, projects) + schema BlogPosting | `blog/[slug]`, `blog/page`, `projects/[slug]`, `projects/page` | ✅ Selesai | BlogPosting author = Gani Abdurrahman |
+| 8 | Perluas FAQ bendungan 3 Q&A + Service/BreadcrumbList schema di 3 halaman layanan | `services/*` | ✅ Selesai | JSON-LD array lengkap di HTML |
+| 9 | H1 homepage + navbar "Permits"/"Perizinan" + footer links + cards permits | `page.tsx`, `Navbar.tsx`, `messages/*.json` | ✅ Selesai | Render terverifikasi |
+| 10 | Sitemap (54 URL, priority, x-default) + robots dedupe | `src/app/sitemap.ts`, `src/app/robots.ts` | ✅ Selesai | 54 `<url>`, robots 1 rule |
+| 11 | Konsistensi `siteUrl` di canonical all pages + OG/twitter halaman layanan + author schema | 3 halaman layanan, `about/page.tsx`, `blog/[slug]`, `projects/[slug]` | ✅ Selesai | 23 Sep 2026, diff direview |
+| — | Lint & Build (`npm run lint && npm run build`) | — | ✅ Selesai | Pass |
+
+### Belum Dilakukan (Perlu Tindakan Pemilik Website)
+
+| # | Tindakan | Prioritas | Catatan |
 |---|---|---|---|
-| **On-Page SEO (Keywords & Headings)** | 2.0 / 5.0 | 🔴 Perlu Perbaikan | Belum ada landing page dedicated untuk masing-masing perizinan. Keyword belum ada di Meta Title/H1. |
-| **Content Depth & Topical Authority** | 2.5 / 5.0 | 🟡 Cukup | Konten blog baru menyentuh 1 topik secara umum, belum detail menyebut Permen PUPR No. 4/2024 atau regulasi SIP SDA. |
-| **GEO (AI Citation Readiness)** | 2.0 / 5.0 | 🔴 Perlu Perbaikan | Format artikel belum menggunakan *direct answer block* (inverted pyramid), tabel komparasi/syarat, atau Schema FAQ. |
-| **Technical SEO & Metadata i18n** | 3.0 / 5.0 | 🟡 Cukup | Next.js i18n sudah ada (`/id`, `/en`, `/zh`), namun Metadata di `layout.tsx` masih statis & `generateMetadata` belum dinamis per locale. |
-| **E-E-A-T & Credibility Signals** | 3.5 / 5.0 | 🟢 Baik | PT WECON punya track record 33+ tahun & proyek nasional (Semantok, Merangin), namun perlu dihubungkan secara teknis ke halaman izin. |
+| 1 | GSC: request indexing `/id/services/*` + resubmit `/sitemap.xml` | 🔴 Kritis | Prasyarat agar halaman terindeks & bisa diranking |
+| 2 | Cek indexation via `site:weconsultant.id/id/services` | 🔴 Kritis | Baseline saat ini 0 hasil |
+| 3 | Bangun 1+ backlink dofollow ke `/id/services` (dari kontraktor utama / asosiasi BHMMA-INTAKIN / direktori industri) | 🟠 Penting | Akselerasi otoritas; domain belum punya data backlink |
+| 4 | Validasi Schema di Google Rich Results Test | 🟢 Standard | FAQ/Service/Breadcrumb/BlogPosting |
+| 5 | Pantau 4-8 minggu: impressions GSC → optimasi query long-tail | 🟢 Standard | Roadmap hasil: indexing 2-3 minggu, trafik nyata 4-8 bulan |
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "印尼河流取水许可与 PUPR SIPPA 许可证办理指南"
 date: "2026-08-10"
-author: "Ir. Hadi Santoso, MT. (PT WECON 首席水利工程师)"
+author: "Gani Abdurrahman | PT Wecon 董事"
 category: "行业洞察"
 excerpt: "了解如何为工业、水电站和工厂申请印尼地表水取水许可证 (SIPPA / SIP SDA)。"
 image: "/service_survey.png"

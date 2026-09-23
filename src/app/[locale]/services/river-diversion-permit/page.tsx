@@ -6,21 +6,24 @@ import type { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://weconsultant.id';
 
-  let title = "River Diversion Permitting Services Indonesia | PT WECON";
+  let title = "River Diversion Permitting Services in Indonesia";
   let description = "Expert river diversion permitting consultation in Indonesia per PUPR Regulation No. 4/2024. Hydrological analysis, hydraulic modeling, and BWS recommendation.";
 
   if (locale === 'id') {
     title = "Perijinan Pengalihan Sungai: Syarat & Panduan Permen PUPR 4/2024";
     description = "Konsultan perijinan pengalihan sungai & alur air sesuai Permen PUPR No. 4 Tahun 2024. Melayani penyusunan kajian hidrologi, pemodelan HEC-RAS, AMDAL, & rekomtek BWS/BBWS.";
   } else if (locale === 'zh') {
-    title = "印尼河流改道许可与导流工程咨询服务 | PT WECON";
+    title = "印尼河流改道许可与导流工程咨询服务";
     description = "根据印尼公共工程部 (PUPR) 2024年第4号条例提供专业河流改道许可咨询。包括水文分析、HEC-RAS水力建模和 BWS 推荐信。";
   }
 
+  const canonicalUrl = `${siteUrl}/${locale}/services/river-diversion-permit`;
+
   return {
-    title: title,
-    description: description,
+    title,
+    description,
     keywords: [
       "Perijinan Pengalihan Sungai",
       "River Diversion Permit Indonesia",
@@ -31,12 +34,34 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       "PT WECON"
     ],
     alternates: {
-      canonical: `https://weconsultant.id/${locale}/services/river-diversion-permit`,
+      canonical: canonicalUrl,
       languages: {
-        'en': 'https://weconsultant.id/en/services/river-diversion-permit',
-        'id': 'https://weconsultant.id/id/services/river-diversion-permit',
-        'zh': 'https://weconsultant.id/zh/services/river-diversion-permit',
+        'en': `${siteUrl}/en/services/river-diversion-permit`,
+        'id': `${siteUrl}/id/services/river-diversion-permit`,
+        'zh': `${siteUrl}/zh/services/river-diversion-permit`,
       },
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      siteName: 'PT. WECON',
+      type: 'website',
+      locale: locale === 'id' ? 'id_ID' : locale === 'zh' ? 'zh_CN' : 'en_US',
+      images: [
+        {
+          url: `${siteUrl}/river_diversion.png`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [`${siteUrl}/river_diversion.png`],
     },
   };
 }
@@ -44,6 +69,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function RiverDiversionPermitPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations('Footer');
+  const tPermits = await getTranslations('Permits');
+
+  const permitLinks = [
+    { href: '/services/river-diversion-permit', label: tPermits('riverDiversion') },
+    { href: '/services/water-intake-permit-sippa', label: tPermits('waterIntake') },
+    { href: '/services/dam-construction-permit', label: tPermits('damConstruction') },
+  ];
+  const currentHref = '/services/river-diversion-permit';
 
   const content = {
     id: {
@@ -66,6 +99,9 @@ export default async function RiverDiversionPermitPage({ params }: { params: Pro
         "Pengajuan Permohonan Rekomtek ke BWS/BBWS: Paparan teknis di depan tim ahli Balai Wilayah Sungai Kementerian PUPR.",
         "Penerbitan Surat Rekomendasi Teknis: Landasan penerbitan Izin Pengalihan Alur Sungai resmi."
       ],
+      sec4Title: "4. Estimasi Durasi, Biaya & Kriteria Memilih Konsultan Pengalihan Sungai",
+      sec4P1: "Waktu pengurusan izin pengalihan alur sungai sangat bergantung pada ketersediaan data hidrologi dan kompleksitas alur sungai. Untuk proyek dengan debit rencana besar (di atas 100 m³/detik) dan pemodelan hidrolika 2D, proses kajian hingga terbitnya Rekomtek BWS umumnya 2-4 bulan; proyek skala menengah dengan data sekunder lengkap dapat selesai dalam 5-8 minggu. Biaya jasa konsultan perijinan pengalihan sungai ditentukan oleh cakupan kajian hidrolika, jumlah titik bor geoteknik, kebutuhan dokumen AMDAL, serta jarak survei lapangan ke lokasi proyek.",
+      sec4P2: "Saat memilih konsultan, pastikan perusahaan memiliki insinyur keairan bersertifikat, rekam jejak sidang rekomtek BWS/BBWS, dan pengalaman integral mengurus izin sejenis seperti SIPPA dan sertifikasi bendungan. PT WECON menggabungkan tim Internal Water Engineer, Geologist, dan Environmental Specialist dalam satu payung proyek — sehingga Anda tidak perlu mengkoordinasikan banyak vendor untuk dokumen pengalihan sungai sekaligus izin pengambilan air.",
       faqTitle: "Pertanyaan Sering Diajukan (FAQ)",
       q1: "Berapa lama proses evaluasi perijinan pengalihan sungai?",
       a1: "Proses penyusunan kajian teknis hingga penerbitan Rekomtek BWS umumnya membutuhkan waktu 1 hingga 3 bulan tergantung kompleksitas debit sungai.",
@@ -74,7 +110,9 @@ export default async function RiverDiversionPermitPage({ params }: { params: Pro
       sidebarTitle: "Butuh Konsultasi Perijinan Pengalihan Sungai?",
       sidebarDesc: "Tim insinyur keairan PT WECON bersertifikat siap membantu studi teknis, pemodelan HEC-RAS, dan pengajuan rekomendasi teknis ke BBWS/BWS setempat.",
       ctaWa: "💬 WhatsApp Konsultan Keairan",
-      ctaMail: "✉️ Kirim Email Diskusi Proyek"
+      ctaMail: "✉️ Kirim Email Diskusi Proyek",
+      guideTitle: "Baca Panduan Lengkap",
+      guideLink: "Panduan Perijinan Pengalihan Air Sungai sesuai Permen PUPR 4/2024"
     },
     en: {
       badge: "WATER RESOURCES PERMITTING CONSULTANT",
@@ -96,6 +134,9 @@ export default async function RiverDiversionPermitPage({ params }: { params: Pro
         "Technical Recommendation Application to BWS/BBWS: Technical presentation before Ministry experts.",
         "Issuance of Official Technical Recommendation (Rekomtek): Basis for official river diversion license."
       ],
+      sec4Title: "4. Duration, Cost & How to Choose a River Diversion Consultant",
+      sec4P1: "The river diversion permitting timeline depends on hydrological data availability and channel complexity. Large projects with 2D hydraulic modeling typically take 2-4 months from study to BWS Rekomtek issuance; mid-scale projects with complete secondary data can finish in 5-8 weeks. Consulting fees are driven by hydraulic study scope, geotechnical borings, AMDAL scope, and distance from site surveys.",
+      sec4P2: "Choose a consultant with certified water engineers, a documented BWS/BBWS hearing track record, and integrated experience across SIPPA and dam certification. PT WECON fields certified water engineers, geologists, and environmental specialists under one roof — one partner for your diversion and water-use permits.",
       faqTitle: "Frequently Asked Questions (FAQ)",
       q1: "How long does the river diversion permit evaluation take?",
       a1: "Technical study preparation and BWS Rekomtek approval typically take 1 to 3 months depending on river complexity.",
@@ -104,7 +145,9 @@ export default async function RiverDiversionPermitPage({ params }: { params: Pro
       sidebarTitle: "Need River Diversion Permitting Support?",
       sidebarDesc: "PT WECON certified water engineering team is ready to assist with technical studies, HEC-RAS modeling, and BWS recommendation submissions.",
       ctaWa: "💬 WhatsApp Water Engineer",
-      ctaMail: "✉️ Email Project Inquiries"
+      ctaMail: "✉️ Email Project Inquiries",
+      guideTitle: "Read the Complete Guide",
+      guideLink: "Complete Guide to River Diversion Permitting (PUPR Reg. 4/2024)"
     },
     zh: {
       badge: "水资源许可工程顾问",
@@ -126,6 +169,9 @@ export default async function RiverDiversionPermitPage({ params }: { params: Pro
         "向 BWS/BBWS 提交技术推荐信申请：在 PUPR 部专家组前进行技术汇报。",
         "颁发官方技术推荐信 (Rekomtek)：作为正式获批河流改道许可证的依据。"
       ],
+      sec4Title: "4. 办理时长、费用与如何选择河流改道顾问",
+      sec4P1: "河流改道许可的办理时长取决于水文数据完整性和河道复杂程度。大型项目（含二维水力建模）从研究到 BWS 推荐信签发通常需 2-4 个月；数据完整的中型项目约需 5-8 周。咨询费用主要取决于水力分析范围、岩土钻探点数量、环评文件要求和现场勘测距离。",
+      sec4P2: "选择顾问时应核对其认证水利工程师资质、BWS/BBWS 评审会成功经历，以及能否一体化办理 SIPPA 与大坝认证。PT WECON 由认证水利工程师、地质师与环评专家组成综合团队，一站式办理您的改道与取水许可。",
       faqTitle: "常见问题解答 (FAQ)",
       q1: "河流改道许可评估需要多长时间？",
       a1: "根据河流复杂程度，技术研究准备至 BWS Rekomtek 获批通常需要 1 到 3 个月。",
@@ -134,34 +180,75 @@ export default async function RiverDiversionPermitPage({ params }: { params: Pro
       sidebarTitle: "需要河流改道许可咨询？",
       sidebarDesc: "PT WECON 认证水利工程师团队随时为您提供技术研究、HEC-RAS 建模和 BWS 推荐信申请支持。",
       ctaWa: "💬 WhatsApp 咨询水利工程师",
-      ctaMail: "✉️ 发送电子邮件探讨项目"
+      ctaMail: "✉️ 发送电子邮件探讨项目",
+      guideTitle: "阅读完整指南",
+      guideLink: "印尼河流改道许可全指南 (PUPR 2024年第4号条例)"
     }
   };
 
   const curr = content[locale as keyof typeof content] || content.en;
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": curr.q1,
-        "acceptedAnswer": { "@type": "Answer", "text": curr.a1 }
-      },
-      {
-        "@type": "Question",
-        "name": curr.q2,
-        "acceptedAnswer": { "@type": "Answer", "text": curr.a2 }
-      }
-    ]
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://weconsultant.id';
+
+  const crumbLabels: Record<string, { home: string; services: string }> = {
+    en: { home: "Home", services: "Services" },
+    id: { home: "Beranda", services: "Layanan" },
+    zh: { home: "首页", services: "服务" },
   };
+  const crumbs = crumbLabels[locale] || crumbLabels.en;
+
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": curr.h1,
+      "url": `${siteUrl}/${locale}/services/river-diversion-permit`,
+      "description": curr.heroDesc,
+      "provider": { "@type": "ProfessionalService", "name": "PT. WECON", "url": siteUrl },
+      "areaServed": { "@type": "Country", "name": "Indonesia" },
+      "serviceType": "Perijinan Pengalihan Sungai",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Perizinan Sumber Daya Air",
+        "itemListElement": [
+          { "@type": "Service", "name": tPermits("riverDiversion") },
+          { "@type": "Service", "name": tPermits("waterIntake") },
+          { "@type": "Service", "name": tPermits("damConstruction") }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": crumbs.home, "item": `${siteUrl}/${locale}` },
+        { "@type": "ListItem", "position": 2, "name": crumbs.services, "item": `${siteUrl}/${locale}/services` },
+        { "@type": "ListItem", "position": 3, "name": curr.h1, "item": `${siteUrl}/${locale}/services/river-diversion-permit` }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": curr.q1,
+          "acceptedAnswer": { "@type": "Answer", "text": curr.a1 }
+        },
+        {
+          "@type": "Question",
+          "name": curr.q2,
+          "acceptedAnswer": { "@type": "Answer", "text": curr.a2 }
+        }
+      ]
+    }
+  ];
 
   return (
     <main className="flex flex-col min-h-screen bg-wecon-light text-wecon-dark">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Navbar />
 
@@ -262,6 +349,18 @@ export default async function RiverDiversionPermitPage({ params }: { params: Pro
                 </ol>
               </div>
 
+              <div>
+                <h2 className="text-[28px] md:text-[36px] font-heading text-black font-medium mb-4">
+                  {curr.sec4Title}
+                </h2>
+                <p className="mb-4">
+                  {curr.sec4P1}
+                </p>
+                <p>
+                  {curr.sec4P2}
+                </p>
+              </div>
+
               {/* FAQ Section */}
               <div className="bg-white p-8 rounded-2xl border border-black/10 space-y-6">
                 <h2 className="text-2xl font-heading text-black font-bold mb-4">{curr.faqTitle}</h2>
@@ -274,6 +373,14 @@ export default async function RiverDiversionPermitPage({ params }: { params: Pro
                   <h3 className="font-bold text-lg text-black mb-1">{curr.q2}</h3>
                   <p className="text-sm">{curr.a2}</p>
                 </div>
+              </div>
+
+            {/* Related Blog Guide */}
+              <div>
+                <p className="font-bold text-lg text-black mb-2">{curr.guideTitle}:</p>
+                <Link href="/blog/panduan-perijinan-pengalihan-air-sungai" className="text-blue-700 hover:underline">
+                  {curr.guideLink} →
+                </Link>
               </div>
 
             </div>
@@ -294,6 +401,27 @@ export default async function RiverDiversionPermitPage({ params }: { params: Pro
                   </Link>
                 </div>
               </div>
+
+              {/* Related Permitting Services */}
+              <div className="bg-white p-8 rounded-2xl border border-black/10 mt-6">
+                <h3 className="text-lg font-heading text-black font-bold mb-4">{tPermits('relatedTitle')}</h3>
+                <ul className="space-y-3">
+                  {permitLinks.map((p) =>
+                    p.href === currentHref ? (
+                      <li key={p.href} className="text-sm font-semibold text-blue-700">{p.label}</li>
+                    ) : (
+                      <li key={p.href} className="text-sm">
+                        <Link href={p.href} className="text-black/70 hover:text-blue-700 transition-colors">{p.label} →</Link>
+                      </li>
+                    )
+                  )}
+                </ul>
+                <div className="mt-6 pt-5 border-t border-black/10">
+                  <Link href="/services" className="text-sm font-medium text-black hover:text-blue-700 transition-colors">
+                    {tPermits('allServices')} →
+                  </Link>
+                </div>
+              </div>
             </div>
 
           </div>
@@ -302,11 +430,23 @@ export default async function RiverDiversionPermitPage({ params }: { params: Pro
 
       {/* Footer */}
       <footer className="bg-[#151515] text-white py-16">
-        <div className="container mx-auto px-6 md:px-12 max-w-[1440px] text-center">
-          <h2 className="text-3xl md:text-4xl font-heading mb-6">{t('cta_title')}</h2>
-          <Link href="https://wa.me/6281234878660" className="inline-block bg-white text-black px-8 py-4 rounded-md font-mono font-bold text-xs uppercase tracking-widest hover:bg-gray-200 transition-colors">
-            {t('contact_us')}
-          </Link>
+        <div className="container mx-auto px-6 md:px-12 max-w-[1440px]">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-10">
+            <h2 className="text-3xl md:text-4xl font-heading">{t('cta_title')}</h2>
+            <Link href="https://wa.me/6281234878660" className="inline-block bg-white text-black px-8 py-4 rounded-md font-mono font-bold text-xs uppercase tracking-widest hover:bg-gray-200 transition-colors">
+              {t('contact_us')}
+            </Link>
+          </div>
+          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <span className="text-[#888888] text-[11px]">© PT. WECON</span>
+            <ul className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 text-[12px] text-[#888888]">
+              {permitLinks.map((p) => (
+                <li key={p.href}>
+                  <Link href={p.href} className="hover:text-white transition-colors">{p.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </footer>
     </main>

@@ -4,10 +4,20 @@
     "expertise": "Our Expertise",
     "projects": "Projects",
     "newsroom": "Newsroom",
+    "services": "Permits",
     "contact_us": "Contact Us"
   },
+  "Permits": {
+    "title": "PERMITS",
+    "riverDiversion": "River Diversion Permit",
+    "waterIntake": "Water Intake Permit & SIPPA",
+    "damConstruction": "Dam Construction Permit",
+    "allServices": "All Permitting Services",
+    "relatedTitle": "Related Permitting Services",
+    "viewAll": "All perizinan & permitting services"
+  },
   "Hero": {
-    "title": "PT Wecon: Indonesia's Trusted Water Engineering Consultant Since 1973",
+    "title": "PT Wecon: Indonesia's Trusted Water Engineering & Licensing Consultant Since 1973",
     "subtitle": "Beyond Technologies. For over 50 years, we have partnered with government agencies and industries to design, supervise, and certify water infrastructure — from Southeast Asia's longest dam to nationwide hydropower plants.",
     "work_with_us": "WORK WITH US",
     "our_services": "OUR SERVICES"
@@ -23,6 +33,9 @@
   "HomePage": {
     "About": {
       "text": "PT Wecon is a leading Water Engineering Consultant in Indonesia, officially certified to deliver specialized civil construction and water resources infrastructure. Founded in 1973 and led by Ir. Hadi Santoso, MT., we leverage decades of hands-on expertise to execute dam designs, irrigation systems, and hydropower facilities. Our track record spans across 7 provinces, securing ISO-standard quality assurance on National Strategic Projects inaugurated directly by the President of the Republic of Indonesia.",
+      "permitShort_river": "Official authorization for redirecting natural river channels before construction, per PUPR Regulation 4/2024 — hydrology studies, HEC-RAS modeling & BWS recommendation.",
+      "permitShort_intake": "Surface water usage license (SIPPA / SIP SDA) for industry, plants & hydropower, with water balance study and intake DED.",
+      "permitShort_dam": "Full-lifecycle dam permits — design certification, construction, impounding & operation through the Dam Safety Commission (KKB, PUPR Reg. 27/2015).",
       "btn": "LEARN OUR STORY"
     },
     "Projects": {

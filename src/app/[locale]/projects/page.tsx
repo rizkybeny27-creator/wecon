@@ -1,11 +1,28 @@
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import { getAllPosts } from '@/lib/markdown';
+import type { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Projects - PT. WECON',
-  description: 'Explore featured water resources engineering projects by PT. WECON.',
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+
+  const META: Record<string, Metadata> = {
+    en: {
+      title: 'Water Resources Engineering Projects',
+      description: 'Explore featured water resources engineering projects by PT. WECON — dam designs, hydropower, irrigation, and construction supervision across Indonesia.',
+    },
+    id: {
+      title: 'Portofolio Proyek Rekayasa Sumber Daya Air',
+      description: 'Jelajahi proyek unggulan rekayasa sumber daya air PT. WECON — desain bendungan, PLTA, irigasi, dan pengawasan konstruksi di Indonesia.',
+    },
+    zh: {
+      title: '印尼水资源工程项目案例',
+      description: '了解 PT WECON 的代表性水资源工程项目 — 大坝设计、水电、灌溉和印尼各地施工监理。',
+    },
+  };
+
+  return META[locale] || META.en;
+}
 
 export default async function ProjectsList({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

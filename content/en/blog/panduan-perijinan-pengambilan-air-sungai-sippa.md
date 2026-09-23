@@ -1,7 +1,7 @@
 ---
 title: "Guide to Surface Water Intake Permitting & SIPPA PUPR in Indonesia"
 date: "2026-08-10"
-author: "Ir. Hadi Santoso, MT. (Principal Water Engineer PT WECON)"
+author: "Gani Abdurrahman | Director, PT Wecon"
 category: "Industry Insights"
 excerpt: "Learn how to apply for Surface Water Intake Permits and SIPPA (Water Resources Information Licensing System) for industrial and hydropower projects."
 image: "/service_survey.png"

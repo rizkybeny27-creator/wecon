@@ -40,45 +40,65 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://weconsultant.id';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const isId = locale === 'id';
 
-  const title = isId 
-    ? "PT WECON - Konsultan Rekayasa Sumber Daya Air & Perijinan Sungai Indonesia"
-    : "PT WECON - Water Resources Engineering & Licensing Consultant Indonesia";
+  const META: Record<string, { title: string; description: string; keywords: string[]; ogLocale: string }> = {
+    en: {
+      title: "PT WECON - Water Resources Engineering & Licensing Consultant Indonesia",
+      description: "PT Wecon is Indonesia's trusted Water Engineering Consultant since 1973. Specializing in river diversion permits, water intake licensing (SIPPA), dam design, and construction supervision.",
+      keywords: [
+        "PT WECON",
+        "Water Resources Engineering",
+        "Water Engineering Consultant Indonesia",
+        "River Diversion Permit Indonesia",
+        "SIPPA Water Permit",
+        "Dam Design Consultant",
+        "Hydropower Engineering",
+      ],
+      ogLocale: "en_US",
+    },
+    id: {
+      title: "PT WECON - Konsultan Rekayasa Sumber Daya Air & Perijinan Sungai Indonesia",
+      description: "PT WECON adalah konsultan teknik pengairan terpercaya sejak 1973. Melayani Perijinan Pengalihan Sungai (Permen PUPR No. 4/2024), Perijinan Pengambilan Sungai (SIPPA / SIP SDA), dan Sertifikasi Pembangunan Bendungan.",
+      keywords: [
+        "Perijinan Pengalihan Sungai",
+        "Perijinan Pengambilan Sungai",
+        "Perijinan Pembangunan Bendungan",
+        "SIPPA",
+        "SIP SDA Kementerian PUPR",
+        "Permen PUPR No 4 Tahun 2024",
+        "Konsultan Teknik Pengairan",
+        "Konsultan Bendungan Indonesia",
+        "PT WECON",
+        "Rekayasa Sumber Daya Air",
+      ],
+      ogLocale: "id_ID",
+    },
+    zh: {
+      title: "PT WECON - 印尼水利工程与许可咨询顾问",
+      description: "PT Wecon 自 1973 年起为印尼领先的水利工程顾问，专注于河流改道许可 (PUPR 2024年第4号条例)、地表水取水许可 (SIPPA)、大坝设计、建设与施工监理。",
+      keywords: [
+        "PT WECON",
+        "印尼水利咨询顾问",
+        "河流改道许可",
+        "地表水取水许可 SIPPA",
+        "大坝建设许可",
+        "水资源工程",
+        "大坝设计咨询",
+      ],
+      ogLocale: "zh_CN",
+    },
+  };
 
-  const description = isId
-    ? "PT WECON adalah konsultan teknik pengairan terpercaya sejak 1973. Melayani Perijinan Pengalihan Sungai (Permen PUPR No. 4/2024), Perijinan Pengambilan Sungai (SIPPA / SIP SDA), dan Sertifikasi Pembangunan Bendungan."
-    : "PT Wecon is Indonesia's trusted Water Engineering Consultant since 1973. Specializing in river diversion permits, water intake licensing, dam design, and construction supervision.";
-
-  const keywords = isId ? [
-    "Perijinan Pengalihan Sungai",
-    "Perijinan Pengambilan Sungai",
-    "Perijinan Pembangunan Bendungan",
-    "SIPPA",
-    "SIP SDA Kementerian PUPR",
-    "Permen PUPR No 4 Tahun 2024",
-    "Konsultan Teknik Pengairan",
-    "Konsultan Bendungan Indonesia",
-    "PT WECON",
-    "Rekayasa Sumber Daya Air"
-  ] : [
-    "PT WECON",
-    "Water Resources Engineering",
-    "Water Engineering Consultant Indonesia",
-    "Dam Design Consultant",
-    "Hydropower Engineering",
-    "River Diversion Permit Indonesia",
-    "SIPPA Water Permit"
-  ];
+  const meta = META[locale] || META.en;
 
   return {
     metadataBase: new URL(siteUrl),
     title: {
-      default: title,
+      default: meta.title,
       template: "%s | PT. WECON"
     },
-    description: description,
-    keywords: keywords,
+    description: meta.description,
+    keywords: meta.keywords,
     authors: [{ name: "PT. WECON" }],
     creator: "PT. WECON",
     publisher: "PT. WECON",
@@ -86,12 +106,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       google: "google55a6da75d36e63eb",
     },
     alternates: {
-      canonical: `https://weconsultant.id/${locale}`,
+      canonical: `${siteUrl}/${locale}`,
       languages: {
-        'en': 'https://weconsultant.id/en',
-        'id': 'https://weconsultant.id/id',
-        'zh': 'https://weconsultant.id/zh',
-        'x-default': 'https://weconsultant.id/en',
+        'en': `${siteUrl}/en`,
+        'id': `${siteUrl}/id`,
+        'zh': `${siteUrl}/zh`,
+        'x-default': `${siteUrl}/en`,
       },
     },
     robots: {
@@ -106,26 +126,26 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       },
     },
     openGraph: {
-      title: title,
-      description: description,
+      title: meta.title,
+      description: meta.description,
       url: `${siteUrl}/${locale}`,
       siteName: "PT. WECON",
       images: [
         {
-          url: "/hero-bg.jpg",
+          url: `${siteUrl}/hero-bg.jpg`,
           width: 1200,
           height: 630,
           alt: "PT. WECON Water Resources Engineering",
         },
       ],
-      locale: isId ? "id_ID" : "en_US",
+      locale: meta.ogLocale,
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: title,
-      description: description,
-      images: ["/hero-bg.jpg"],
+      title: meta.title,
+      description: meta.description,
+      images: [`${siteUrl}/hero-bg.jpg`],
     },
   };
 }
@@ -145,6 +165,12 @@ export default async function RootLayout({
 
   const messages = await getMessages();
 
+  const jsonLdDesc: Record<string, string> = {
+    en: "Water Resources Engineering & Permitting Consultant in Indonesia. 33+ years of experience in river diversion licensing, surface water usage (SIPPA), and dam safety certification.",
+    id: "Konsultan Teknik Pengairan & Perizinan Sumber Daya Air di Indonesia. Pengalaman 33+ tahun dalam perizinan pengalihan sungai, pengusahaan air permukaan (SIPPA), dan sertifikasi bendungan.",
+    zh: "印尼水资源工程与许可咨询顾问。拥有 33 年以上经验，涵盖河流改道许可、地表水取用 (SIPPA) 和大坝安全认证。",
+  };
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -152,7 +178,7 @@ export default async function RootLayout({
     "url": siteUrl,
     "logo": `${siteUrl}/logo-black.png`,
     "image": `${siteUrl}/hero-bg.jpg`,
-    "description": "Konsultan Teknik Pengairan & Perizinan Sumber Daya Air di Indonesia. Pengalaman 33+ tahun dalam perizinan pengalihan sungai, pengusahaan air permukaan (SIPPA), dan sertifikasi bendungan.",
+    "description": jsonLdDesc[locale] || jsonLdDesc.en,
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Sidoarjo",
@@ -161,6 +187,17 @@ export default async function RootLayout({
     },
     "telephone": "+6281234878660",
     "priceRange": "$$$",
+    "areaServed": { "@type": "Country", "name": "Indonesia" },
+    "sameAs": [siteUrl],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Water Resources Permitting Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Perijinan Pengalihan Sungai" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Perijinan Pengambilan Sungai & SIPPA" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Perijinan Pembangunan Bendungan" } }
+      ]
+    },
     "knowsAbout": [
       "Perijinan Pengalihan Sungai",
       "Perijinan Pengambilan Sungai",

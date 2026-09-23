@@ -1,7 +1,7 @@
 ---
 title: "4 Stages of Dam Construction Permitting in Indonesia (PUPR Reg. 27/2015)"
 date: "2026-08-15"
-author: "Ir. Hadi Santoso, MT. (Principal Water Engineer PT WECON)"
+author: "Gani Abdurrahman | Director, PT Wecon"
 category: "Engineering Insights"
 excerpt: "A comprehensive guide to the 4 stages of dam construction permitting in Indonesia, from Dam Safety Commission Design Certification to Impounding and Operation Permits."
 image: "/dam_sustainable.png"

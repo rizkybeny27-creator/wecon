@@ -4,10 +4,20 @@
     "expertise": "Keahlian",
     "projects": "Proyek",
     "newsroom": "Berita",
+    "services": "Perizinan",
     "contact_us": "Hubungi Kami"
   },
+  "Permits": {
+    "title": "PERIZINAN",
+    "riverDiversion": "Perijinan Pengalihan Sungai",
+    "waterIntake": "Perijinan Pengambilan Sungai & SIPPA",
+    "damConstruction": "Perijinan Pembangunan Bendungan",
+    "allServices": "Semua Layanan Perizinan",
+    "relatedTitle": "Layanan Perizinan Terkait",
+    "viewAll": "Semua layanan perizinan SDA"
+  },
   "Hero": {
-    "title": "PT Wecon: Konsultan Teknik Air Terpercaya di Indonesia Sejak 1973",
+    "title": "PT Wecon: Konsultan Perijinan Sumber Daya Air, Bendungan & Teknik Air Sejak 1973",
     "subtitle": "Melampaui Teknologi. Selama lebih dari 50 tahun, kami telah bermitra dengan instansi pemerintah dan industri untuk merancang, mengawasi, dan mensertifikasi infrastruktur air — mulai dari bendungan terpanjang di Asia Tenggara hingga pembangkit listrik tenaga air nasional.",
     "work_with_us": "KERJA SAMA",
     "our_services": "LAYANAN KAMI"
@@ -23,6 +33,9 @@
   "HomePage": {
     "About": {
       "text": "PT Wecon adalah Konsultan Teknik Sumber Daya Air terkemuka di Indonesia, bersertifikat resmi untuk memberikan layanan konstruksi sipil khusus dan infrastruktur sumber daya air. Didirikan pada tahun 1973 dan dipimpin oleh Ir. Hadi Santoso, MT., kami memanfaatkan pengalaman puluhan tahun untuk mengerjakan desain bendungan, sistem irigasi, dan fasilitas PLTA. Rekam jejak kami tersebar di 7 provinsi, memastikan standar kualitas ISO pada Proyek Strategis Nasional yang diresmikan langsung oleh Presiden Republik Indonesia.",
+      "permitShort_river": "Izin resmi pengalihan alur sungai sebelum konstruksi sesuai Permen PUPR 4/2024 — kajian hidrologi, pemodelan HEC-RAS, dan rekomtek BWS.",
+      "permitShort_intake": "Izin Pengusahaan Air Permukaan (SIPPA / SIP SDA) untuk industri & PLTA, lengkap dengan neraca air dan DED intake.",
+      "permitShort_dam": "Sertifikasi Desain, Izin Konstruksi, Impounding, dan Izin Operasi Bendungan melalui Komisi Keamanan Bendungan (KKB, Permen PUPR 27/2015).",
       "btn": "PELAJARI CERITA KAMI"
     },
     "Projects": {

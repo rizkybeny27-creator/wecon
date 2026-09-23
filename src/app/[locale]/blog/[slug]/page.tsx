@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug, locale } = await params;
   try {
     const post = await getPostData('blog', slug, locale);
-    const title = `${post.title} - PT. WECON`;
+    const title = post.title;
     const description = post.excerpt || `Blog article: ${post.title} by PT. WECON Water Resources Engineering Consultant.`;
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://weconsultant.id';
     const canonicalUrl = `${siteUrl}/${locale}/blog/${slug}`;
@@ -37,11 +37,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         card: 'summary_large_image',
         title,
         description,
-        images: post.image ? [post.image] : [],
+        images: post.image ? [post.image.startsWith('http') ? post.image : `${siteUrl}${post.image}`] : [],
       },
     };
   } catch {
-    return { title: 'Not Found - PT. WECON' };
+    return { title: 'Not Found' };
   }
 }
 
@@ -57,8 +57,32 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   
   const relatedPosts = getAllPosts('blog', locale).filter(p => p.slug !== slug).slice(0, 3);
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://weconsultant.id';
+  const authorName = ((post.author as string) || 'PT. WECON').split('|')[0].trim();
+  const blogJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.excerpt,
+    "image": post.image ? `${siteUrl}${post.image}` : `${siteUrl}/hero-bg.jpg`,
+    "author": { "@type": "Person", "name": authorName },
+    "publisher": {
+      "@type": "Organization",
+      "name": "PT. WECON",
+      "logo": { "@type": "ImageObject", "url": `${siteUrl}/logo-black.png` }
+    },
+    "mainEntityOfPage": `${siteUrl}/${locale}/blog/${slug}`,
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "inLanguage": locale === 'id' ? 'id-ID' : locale === 'zh' ? 'zh-CN' : 'en-US'
+  };
+
   return (
     <main className="min-h-screen bg-white font-sans antialiased text-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+      />
       <Navbar theme="light" />
 
       {/* Hero Section */}

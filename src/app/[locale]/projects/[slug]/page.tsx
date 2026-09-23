@@ -10,14 +10,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug, locale } = await params;
   try {
     const project = await getPostData('projects', slug, locale);
-    const isId = locale === 'id';
-    const isZh = locale === 'zh';
 
-    let titleSuffix = "PT. WECON Water Resources Engineering";
-    if (isId) titleSuffix = "Konsultan Teknik Air PT. WECON";
-    if (isZh) titleSuffix = "PT. WECON 水利工程顾问";
-
-    const title = `${project.title} | ${titleSuffix}`;
+    const title = project.title;
     const description = project.excerpt || `${project.title} - Portofolio proyek rekayasa sumber daya air, perizinan, dan pengawasan konstruksi oleh PT. WECON.`;
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://weconsultant.id';
     const canonicalUrl = `${siteUrl}/${locale}/projects/${slug}`;
@@ -53,11 +47,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         card: 'summary_large_image',
         title,
         description,
-        images: project.image ? [project.image] : [],
+        images: project.image ? [project.image.startsWith('http') ? project.image : `${siteUrl}${project.image}`] : [],
       },
     };
   } catch {
-    return { title: 'Not Found - PT. WECON' };
+    return { title: 'Not Found' };
   }
 }
 

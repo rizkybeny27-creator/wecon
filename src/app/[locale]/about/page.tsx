@@ -6,27 +6,30 @@ import type { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  
-  let title = "About PT. WECON - Water Engineering Consultant";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://weconsultant.id';
+
+  let title = "Water Engineering & SDA Permitting Consultant in Indonesia";
   let description = "Profile of PT WECON, Indonesia's trusted water engineering consultant since 1973. Specializing in dam certification, river diversion permitting, and hydropower engineering.";
-  
+
   if (locale === 'id') {
-    title = "Tentang PT. WECON - Konsultan Rekayasa Sumber Daya Air";
+    title = "Konsultan Teknik Pengairan & Perizinan Sumber Daya Air di Indonesia";
     description = "Profil PT WECON, konsultan teknik pengairan dan sumber daya air terpercaya di Indonesia sejak 1973. Pengalaman 33+ tahun dalam sertifikasi bendungan dan perizinan pengalihan sungai.";
   } else if (locale === 'zh') {
-    title = "关于 PT. WECON - 印尼水利工程顾问公司";
+    title = "印尼水利工程与许可咨询顾问公司简介";
     description = "PT WECON 公司简介，自1973年以来印尼值得信赖的水利工程顾问公司。拥有超过33年的大坝认证、河流改道许可和水电工程经验。";
   }
 
+  const canonicalUrl = `${siteUrl}/${locale}/about`;
+
   return {
-    title: title,
-    description: description,
+    title,
+    description,
     alternates: {
-      canonical: `https://weconsultant.id/${locale}/about`,
+      canonical: canonicalUrl,
       languages: {
-        'en': 'https://weconsultant.id/en/about',
-        'id': 'https://weconsultant.id/id/about',
-        'zh': 'https://weconsultant.id/zh/about',
+        'en': `${siteUrl}/en/about`,
+        'id': `${siteUrl}/id/about`,
+        'zh': `${siteUrl}/zh/about`,
       },
     },
   };
