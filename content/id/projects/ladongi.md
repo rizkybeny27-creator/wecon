@@ -13,8 +13,8 @@ visibilitySettings: "Publik"
 servicesConsultant: "PT. WECON"
 quote:
   text: "Sebagai konsultan teknik air terkemuka, PT. WECON memastikan setiap detail struktural Bendungan Ladongi memenuhi standar keamanan tertinggi untuk ketahanan air jangka panjang."
-  author: "Ir. Hadi Santoso, MT."
-  authorRole: "Presiden Direktur, PT. WECON"
+  author: "Gani Abdurrahman"
+  authorRole: "Direktur, PT Wecon"
   authorAvatar: "/hadi-santoso.png"
 gallery:
   - "/dam_sustainable.png"

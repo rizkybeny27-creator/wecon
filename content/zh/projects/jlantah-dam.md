@@ -13,8 +13,8 @@ visibilitySettings: "公开"
 servicesConsultant: "PT. WECON"
 quote:
   text: "PT. WECON 从早期规划到施工监理全程参与这座高70米的土石坝建设，保障 1,097 万立方米水库的结构安全。"
-  author: "Ir. Hadi Santoso, MT."
-  authorRole: "PT. WECON 总裁"
+  author: "Gani Abdurrahman"
+  authorRole: "PT Wecon 董事"
   authorAvatar: "/hadi-santoso.png"
 gallery:
   - "/dam_sustainable.png"

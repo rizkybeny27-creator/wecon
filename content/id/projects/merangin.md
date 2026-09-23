@@ -1,7 +1,7 @@
 ---
 title: "Pembangkit Listrik Tenaga Air Merangin 350 MW — Konsultan PT. WECON"
 date: "2024-01-01"
-author: "Ir. Hadi Santoso, MT."
+author: "Gani Abdurrahman"
 excerpt: "PT. WECON bertindak sebagai Konsultan Manajemen Proyek dan Konsultan Teknik Sumber Daya Air utama untuk PLTA Merangin 350 MW di Jambi."
 image: "/merangin.jpg"
 tag: "Pembangkit Listrik Tenaga Air"
@@ -14,8 +14,8 @@ visibilitySettings: "Publik"
 servicesConsultant: "PT. WECON"
 quote:
   text: "Sebagai konsultan teknik air dan manajemen proyek PLTA Merangin 350 MW, kami menjembatani kontrak sipil kompleks untuk menghadirkan energi hijau berkelanjutan di Sumatera."
-  author: "Ir. Hadi Santoso, MT."
-  authorRole: "Presiden Direktur, PT. WECON"
+  author: "Gani Abdurrahman"
+  authorRole: "Direktur, PT Wecon"
   authorAvatar: "/hadi-santoso.png"
 gallery:
   - "/dam_sustainable.png"

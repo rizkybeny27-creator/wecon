@@ -13,8 +13,8 @@ visibilitySettings: "Public"
 servicesConsultant: "PT. WECON"
 quote:
   text: "As a lead water engineering consultant in Indonesia, PT. WECON ensured every structural aspect of Ladongi Dam met the highest safety standards."
-  author: "Ir. Hadi Santoso, MT."
-  authorRole: "President Director, PT. WECON"
+  author: "Gani Abdurrahman"
+  authorRole: "Director, PT Wecon"
   authorAvatar: "/hadi-santoso.png"
 gallery:
   - "/dam_sustainable.png"

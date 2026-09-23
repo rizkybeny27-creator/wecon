@@ -178,16 +178,26 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
                   &quot;{project.quote.text}&quot;
                 </p>
                 <div className="flex items-center gap-4">
-                  {project.quote.authorAvatar && (
-                    <div className="w-[50px] h-[50px] rounded-full border-2 border-[#333] bg-[#222] overflow-hidden flex-shrink-0 relative">
-                      <Image 
-                        src={project.quote.authorAvatar} 
-                        alt={project.quote.author} 
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  )}
+                  <div
+                    className="w-[50px] h-[50px] rounded-full border-2 border-[#333] bg-[#222] overflow-hidden flex-shrink-0 flex items-center justify-center"
+                    role="img"
+                    aria-label={project.quote.author}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-6 h-6 text-white/70"
+                      aria-hidden="true"
+                    >
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" />
+                    </svg>
+                  </div>
                   <div>
                     <h4 className="font-medium text-black">{project.quote.author}</h4>
                     <p className="text-sm text-black/60">{project.quote.authorRole}</p>

@@ -13,8 +13,8 @@ visibilitySettings: "Publik"
 servicesConsultant: "PT. WECON"
 quote:
   text: "Bendungan Semantok tidak hanya menjadi bendungan terpanjang, tapi juga simbol ketahanan air yang memprioritaskan keselamatan teknis dan kemakmuran petani di Nganjuk."
-  author: "Ir. Hadi Santoso, MT."
-  authorRole: "Presiden Direktur, PT. WECON"
+  author: "Gani Abdurrahman"
+  authorRole: "Direktur, PT Wecon"
   authorAvatar: "/hadi-santoso.png"
 gallery:
   - "/dam_sustainable.png"

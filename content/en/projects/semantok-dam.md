@@ -13,8 +13,8 @@ visibilitySettings: "Public"
 servicesConsultant: "PT. WECON"
 quote:
   text: "Semantok Dam is not only a record-breaking engineering milestone, but a vital water security pillar for East Java agricultural prosperity."
-  author: "Ir. Hadi Santoso, MT."
-  authorRole: "President Director, PT. WECON"
+  author: "Gani Abdurrahman"
+  authorRole: "Director, PT Wecon"
   authorAvatar: "/hadi-santoso.png"
 gallery:
   - "/dam_sustainable.png"

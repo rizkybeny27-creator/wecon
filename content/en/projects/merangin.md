@@ -1,7 +1,7 @@
 ---
 title: "Merangin 350 MW Hydropower Project — PT. WECON Engineering Consultant"
 date: "2024-01-01"
-author: "Ir. Hadi Santoso, MT."
+author: "Gani Abdurrahman"
 excerpt: "PT. WECON provides project management and water resources engineering consultancy for the Merangin 350 MW Hydroelectric Power Plant in Jambi."
 image: "/merangin.jpg"
 tag: "Hydropower Engineering"
@@ -14,8 +14,8 @@ visibilitySettings: "Public"
 servicesConsultant: "PT. WECON"
 quote:
   text: "As project management and water engineering consultant for the Merangin 350 MW hydropower plant, we bridge complex civil contracts to deliver sustainable green energy."
-  author: "Ir. Hadi Santoso, MT."
-  authorRole: "President Director, PT. WECON"
+  author: "Gani Abdurrahman"
+  authorRole: "Director, PT Wecon"
   authorAvatar: "/hadi-santoso.png"
 gallery:
   - "/dam_sustainable.png"

@@ -13,8 +13,8 @@ visibilitySettings: "Public"
 servicesConsultant: "PT. WECON"
 quote:
   text: "PT. WECON contributed from early planning through construction supervision for this 70m high earthfill dam, ensuring structural integrity for a 10.97 million m³ reservoir."
-  author: "Ir. Hadi Santoso, MT."
-  authorRole: "President Director, PT. WECON"
+  author: "Gani Abdurrahman"
+  authorRole: "Director, PT Wecon"
   authorAvatar: "/hadi-santoso.png"
 gallery:
   - "/dam_sustainable.png"

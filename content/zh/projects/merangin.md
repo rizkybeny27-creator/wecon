@@ -1,7 +1,7 @@
 ---
 title: "Merangin 350 MW 水力发电站 — PT. WECON 水利工程顾问"
 date: "2024-01-01"
-author: "Ir. Hadi Santoso, MT."
+author: "Gani Abdurrahman"
 excerpt: "PT. WECON 为占碑省 Merangin 350 MW 水电站项目提供项目管理与水资源工程咨询服务。"
 image: "/merangin.jpg"
 tag: "水电工程"
@@ -14,8 +14,8 @@ visibilitySettings: "公开"
 servicesConsultant: "PT. WECON"
 quote:
   text: "作为 Merangin 350 MW 水电站的项目管理与水利工程顾问，我们统筹复杂的土木工程合同，致力于在苏门答腊输送可持续绿色能源。"
-  author: "Ir. Hadi Santoso, MT."
-  authorRole: "PT. WECON 总裁"
+  author: "Gani Abdurrahman"
+  authorRole: "PT Wecon 董事"
   authorAvatar: "/hadi-santoso.png"
 gallery:
   - "/dam_sustainable.png"

@@ -13,8 +13,8 @@ visibilitySettings: "公开"
 servicesConsultant: "PT. WECON"
 quote:
   text: "作为印尼领先的水利工程顾问，PT. WECON 确保 Ladongi 大坝的每个结构细节都符合最高安全标准。"
-  author: "Ir. Hadi Santoso, MT."
-  authorRole: "PT. WECON 总裁"
+  author: "Gani Abdurrahman"
+  authorRole: "PT Wecon 董事"
   authorAvatar: "/hadi-santoso.png"
 gallery:
   - "/dam_sustainable.png"

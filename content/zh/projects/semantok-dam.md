@@ -13,8 +13,8 @@ visibilitySettings: "公开"
 servicesConsultant: "PT. WECON"
 quote:
   text: "Semantok 大坝不仅打破了工程纪录，更是保障东爪哇农业繁荣与水资源安全的核心支柱。"
-  author: "Ir. Hadi Santoso, MT."
-  authorRole: "PT. WECON 总裁"
+  author: "Gani Abdurrahman"
+  authorRole: "PT Wecon 董事"
   authorAvatar: "/hadi-santoso.png"
 gallery:
   - "/dam_sustainable.png"

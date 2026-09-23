@@ -13,8 +13,8 @@ visibilitySettings: "Publik"
 servicesConsultant: "PT. WECON"
 quote:
   text: "PT. WECON berkontribusi dari perencanaan awal hingga supervisi konstruksi bendungan urugan setinggi 70 meter ini untuk menjamin integritas struktural dan keselamatan air jangka panjang."
-  author: "Ir. Hadi Santoso, MT."
-  authorRole: "Presiden Direktur, PT. WECON"
+  author: "Gani Abdurrahman"
+  authorRole: "Direktur, PT Wecon"
   authorAvatar: "/hadi-santoso.png"
 gallery:
   - "/dam_sustainable.png"
